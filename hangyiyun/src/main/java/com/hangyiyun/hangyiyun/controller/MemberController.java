@@ -17,6 +17,9 @@ import java.util.Map;
 @RestController
 @RequestMapping("/Member")
 public class MemberController {
+
+    int i =  100;
+
     final String HOSST ="http://xyyapi.michain.tech";
 
 
