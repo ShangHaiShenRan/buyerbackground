@@ -1,0 +1,16 @@
+server:
+  port: 7401
+spring:
+  application:
+    name: buyerbackground-hystrix
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:7101/eureka/,http://localhost:7102/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
