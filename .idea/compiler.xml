@@ -6,10 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="buyerbackground-server-cluster" />
+        <module name="object-vo" />
         <module name="hangyiyun" />
         <module name="buyerbackground-hystrix" />
-        <module name="object-vo" />
+        <module name="buyerbackground-server-cluster" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

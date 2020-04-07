@@ -113,6 +113,14 @@ public class Order {
     @ApiModelProperty("订单优惠活动")
     private List<OrderActive> orderActive;
 
+    private String buyerMemberHeadImg;
+
+    private String payerMemberHeadImg;
+
+    private String distributorMemberHeadImg;
+
+    private String distributorWechatNickname;
+
     private Integer  pageSize;
 
     private Integer pageNum;
@@ -668,73 +676,35 @@ public class Order {
         this.cityName = cityName;
     }
 
-    @Override
-    public String toString() {
-        return "Order{" +
-                "id='" + id + '\'' +
-                ", mallCode='" + mallCode + '\'' +
-                ", isDistributionOrder=" + isDistributionOrder +
-                ", orderCode='" + orderCode + '\'' +
-                ", courierCode='" + courierCode + '\'' +
-                ", goodsAmount=" + goodsAmount +
-                ", payableAmount=" + payableAmount +
-                ", discountAmount=" + discountAmount +
-                ", discountRate=" + discountRate +
-                ", paidAmount=" + paidAmount +
-                ", paymentWay=" + paymentWay +
-                ", paymentSerialNumber='" + paymentSerialNumber + '\'' +
-                ", couponId=" + couponId +
-                ", couponName='" + couponName + '\'' +
-                ", couponDeductionAmount=" + couponDeductionAmount +
-                ", distributiorId=" + distributiorId +
-                ", distributorName='" + distributorName + '\'' +
-                ", buyerMemberId=" + buyerMemberId +
-                ", buyerName='" + buyerName + '\'' +
-                ", buyerMessage='" + buyerMessage + '\'' +
-                ", payerName='" + payerName + '\'' +
-                ", shippingWay=" + shippingWay +
-                ", expressName='" + expressName + '\'' +
-                ", freightAmount=" + freightAmount +
-                ", consigneeName='" + consigneeName + '\'' +
-                ", consigneePhone='" + consigneePhone + '\'' +
-                ", consigneeAddress='" + consigneeAddress + '\'' +
-                ", proviceCode='" + proviceCode + '\'' +
-                ", cityCode='" + cityCode + '\'' +
-                ", countyCode='" + countyCode + '\'' +
-                ", orderTime=" + orderTime +
-                ", payTime=" + payTime +
-                ", deliveryTime=" + deliveryTime +
-                ", finishTime=" + finishTime +
-                ", orderStatus=" + orderStatus +
-                ", rejectedStatus=" + rejectedStatus +
-                ", note='" + note + '\'' +
-                ", updateAt=" + updateAt +
-                ", createAt=" + createAt +
-                ", reason='" + reason + '\'' +
-                ", goodsList=" + goodsList +
-                ", memberLevel=" + memberLevel +
-                ", orderActive=" + orderActive +
-                ", pageSize=" + pageSize +
-                ", pageNum=" + pageNum +
-                ", selectTime='" + selectTime + '\'' +
-                ", startTime='" + startTime + '\'' +
-                ", endTime='" + endTime + '\'' +
-                ", selectDetail='" + selectDetail + '\'' +
-                ", details='" + details + '\'' +
-                ", goodsName='" + goodsName + '\'' +
-                ", specAttr='" + specAttr + '\'' +
-                ", price=" + price +
-                ", amount=" + amount +
-                ", distributionRatio1=" + distributionRatio1 +
-                ", distributionRatio2=" + distributionRatio2 +
-                ", distributionRatio3=" + distributionRatio3 +
-                ", orderStatusName='" + orderStatusName + '\'' +
-                ", isDistributionOrderName='" + isDistributionOrderName + '\'' +
-                ", paymentWayName='" + paymentWayName + '\'' +
-                ", shippingWayName='" + shippingWayName + '\'' +
-                ", cityName='" + cityName + '\'' +
-                ", detailAddress='" + detailAddress + '\'' +
-                ", mallName='" + mallName + '\'' +
-                '}';
+    public String getBuyerMemberHeadImg() {
+        return buyerMemberHeadImg;
+    }
+
+    public void setBuyerMemberHeadImg(String buyerMemberHeadImg) {
+        this.buyerMemberHeadImg = buyerMemberHeadImg;
+    }
+
+    public String getPayerMemberHeadImg() {
+        return payerMemberHeadImg;
+    }
+
+    public void setPayerMemberHeadImg(String payerMemberHeadImg) {
+        this.payerMemberHeadImg = payerMemberHeadImg;
+    }
+
+    public String getDistributorMemberHeadImg() {
+        return distributorMemberHeadImg;
+    }
+
+    public void setDistributorMemberHeadImg(String distributorMemberHeadImg) {
+        this.distributorMemberHeadImg = distributorMemberHeadImg;
+    }
+
+    public String getDistributorWechatNickname() {
+        return distributorWechatNickname;
+    }
+
+    public void setDistributorWechatNickname(String distributorWechatNickname) {
+        this.distributorWechatNickname = distributorWechatNickname;
     }
 }

@@ -1,20 +1,36 @@
 package com.hangyiyun.hangyiyun.controller;
 
-import com.hangyiyun.hangyiyun.util.HttpUtils;
-import com.shsr.objectvo.vo.member.Member;
-import org.apache.catalina.User;
-import org.apache.http.HttpResponse;
-import org.apache.http.util.EntityUtils;
-import org.springframework.stereotype.Controller;
+import com.alibaba.fastjson.JSONObject;
+import com.hangyiyun.hangyiyun.utils.HttpClientUtils;
+import com.hangyiyun.hangyiyun.utils.Util;
+import com.shsr.objectvo.vo.mall.TMpfMallInfo;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * @Author wangcc
+ * @Description //TODO 商城 添加，修改，查询
+ * @Date 13:52 2020/4/5
+ * @Param 
+ * @return 
+ **/
 @RestController
 @RequestMapping("/Mall")
 public class MallController {
+
     final String HOST="http://xyyapi.michain.tech";
+
+    private static final Logger logger = LoggerFactory.getLogger(MallController.class);
+
+    @Autowired
+    private Util util;
 
     /*
      * 功能描述: <br>
@@ -25,67 +41,95 @@ public class MallController {
      * @Date: 2020/3/29 11:39
      */
     @RequestMapping(value = "/by/id",method = RequestMethod.GET)
-    public Map<String,Object> selectMallByID(String id){
-        System.out.println("获得前端发送的请求");
+    public JSONObject selectMallByID(String id){
+        JSONObject result = new JSONObject();
+
         String path="/admin/mall/by/id";
-        String method = "POST";
-        Map<String, String> headers = new HashMap<String, String>();
-//        设置token
-//        headers.put("Authorization", "APPCODE " + appcode);
-        //根据API的要求，定义相对应的Content-Type
-        headers.put("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
-        Map<String, String> querys = new HashMap<String, String>();
-        Map<String, String> bodys = new HashMap<String, String>();
-        querys.put("id",id);
+        String url = HOST+path;
+
+        Map<String,String> heards = new HashMap<String,String>();
+        heards.put("Content-Type","application/json");
+        String params = "id="+id;
+
+        /*请求头添加数据(目前只添加一个其他用默认格式)*/
 
         try {
-            HttpResponse response = HttpUtils.doGet(HOST, path, method, headers, querys);
-            System.out.println("商城查询接口 get Date():"+response.toString());
-            //获取response的body
-            System.out.println(EntityUtils.toString(response.getEntity()));
+
+            JSONObject jsonObjResult = HttpClientUtils.doGet(url, heards, params);
+
+            result = util.checkRespStatusAndGetMsg(jsonObjResult);
+
         }catch (Exception e){
             e.printStackTrace();
         }
-        return null;
+        return result;
     }
 
-
-    /*
-     * 功能描述: <br>
-     * 〈〉商城新增接口
-     * @Param:
-     * @Return: Map集合
-     * @Author: 骄傲的骨傲天
-     * @Date: 2020/3/29 11:43
-     */
+    /**
+     * @Author wangcc
+     * @Description //TODO 新增商城
+     * @Date 10:53 2020/4/3
+     * @Param [mallInfo]
+     * @return
+     **/
     @RequestMapping(value = "/addMall",method = RequestMethod.POST)
-    public Map<String,Object> addMall(){
-        String path="admin/mall";
+    public JSONObject addMall(@RequestBody TMpfMallInfo mallInfo){
+
+        String path="/admin/mall";
+        String url = HOST+path;
+
+        JSONObject result = new JSONObject();
+
+        Map<String,String> headers = new HashMap<String,String>();
+        headers.put("Content-Type", "application/json");
+
+        result = util.getResultForObj(mallInfo,url,"POST",headers);
+
+        return result;
+    }
+
+    /**
+     * @Author wangcc
+     * @Description //TODO 修改界面
+     * @Date 14:08 2020/4/3
+     * @Param
+     * @return
+     **/
+    @RequestMapping(value = "/editMall",method = RequestMethod.POST)
+    public JSONObject editMall(@RequestBody TMpfMallInfo mallInfo) {
+
+        logger.info("进入editMall.........................................");
+
+        JSONObject result = new JSONObject();
+
+        String path="/admin/mall/edit";
+        String url = HOST+path;
+
+        Map<String,String> headers = new HashMap<String,String>();
+        headers.put("Content-Type", "application/json");
+
+        /*进行重构将这个传输改为fegin*/
+        result = util.getResultForObj(mallInfo,url,"POST",headers);
+
+        return  result;
+    }
+
+    /**
+     * @Author wangcc
+     * @Description //TODO 删除(假删除-修改状态)
+     * @Date 14:34 2020/4/3
+     * @Param [mallInfo]
+     * @return java.lang.String
+     **/
+    @RequestMapping(value = "/deleteMall",method = RequestMethod.POST)
+    public String deleteMall(@RequestBody TMpfMallInfo mallInfo,HttpServletRequest req, HttpServletResponse resp){
+        String path="/admin/mall/edit";
         String method = "POST";
-        Map<String, String> headers = new HashMap<String, String>();
-//        设置token
-//        headers.put("Authorization", "APPCODE " + appcode);
-        //根据API的要求，定义相对应的Content-Type
-        headers.put("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
-        Map<String, String> querys = new HashMap<String, String>();
-        Map<String, String> bodys = new HashMap<String, String>();
-
-
 
         return null;
     }
 
 
-    /*
-     * 功能描述: <br>
-     * 〈〉商城修改接口
-     * @Param:
-     * @Return: Map集合
-     * @Author: 骄傲的骨傲天
-     * @Date: 2020/3/29 11:47
-     */
-    @RequestMapping(value = "/editMall",method = RequestMethod.POST)
-    public Map<String,Object> editMall() { return  null;
-    }
+
 
 }

@@ -3,6 +3,18 @@ server:
 spring:
   application:
     name: hangyiyun
+  redis:
+    database: 0
+    host: 8.129.18.200
+    port: 6379
+    password: 123456
+    jedis:
+      pool:
+        max-active: 100
+        max-idle: 3
+        max-wait: -1
+        min-idle: 0
+    timeout: 1000
 eureka:
   client:
     serviceUrl:
@@ -15,3 +27,7 @@ management:
     web:
       exposure:
         include: "*"
+#显示日志
+logging:
+  level:
+    com.zking.springboot02.mapper: debug
