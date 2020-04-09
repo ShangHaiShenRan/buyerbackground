@@ -141,4 +141,10 @@ public class GoodsController {
         }
         return result;
     }
+
+
+
+    public void test(){
+        System.out.println("1");
+    }
 }

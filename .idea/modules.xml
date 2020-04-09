@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/buyerbackground.iml" filepath="$PROJECT_DIR$/buyerbackground.iml" />
+      <module fileurl="file://$PROJECT_DIR$/buyerbackground-hystrix/buyerbackground-hystrix.iml" filepath="$PROJECT_DIR$/buyerbackground-hystrix/buyerbackground-hystrix.iml" />
+      <module fileurl="file://$PROJECT_DIR$/buyerbackground-server-cluster/buyerbackground-server-cluster.iml" filepath="$PROJECT_DIR$/buyerbackground-server-cluster/buyerbackground-server-cluster.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hangyiyun/hangyiyun.iml" filepath="$PROJECT_DIR$/hangyiyun/hangyiyun.iml" />
+      <module fileurl="file://$PROJECT_DIR$/object-vo/object-vo.iml" filepath="$PROJECT_DIR$/object-vo/object-vo.iml" />
+    </modules>
+  </component>
+</project>
