@@ -10,11 +10,12 @@
 	<artifactId>hangyiyun</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>hangyiyun</name>
-	<packaging>jar</packaging>
 	<description>子模块之行翼云</description>
+	<packaging>jar</packaging>
 
 	<properties>
 		<fastjson.version>1.2.58</fastjson.version>
+		<target.dir>E:/data/jar</target.dir>
 	</properties>
 
 	<dependencies>
@@ -69,4 +70,16 @@
 		</dependency>
 
 	</dependencies>
+
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+
 </project>
