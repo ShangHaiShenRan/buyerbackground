@@ -29,5 +29,4 @@ public final class ConstantKit {
      */
     public static final Integer TOKEN_RESET_TIME = 1000 * 100;
 
-
 }

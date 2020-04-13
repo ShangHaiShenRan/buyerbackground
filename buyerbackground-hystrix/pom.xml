@@ -6,11 +6,20 @@
 		<groupId>com.shsr</groupId>
 		<artifactId>buyerbackground</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<artifactId>buyerbackground-hystrix</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>buyerbackground-hystrix</name>
 	<description>熔断监控中心</description>
+	<packaging>jar</packaging>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>
