@@ -28,6 +28,9 @@ import java.util.Map;
 @RequestMapping("/Goods")
 public class GoodsController {
 
+
+    int test = 0;
+
     final String HOST="http://xyyapi.michain.tech";
 
     private static final Logger logger = LoggerFactory.getLogger(MallController.class);
@@ -115,7 +118,6 @@ public class GoodsController {
 
         return result;
     }
-
 
     @RequestMapping("/selectById")
     public JSONObject selectById(){
