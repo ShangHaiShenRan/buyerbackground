@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10754e25-b9de-489f-b88e-f4d8db37b879" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buyerbackground.iml" beforeDir="false" afterPath="$PROJECT_DIR$/buyerbackground.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/GoodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/GoodsController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -61,8 +56,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/GoodsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="28" column="30" lean-forward="true" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
+            <state relative-caret-position="306">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
               <folding>
                 <element signature="method#addGoods#0;class#GoodsController#0" />
                 <element signature="method#updataGoods#0;class#GoodsController#0" />
@@ -525,7 +520,7 @@
       <workItem from="1586443886660" duration="759000" />
       <workItem from="1586479963257" duration="98000" />
       <workItem from="1586683315934" duration="129000" />
-      <workItem from="1586745820642" duration="241000" />
+      <workItem from="1586745820642" duration="541000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1585718957405</created>
@@ -562,7 +557,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585726249874</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="测试git提交问题:&#10; 1.单纯提交代码;">
+      <created>1586746230586</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1586746230586</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -577,7 +579,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="251888000" />
+    <option name="totallyTimeSpent" value="252188000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -693,7 +695,8 @@
     </ignored-roots>
     <MESSAGE value="first commit" />
     <MESSAGE value="second commit:&#10; 1.添加了一个类，test 作为测试" />
-    <option name="LAST_COMMIT_MESSAGE" value="second commit:&#10; 1.添加了一个类，test 作为测试" />
+    <MESSAGE value="测试git提交问题:&#10; 1.单纯提交代码;" />
+    <option name="LAST_COMMIT_MESSAGE" value="测试git提交问题:&#10; 1.单纯提交代码;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1051,8 +1054,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/GoodsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="28" column="30" lean-forward="true" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
+        <state relative-caret-position="306">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
           <folding>
             <element signature="method#addGoods#0;class#GoodsController#0" />
             <element signature="method#updataGoods#0;class#GoodsController#0" />
