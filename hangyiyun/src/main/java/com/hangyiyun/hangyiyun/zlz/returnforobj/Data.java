@@ -8,4 +8,5 @@ public class Data{
     private String companyCode;
     //        企业简称
     private String companyAb;
+
 }
