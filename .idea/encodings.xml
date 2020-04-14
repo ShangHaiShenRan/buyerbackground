@@ -6,6 +6,8 @@
     <file url="file://$PROJECT_DIR$/buyerbackground-server-cluster" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hangyiyun" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/object-vo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/object-vo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/object-vo/src/main/resources" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
