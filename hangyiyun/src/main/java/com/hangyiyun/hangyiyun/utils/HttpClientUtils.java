@@ -83,7 +83,6 @@ public class HttpClientUtils {
             e.printStackTrace();
         }
         jsonResult = JSONObject.parseObject(result);
-        logger.info("成功获取三方返回数据："+jsonResult);
 
         return  jsonResult;
     }

@@ -8,7 +8,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://localhost:7101/eureka/,http://localhost:7102/eureka/
+      defaultZone: http://8.129.18.200:7101/eureka/,http://8.129.18.200:7102/eureka/
 management:
   endpoints:
     web:
