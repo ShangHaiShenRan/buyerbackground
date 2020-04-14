@@ -11,10 +11,12 @@
   <artifactId>buyerbackground</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>buyerbackground</name>
-  <description>主模块-buyerbackgrund</description>
+  <description>主模块-buyerbackground</description>
   <packaging>pom</packaging>
 
   <modules>
+      <module>buyerbackground-gateway</module>
+      <module>buyerbackground-hystrix</module>
       <module>buyerbackground-server-cluster</module>
       <module>hangyiyun</module>
   </modules>
@@ -24,7 +26,6 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <java.version>1.8</java.version>
     <spring-cloud.version>Hoxton.RELEASE</spring-cloud.version>
-    <!--<spring-cloud.version>Greenwich.SR3</spring-cloud.version>-->
   </properties>
 
   <dependencies>
@@ -35,7 +36,7 @@
     </dependency>
 
     <!--
-    feign
+      feign
     -->
     <dependency>
       <groupId>org.springframework.cloud</groupId>
@@ -96,13 +97,5 @@
     </dependencies>
   </dependencyManagement>
 
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-maven-plugin</artifactId>
-      </plugin>
-    </plugins>
-  </build>
 
 </project>

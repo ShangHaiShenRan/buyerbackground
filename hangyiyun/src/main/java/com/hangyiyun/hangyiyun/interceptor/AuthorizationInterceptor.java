@@ -34,7 +34,6 @@ import java.lang.reflect.Method;
  * @Param 
  * @return 
  **/
-@Slf4j
 public class AuthorizationInterceptor extends HandlerInterceptorAdapter {
 
     private static final Logger log = LoggerFactory.getLogger(UserController.class);
