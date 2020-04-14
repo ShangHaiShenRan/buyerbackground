@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="10754e25-b9de-489f-b88e-f4d8db37b879" name="Default Changelist" comment="测试git提交问题:&#10; 1.单纯提交代码;">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="10754e25-b9de-489f-b88e-f4d8db37b879" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/utils/DESUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/utils/DESUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buyerbackground-server-cluster/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/buyerbackground-server-cluster/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buyerbackground-server-cluster/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/buyerbackground-server-cluster/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,16 +62,19 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
-    <option name="ROOT_SYNC" value="DONT_SYNC" />
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
-    <option name="PUSH_TAGS">
-      <GitPushTagMode />
-    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -92,7 +94,7 @@
     </option>
   </component>
   <component name="MavenRunner">
-    <option name="jreName" value="1.8 (2)" />
+    <option name="jreName" value="1.8" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="570" />
@@ -179,7 +181,7 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.20140515" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -199,7 +201,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.BuyerbackgroundHystrixApplication">
+  <component name="RunManager" selected="Spring Boot.BuyerbackgroundServerClusterApplication-peer1">
     <configuration name="BuyerbackgroundGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="buyerbackground-gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.shsr.buyerbackgroundgateway.BuyerbackgroundGatewayApplication" />
@@ -455,6 +457,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="353" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1586836786101" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1586850856209">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586850856209" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1586850856209">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586850856209" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1586850856208">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586850856208" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1586850856209">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586850856209" />
+    <state x="272" y="57" key="SettingsEditor" timestamp="1586850716019">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="272" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1586850716019" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
