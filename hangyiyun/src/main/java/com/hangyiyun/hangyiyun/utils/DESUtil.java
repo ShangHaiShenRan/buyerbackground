@@ -15,6 +15,7 @@ public class DESUtil {
     public static final String CIPHER_ALGORITHM = "DES/ECB/PKCS5Padding";
 
 
+
     /**
      * 加密数据 
      * @param data 待加密数据 
