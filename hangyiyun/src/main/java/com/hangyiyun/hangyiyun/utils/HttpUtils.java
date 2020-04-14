@@ -60,7 +60,7 @@ public class HttpUtils {
 
         return httpClient.execute(request);
     }
-    /*public static String doGet(String url, Map<String, String> param) {
+    public static String doGet(String url, Map<String, String> param) {
 
         // 创建Httpclient对象
         CloseableHttpClient httpclient = HttpClients.createDefault();
@@ -99,7 +99,7 @@ public class HttpUtils {
             }
         }
         return resultString;
-    }*/
+    }
 
 
     /**
