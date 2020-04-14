@@ -8,7 +8,7 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableZuulProxy        //开启网关
-public class BuyerbackgroundGatewayApplication {
+public class BuyerbackgroundGatewayApplication  {
     public static void main(String[] args) {
         SpringApplication.run(BuyerbackgroundGatewayApplication.class, args);
     }
