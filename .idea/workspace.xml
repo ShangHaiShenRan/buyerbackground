@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10754e25-b9de-489f-b88e-f4d8db37b879" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buyerbackground-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/buyerbackground-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buyerbackground-hystrix/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/buyerbackground-hystrix/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buyerbackground-hystrix/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/buyerbackground-hystrix/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buyerbackground-server-cluster/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/buyerbackground-server-cluster/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buyerbackground-server-cluster/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/buyerbackground-server-cluster/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hangyiyun/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hangyiyun/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hangyiyun/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/hangyiyun/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/object-vo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/object-vo/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,9 +87,8 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="D:\Program Files\Apache\maven\Myrepository" />
-        <option name="mavenHome" value="C:/Program Files/maven" />
-        <option name="userSettingsFile" value="C:\Program Files\Maven\conf\settings.xml" />
+        <option name="mavenHome" value="C:/software/apache-maven-3.6.1" />
+        <option name="userSettingsFile" value="C:\software\apache-maven-3.6.1\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -96,67 +103,13 @@
   <component name="MavenRunner">
     <option name="jreName" value="1.8" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="570" />
-    <option name="y" value="-20" />
-    <option name="width" value="1155" />
-    <option name="height" value="1040" />
-  </component>
-  <component name="ProjectInspectionProfilesVisibleTreeState">
-    <entry key="Project Default">
-      <profile-state>
-        <expanded-state>
-          <State>
-            <id />
-          </State>
-          <State>
-            <id>Class structureJava</id>
-          </State>
-          <State>
-            <id>Code maturity issuesJava</id>
-          </State>
-          <State>
-            <id>JUnit issuesJava</id>
-          </State>
-          <State>
-            <id>Java</id>
-          </State>
-          <State>
-            <id>Java 5Java language level migration aidsJava</id>
-          </State>
-          <State>
-            <id>Java 7Java language level migration aidsJava</id>
-          </State>
-          <State>
-            <id>Java 8Java language level migration aidsJava</id>
-          </State>
-          <State>
-            <id>Java language level migration aidsJava</id>
-          </State>
-          <State>
-            <id>Javadoc issuesJava</id>
-          </State>
-          <State>
-            <id>Numeric issuesJava</id>
-          </State>
-          <State>
-            <id>Spring</id>
-          </State>
-          <State>
-            <id>Spring AOPSpring</id>
-          </State>
-          <State>
-            <id>Threading issuesJava</id>
-          </State>
-        </expanded-state>
-      </profile-state>
-    </entry>
-  </component>
+  <component name="ProjectId" id="1aWhdpeelyRIgCZxGWsKR81uA9K" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
@@ -164,6 +117,7 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -181,7 +135,10 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.20140515" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -201,7 +158,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.BuyerbackgroundServerClusterApplication-peer1">
+  <component name="RunManager" selected="Spring Boot.BuyerbackgroundServerClusterApplication-peer2">
     <configuration name="BuyerbackgroundGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="buyerbackground-gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.shsr.buyerbackgroundgateway.BuyerbackgroundGatewayApplication" />
@@ -234,13 +191,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EurekaService01Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="eureka_service01" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.eureka_service01.EurekaService01Application" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="HangyiyunApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="hangyiyun" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.hangyiyun.hangyiyun.HangyiyunApplication" />
@@ -257,20 +207,35 @@
     </configuration>
     <list>
       <item itemvalue="Spring Boot.BuyerbackgroundServerClusterApplication-peer2" />
-      <item itemvalue="Spring Boot.EurekaService01Application" />
-      <item itemvalue="Spring Boot.ObjectVoApplication" />
-      <item itemvalue="Spring Boot.BuyerbackgroundHystrixApplication" />
       <item itemvalue="Spring Boot.BuyerbackgroundServerClusterApplication-peer1" />
-      <item itemvalue="Spring Boot.HangyiyunApplication" />
+      <item itemvalue="Spring Boot.BuyerbackgroundHystrixApplication" />
       <item itemvalue="Spring Boot.BuyerbackgroundGatewayApplication" />
+      <item itemvalue="Spring Boot.HangyiyunApplication" />
+      <item itemvalue="Spring Boot.ObjectVoApplication" />
     </list>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
       <list>
         <serviceView>
+          <option name="contentProportion" value="0.27117488" />
           <treeState>
-            <expand />
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Not Started" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
             <select />
           </treeState>
         </serviceView>
@@ -332,6 +297,9 @@
       <workItem from="1586479963257" duration="98000" />
       <workItem from="1586683315934" duration="129000" />
       <workItem from="1586745820642" duration="541000" />
+      <workItem from="1586857350228" duration="1128000" />
+      <workItem from="1586872507673" duration="2304000" />
+      <workItem from="1586912240472" duration="6312000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1585718957405</created>
@@ -375,7 +343,21 @@
       <option name="project" value="LOCAL" />
       <updated>1586746230586</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="测试git提交问题:&#10; 1.单纯提交代码;">
+      <created>1586850875851</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1586850875851</updated>
+    </task>
+    <task id="LOCAL-00008" summary="网关">
+      <created>1586852865104</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1586852865104</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -450,33 +432,94 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="second commit:&#10; 1.添加了一个类，test 作为测试" />
     <MESSAGE value="测试git提交问题:&#10; 1.单纯提交代码;" />
-    <option name="LAST_COMMIT_MESSAGE" value="测试git提交问题:&#10; 1.单纯提交代码;" />
+    <MESSAGE value="网关" />
+    <option name="LAST_COMMIT_MESSAGE" value="网关" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="353" y="0" key="CommitChangelistDialog2" timestamp="1586836786101">
+    <state x="361" y="74" key="#Scopes" timestamp="1586857604022">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="353" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1586836786101" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1586850856209">
+    <state x="361" y="74" key="#Scopes/0.0.1536.824@0.0.1536.824" timestamp="1586857604022" />
+    <state x="223" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586851410086">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586850856209" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1586850856209">
+    <state x="223" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1586851410086" />
+    <state x="353" y="0" key="CommitChangelistDialog2" timestamp="1586852863897">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586850856209" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1586850856208">
+    <state x="353" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1586852863897" />
+    <state x="549" y="170" key="FileChooserDialogImpl" timestamp="1586857454921">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586850856208" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1586850856209">
+    <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1586857454921" />
+    <state width="1066" height="210" key="GridCell.Tab.0.bottom" timestamp="1586914378078">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586850856209" />
-    <state x="272" y="57" key="SettingsEditor" timestamp="1586850716019">
+    <state width="1066" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586914378078" />
+    <state width="1066" height="210" key="GridCell.Tab.0.center" timestamp="1586914378077">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="272" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1586850716019" />
+    <state width="1066" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586914378077" />
+    <state width="1066" height="210" key="GridCell.Tab.0.left" timestamp="1586914378077">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1066" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586914378077" />
+    <state width="1066" height="210" key="GridCell.Tab.0.right" timestamp="1586914378078">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1066" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586914378078" />
+    <state width="1066" height="210" key="GridCell.Tab.1.bottom" timestamp="1586914378078">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1066" height="210" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586914378078" />
+    <state width="1066" height="210" key="GridCell.Tab.1.center" timestamp="1586914378078">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1066" height="210" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1586914378078" />
+    <state width="1066" height="210" key="GridCell.Tab.1.left" timestamp="1586914378078">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1066" height="210" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1586914378078" />
+    <state width="1066" height="210" key="GridCell.Tab.1.right" timestamp="1586914378078">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1066" height="210" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1586914378078" />
+    <state width="1024" height="210" key="GridCell.Tab.2.bottom" timestamp="1586850895013">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="210" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586850895013" />
+    <state width="1024" height="210" key="GridCell.Tab.2.center" timestamp="1586850895011">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="210" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1586850895011" />
+    <state width="1024" height="210" key="GridCell.Tab.2.left" timestamp="1586850895011">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="210" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1586850895011" />
+    <state width="1024" height="210" key="GridCell.Tab.2.right" timestamp="1586850895013">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="210" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1586850895013" />
+    <state x="272" y="0" key="SettingsEditor" timestamp="1586857474213">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="272" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1586857474213" />
+    <state x="361" y="136" key="Vcs.Push.Dialog.v2" timestamp="1586853258534">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="136" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1586853258534" />
+    <state x="461" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1586913468380">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="461" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1586913468380" />
+    <state x="428" y="214" key="git4idea.merge.GitPullDialog" timestamp="1586852900254">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="428" y="214" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1586852900254" />
+    <state x="178" y="120" key="new project wizard" timestamp="1586855114311">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="178" y="120" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1586855114311" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -497,93 +540,5 @@
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>Spring</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.20140515" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>object-vo</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.20140515" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>

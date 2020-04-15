@@ -15,7 +15,6 @@
 
 	<properties>
 		<fastjson.version>1.2.58</fastjson.version>
-		<target.dir>E:/data/jar</target.dir>
 	</properties>
 
 	<dependencies>
