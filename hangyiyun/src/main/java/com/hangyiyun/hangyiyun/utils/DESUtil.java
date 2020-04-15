@@ -29,7 +29,7 @@ public class DESUtil {
         // 实例化Cipher对象，它用于完成实际的加密操作  
         Cipher cipher = Cipher.getInstance(CIPHER_ALGORITHM);  
         SecureRandom random = new SecureRandom();  
-        // 初始化Cipher对象，设置为加密模式  
+            // 初始化Cipher对象，设置为加密模式
         cipher.init(Cipher.ENCRYPT_MODE, deskey, random);  
         byte[] results = cipher.doFinal(data.getBytes("utf-8"));  
         // 执行加密操作。加密后的结果通常都会用Base64编码进行传输   
