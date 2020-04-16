@@ -3,13 +3,12 @@ server:
 spring:
   application:
     name: gateway
-## \u914D\u7F6E\u5B50\u6A21\u5757eureka-consumer\u7684\u8DEF\u7531\u89C4\u5219
-#zuul:
-#  routes:
-#    api-cons:
-#      path: /cons/**
-#      serviceId: eureka-consumer
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'routes'
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://127.0.0.1:7101/eureka/,http://127.0.0.1:7102/eureka/
+      defaultZone: http://8.129.18.200:7101/eureka/

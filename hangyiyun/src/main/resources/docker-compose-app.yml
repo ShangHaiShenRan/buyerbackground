@@ -1,0 +1,27 @@
+version: '1'
+services:
+  buyerbackground-server-cluster-7101:
+    image: buyerbackgound/buyerbackground-server-cluster
+    container_name: buyerbackground-server-cluster-7101
+    ports:
+      - 7101:7101
+  buyerbackground-server-cluster-7102:
+    image: buyerbackgound/buyerbackground-server-cluster
+    container_name: buyerbackground-server-cluster-7102
+    ports:
+      - 7102:7102
+  buyerbackground-gateway:
+    image: buyerbackgound/buyerbackground-gateway
+    container_name: buyerbackground-gateway
+    ports:
+      - 7501:7501
+  buyerbackground-hystrix:
+    image: buyerbackgound/buyerbackground-hystrix
+    container_name: buyerbackground-hystrix
+    ports:
+      - 7401:7401
+  buyerbackground-hangyiyun:
+    image: buyerbackgound/hangyiyun
+    container_name: buyerbackground-hangyiyun
+    ports:
+      - 7201:7201

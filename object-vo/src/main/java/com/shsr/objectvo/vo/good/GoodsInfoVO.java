@@ -1,8 +1,5 @@
 package com.shsr.objectvo.vo.good;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import jdk.nashorn.internal.objects.annotations.Setter;
-
 import java.util.List;
 
 /**

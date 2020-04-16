@@ -19,34 +19,34 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-<!--			<plugin>-->
-<!--				<groupId>com.spotify</groupId>-->
-<!--				<artifactId>docker-maven-plugin</artifactId>-->
-<!--				<version>1.1.0</version>-->
-<!--				<executions>-->
-<!--					<execution>-->
-<!--						<id>build-image</id>-->
-<!--						<phase>package</phase>-->
-<!--						<goals>-->
-<!--							<goal>build</goal>-->
-<!--						</goals>-->
-<!--					</execution>-->
-<!--				</executions>-->
-<!--				<configuration>-->
-<!--					<imageName>hystrix7401</imageName>-->
-<!--					&lt;!&ndash; <dockerDirectory>src/main/docker</dockerDirectory>&ndash;&gt;-->
-<!--					<dockerHost>http://8.129.18.200:2375</dockerHost>-->
-<!--					<baseImage>java:8</baseImage>-->
-<!--					<entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>-->
-<!--					<resources>-->
-<!--						<resource>-->
-<!--							<targetPath>/</targetPath>-->
-<!--							<directory>${project.build.directory}</directory>-->
-<!--							<include>${project.build.finalName}.jar</include>-->
-<!--						</resource>-->
-<!--					</resources>-->
-<!--				</configuration>-->
-<!--			</plugin>-->
+			<plugin>
+				<groupId>com.spotify</groupId>
+				<artifactId>docker-maven-plugin</artifactId>
+				<version>1.1.0</version>
+				<executions>
+					<execution>
+						<id>build-image</id>
+						<phase>package</phase>
+						<goals>
+							<goal>build</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<imageName>buyerbackgound/${project.artifactId}:${project.version}</imageName>
+					<!-- <dockerDirectory>src/main/docker</dockerDirectory>-->
+					<dockerHost>http://8.129.18.200:2375</dockerHost>
+					<baseImage>java:8</baseImage>
+					<entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
+					<resources>
+						<resource>
+							<targetPath>/</targetPath>
+							<directory>${project.build.directory}</directory>
+							<include>${project.build.finalName}.jar</include>
+						</resource>
+					</resources>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 </project>
