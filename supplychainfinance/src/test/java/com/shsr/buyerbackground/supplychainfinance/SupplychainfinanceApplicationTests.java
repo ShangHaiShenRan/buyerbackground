@@ -1,4 +1,4 @@
-package com.shsr.supplychainfinance;
+package com.shsr.buyerbackground.supplychainfinance;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

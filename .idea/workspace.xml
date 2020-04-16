@@ -19,17 +19,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10754e25-b9de-489f-b88e-f4d8db37b879" name="Default Changelist" comment="4/15:review注册，开通平台平台;">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="10754e25-b9de-489f-b88e-f4d8db37b879" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/HangyiyunApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/HangyiyunApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/EnterpriseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/EnterpriseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/GoodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/GoodsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/interceptor/AuthorizationInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/interceptor/AuthorizationInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hangyiyun/src/test/java/com/hangyiyun/hangyiyun/zlz/controller/EnterpriseControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/hangyiyun/src/test/java/com/hangyiyun/hangyiyun/zlz/controller/EnterpriseControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supplychainfinance/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supplychainfinance/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supplychainfinance/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supplychainfinance/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supplychainfinance/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supplychainfinance/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supplychainfinance/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supplychainfinance/src/main/java/com/shsr/supplychainfinance/SupplychainfinanceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supplychainfinance/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supplychainfinance/src/test/java/com/shsr/supplychainfinance/SupplychainfinanceApplicationTests.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -72,7 +74,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/interceptor/AuthorizationInterceptor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
+            <state relative-caret-position="322">
               <caret line="32" column="14" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -81,14 +83,47 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hangyiyun/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="299">
+              <caret line="13" column="30" selection-start-line="4" selection-start-column="4" selection-end-line="13" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="17" column="29" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/supplychainfinance/src/main/java/com/shsr/supplychainfinance/SupplychainfinanceApplication.java">
+        <entry file="file://$PROJECT_DIR$/supplychainfinance/src/main/java/com/shsr/buyerbackground/supplychainfinance/SupplychainfinanceApplication.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="115">
-              <caret line="5" column="22" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/supplychainfinance/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="7" column="31" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/HangyiyunApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="8" column="6" selection-start-line="8" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -139,6 +174,11 @@
         <option value="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/UserController.java" />
         <option value="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/OrderController.java" />
         <option value="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/interceptor/AuthorizationInterceptor.java" />
+        <option value="$PROJECT_DIR$/supplychainfinance/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/supplychainfinance/src/main/java/com/shsr/supplychainfinance/SupplychainfinanceApplication.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/supplychainfinance/pom.xml" />
+        <option value="$PROJECT_DIR$/supplychainfinance/src/main/java/com/shsr/buyerbackground/supplychainfinance/SupplychainfinanceApplication.java" />
       </list>
     </option>
   </component>
@@ -245,6 +285,17 @@
             <path>
               <item name="buyerbackground" type="b2602c69:ProjectViewProjectNode" />
               <item name="buyerbackground" type="462c0819:PsiDirectoryNode" />
+              <item name="hangyiyun" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buyerbackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buyerbackground" type="462c0819:PsiDirectoryNode" />
+              <item name="hangyiyun" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buyerbackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buyerbackground" type="462c0819:PsiDirectoryNode" />
               <item name="supplychainfinance" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -267,15 +318,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="buyerbackground" type="b2602c69:ProjectViewProjectNode" />
-              <item name="buyerbackground" type="462c0819:PsiDirectoryNode" />
-              <item name="supplychainfinance" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="supplychainfinance" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -402,6 +444,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SupplychainfinanceApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="supplychainfinance" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.shsr.buyerbackground.supplychainfinance.SupplychainfinanceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SupplychainfinanceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="supplychainfinance" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.shsr.supplychainfinance.SupplychainfinanceApplication" />
@@ -418,6 +467,7 @@
       <item itemvalue="Spring Boot.HangyiyunApplication" />
       <item itemvalue="Spring Boot.BuyerbackgroundGatewayApplication" />
       <item itemvalue="Spring Boot.SupplychainfinanceApplication" />
+      <item itemvalue="Spring Boot.SupplychainfinanceApplication (1)" />
     </list>
     <recent_temporary>
       <list>
@@ -484,7 +534,7 @@
       <workItem from="1586919443697" duration="5250000" />
       <workItem from="1586928560943" duration="13258000" />
       <workItem from="1586944082295" duration="598000" />
-      <workItem from="1586998326740" duration="3413000" />
+      <workItem from="1586998326740" duration="5026000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1585718957405</created>
@@ -535,7 +585,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586932998097</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="4/16:添加供应链金融服务">
+      <created>1587010606686</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1587010606686</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -553,7 +610,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22536000" />
+    <option name="totallyTimeSpent" value="24149000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -566,6 +623,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24262735" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -712,7 +770,8 @@
     <MESSAGE value="second commit:&#10; 1.添加了一个类，test 作为测试" />
     <MESSAGE value="测试git提交问题:&#10; 1.单纯提交代码;" />
     <MESSAGE value="4/15:review注册，开通平台平台;" />
-    <option name="LAST_COMMIT_MESSAGE" value="4/15:review注册，开通平台平台;" />
+    <MESSAGE value="4/16:添加供应链金融服务" />
+    <option name="LAST_COMMIT_MESSAGE" value="4/16:添加供应链金融服务" />
   </component>
   <component name="WindowStateProjectService">
     <state x="353" y="0" key="CommitChangelistDialog2" timestamp="1586836786101">
@@ -746,13 +805,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="21" column="65" selection-start-line="21" selection-start-column="65" selection-end-line="21" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/object-vo/src/main/java/com/shsr/objectvo/ObjectVoApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -836,11 +888,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hangyiyun/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-276" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/GoodsController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="644">
@@ -883,13 +930,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/HangyiyunApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
@@ -912,9 +952,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="21" column="65" selection-start-line="21" selection-start-column="65" selection-end-line="21" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supplychainfinance/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supplychainfinance/src/main/java/com/shsr/supplychainfinance/SupplychainfinanceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/interceptor/AuthorizationInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
+        <state relative-caret-position="322">
           <caret line="32" column="14" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -922,13 +982,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/supplychainfinance/src/main/java/com/shsr/supplychainfinance/SupplychainfinanceApplication.java">
+    <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/HangyiyunApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="8" column="6" selection-start-line="8" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="17" column="29" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangyiyun/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" column="30" selection-start-line="4" selection-start-column="4" selection-end-line="13" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supplychainfinance/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="31" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supplychainfinance/src/main/java/com/shsr/buyerbackground/supplychainfinance/SupplychainfinanceApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
         </state>
       </provider>
     </entry>
