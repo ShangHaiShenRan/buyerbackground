@@ -1,7 +1,9 @@
 package com.hangyiyun.hangyiyun.zlz.controller;
 
 
-import com.hangyiyun.hangyiyun.zlz.entity.Enterprise;
+import com.alibaba.fastjson.JSONObject;
+import com.hangyiyun.hangyiyun.controller.EnterpriseController;
+import com.shsr.objectvo.vo.company.Enterprise;
 import com.shsr.objectvo.vo.user.PigcmsUser;
 import org.junit.Test;
 import org.junit.jupiter.api.AfterEach;
@@ -43,7 +45,9 @@ public class EnterpriseControllerTest {
         PigcmsUser pigcmsUser=new PigcmsUser();
         pigcmsUser.setPhone("18516022025");
         pigcmsUser.setPassword("Zlz13117500158");
-        String login = enterpriseController.login(pigcmsUser);
+        JSONObject login = enterpriseController.login(pigcmsUser);
+
+        System.out.println("打印登陆后的内容是:"+login.toString());
 
     }
 

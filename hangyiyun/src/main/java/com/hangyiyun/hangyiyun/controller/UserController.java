@@ -9,10 +9,7 @@ import com.shsr.objectvo.vo.user.PigcmsUser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.constraints.NotNull;
 import java.util.HashMap;
@@ -119,7 +116,6 @@ public class UserController {
         return result;
     }
 
-
     /**
      * @return com.alibaba.fastjson.JSONObject
      * @Author wangcc
@@ -128,8 +124,7 @@ public class UserController {
      * @Param [token]
      **/
     @RequestMapping("/loginOut")
-    public JSONObject loginOut(@RequestParam(value = "token") String token) {
-        logger.info("测试连接,获取token:" + token.toString());
+    public JSONObject loginOut(@RequestHeader("Authorization") String token ) {
 
         JSONObject result = new JSONObject();
 

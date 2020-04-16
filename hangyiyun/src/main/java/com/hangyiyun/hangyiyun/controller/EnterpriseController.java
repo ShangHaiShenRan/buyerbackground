@@ -64,7 +64,6 @@ public class EnterpriseController {
             String enterpriseJson = JSONObject.toJSONString(enterprise);
             String encryptionCode = DESUtil.encrypt(enterpriseJson, KEY);
 
-
             Map<String, String> headers = new HashMap<String, String>();
             headers.put("Content-Type", "application/x-www-form-urlencoded");//接口要求格式
 

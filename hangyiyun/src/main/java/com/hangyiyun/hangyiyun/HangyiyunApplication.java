@@ -9,7 +9,6 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 @EnableEurekaClient
 public class HangyiyunApplication {
 
-
 	public static void main(String[] args) {
 		SpringApplication.run(HangyiyunApplication.class, args);
 	}

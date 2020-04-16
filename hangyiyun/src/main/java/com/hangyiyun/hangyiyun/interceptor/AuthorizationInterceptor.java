@@ -3,24 +3,16 @@ package com.hangyiyun.hangyiyun.interceptor;
 import com.alibaba.fastjson.JSONObject;
 import com.hangyiyun.hangyiyun.annotation.AuthToken;
 import com.hangyiyun.hangyiyun.controller.UserController;
-import com.hangyiyun.hangyiyun.utils.ConstantKit;
-
 import com.hangyiyun.hangyiyun.utils.RedisUtil;
 import com.hangyiyun.hangyiyun.utils.StringUtils;
-import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
-import org.springframework.stereotype.Component;
+import org.springframework.web.context.WebApplicationContext;
+import org.springframework.web.context.support.WebApplicationContextUtils;
 import org.springframework.web.method.HandlerMethod;
-import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.function.ServerResponse;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
-import redis.clients.jedis.Jedis;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -57,7 +49,6 @@ public class AuthorizationInterceptor extends HandlerInterceptorAdapter {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        System.out.println("-------------------------------");
         Boolean result = true;
         String token = "";
 
@@ -93,17 +84,23 @@ public class AuthorizationInterceptor extends HandlerInterceptorAdapter {
                 } else {
                     log.info("打印token是：:"+token.toString());
                     /*获得token后 直接去redis验证是否存在*/
-                    boolean hasToken = redisUtil.hasKey(token);
 
-                    if (hasToken) {
-                        log.info("token 验证成功！");
-                        result = true;
-                    }else {
-                        log.error("token 验证失败！");
-                        resultMsg.put("message", "权限不足，传入的token以失效");
-                        resultMsg.put("status", "false");
-                        pw.write(resultMsg.toString());
-                        result = false;
+                    if(redisUtil == null){
+                        WebApplicationContext wac = WebApplicationContextUtils.getRequiredWebApplicationContext(request.getServletContext());
+                        redisUtil = wac.getBean(RedisUtil.class);
+
+                        boolean hasToken = redisUtil.hasKey(token);
+
+                        if (hasToken) {
+                            log.info("token 验证成功！");
+                            result = true;
+                        }else {
+                            log.error("token 验证失败！");
+                            resultMsg.put("message", "权限不足，传入的token以失效");
+                            resultMsg.put("status", "false");
+                            pw.write(resultMsg.toString());
+                            result = false;
+                        }
                     }
                 }
                 pw.flush();
