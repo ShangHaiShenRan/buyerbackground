@@ -1,6 +1,7 @@
 package com.hangyiyun.hangyiyun.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import com.hangyiyun.hangyiyun.annotation.AuthToken;
 import com.hangyiyun.hangyiyun.utils.HttpClientUtils;
 import com.hangyiyun.hangyiyun.utils.RedisUtil;
 import com.hangyiyun.hangyiyun.utils.StringUtils;
@@ -88,12 +89,12 @@ public class UserController {
                     /*redis存储token为key，用户名为value*/
                     boolean setTokenResult = redisUtil.set(tokenForResp, getMallCodeForDataForResp);
                     /*redis存储用户名为key,token为value，为了获取token将token放入第三方请求头*/
-                    boolean setNameResult = redisUtil.set(getMallCodeForDataForResp, tokenForResp);
+                    //boolean setNameResult = redisUtil.set(getMallCodeForDataForResp, tokenForResp);暂时只存储一条数据
                     /*redis存储用户名为key,token为value，为了获取token将token放入第三方请求头*/
                     Long currentTime = System.currentTimeMillis();
                     boolean setTimeResult = redisUtil.set(tokenForResp + getMallCodeForDataForResp, currentTime.toString());
 
-                    if (setTokenResult && setNameResult && setTimeResult) {
+                    if (setTokenResult && setTimeResult) {
                        result = jsonResp;
                     } else {
                         result.put("status", "false");
@@ -124,6 +125,7 @@ public class UserController {
      * @Param [token]
      **/
     @RequestMapping("/loginOut")
+    @AuthToken
     public JSONObject loginOut(@RequestHeader("Authorization") String token ) {
 
         JSONObject result = new JSONObject();

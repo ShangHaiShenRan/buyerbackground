@@ -33,7 +33,7 @@
 					</execution>
 				</executions>
 				<configuration>
-					<imageName>hystrix7401</imageName>
+					<imageName>buyerbackgound/${project.artifactId}:${project.version}</imageName>
 					<!-- <dockerDirectory>src/main/docker</dockerDirectory>-->
 					<dockerHost>http://8.129.18.200:2375</dockerHost>
 					<baseImage>java:8</baseImage>

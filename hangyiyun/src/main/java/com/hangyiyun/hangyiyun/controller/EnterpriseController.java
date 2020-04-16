@@ -5,7 +5,6 @@ import com.hangyiyun.hangyiyun.utils.DESUtil;
 import com.hangyiyun.hangyiyun.utils.HttpClientUtils;
 import com.hangyiyun.hangyiyun.utils.HttpUtils;
 import com.shsr.objectvo.vo.company.Enterprise;
-import com.hangyiyun.hangyiyun.zlz.returnforobj.OpenMall;
 import com.shsr.objectvo.vo.user.PigcmsUser;
 import org.apache.http.HttpResponse;
 import org.apache.http.util.EntityUtils;
@@ -138,12 +137,11 @@ public class EnterpriseController {
         String pathMall = "/api/third/mall/open";
         String method = "POST";
 
-        OpenMall openMall = new OpenMall();
-        openMall.setCompanyCode(enterprise.getCompanyCode());//注册公司码
-        openMall.setTimestamp(enterprise.getTimestamp());//注册时间
+        JSONObject openMall = new JSONObject();
+        openMall.put("companyCode",enterprise.getCompanyCode());//注册公司码
+        openMall.put("timestamp",enterprise.getTimestamp());//注册时间
 
-        String reqMsg = JSONObject.toJSONString(openMall);//加密
-        String encryptReq = DESUtil.encrypt(reqMsg, KEY);//Key是双方约定的
+        String encryptReq = DESUtil.encrypt(openMall.toJSONString(), KEY);//对称加密 Key是双方约定的
         Map<String, String> headersMall = new HashMap<String, String>();
         headersMall.put("Content-Type", "application/x-www-form-urlencoded");
 

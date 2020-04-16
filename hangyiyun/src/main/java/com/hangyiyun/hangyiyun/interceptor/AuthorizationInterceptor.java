@@ -85,22 +85,27 @@ public class AuthorizationInterceptor extends HandlerInterceptorAdapter {
                     log.info("打印token是：:"+token.toString());
                     /*获得token后 直接去redis验证是否存在*/
 
+                    int count = 0;
+
                     if(redisUtil == null){
-                        WebApplicationContext wac = WebApplicationContextUtils.getRequiredWebApplicationContext(request.getServletContext());
-                        redisUtil = wac.getBean(RedisUtil.class);
+                        do{
+                            count++;
+                            WebApplicationContext wac = WebApplicationContextUtils.getRequiredWebApplicationContext(request.getServletContext());
+                            redisUtil = wac.getBean(RedisUtil.class);
+                        } while (redisUtil == null || count > 10);
+                    }
 
-                        boolean hasToken = redisUtil.hasKey(token);
+                    boolean hasToken = redisUtil.hasKey(token);
 
-                        if (hasToken) {
-                            log.info("token 验证成功！");
-                            result = true;
-                        }else {
-                            log.error("token 验证失败！");
-                            resultMsg.put("message", "权限不足，传入的token以失效");
-                            resultMsg.put("status", "false");
-                            pw.write(resultMsg.toString());
-                            result = false;
-                        }
+                    if (hasToken) {
+                        log.info("token 验证成功！");
+                        result = true;
+                    }else {
+                        log.error("token 验证失败！");
+                        resultMsg.put("message", "权限不足，传入的token已失效");
+                        resultMsg.put("status", "false");
+                        pw.write(resultMsg.toString());
+                        result = false;
                     }
                 }
                 pw.flush();

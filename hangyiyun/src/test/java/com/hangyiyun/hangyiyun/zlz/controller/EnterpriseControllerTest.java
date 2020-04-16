@@ -2,6 +2,7 @@ package com.hangyiyun.hangyiyun.zlz.controller;
 
 
 import com.alibaba.fastjson.JSONObject;
+import com.hangyiyun.hangyiyun.annotation.AuthToken;
 import com.hangyiyun.hangyiyun.controller.EnterpriseController;
 import com.shsr.objectvo.vo.company.Enterprise;
 import com.shsr.objectvo.vo.user.PigcmsUser;
@@ -21,7 +22,6 @@ public class EnterpriseControllerTest {
     private Enterprise enterprise;
     @BeforeEach
     void setUp() {
-
     }
 
     @AfterEach

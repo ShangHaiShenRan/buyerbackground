@@ -1,10 +1,8 @@
 package com.hangyiyun.hangyiyun.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import com.hangyiyun.hangyiyun.utils.HttpClientUtils;
 import com.hangyiyun.hangyiyun.utils.HttpUtils;
 import com.hangyiyun.hangyiyun.utils.Util;
-import com.shsr.objectvo.vo.good.GoodsInfoBaseVO;
 import com.shsr.objectvo.vo.good.GoodsInfoVO;
 import org.apache.http.HttpResponse;
 import org.apache.http.util.EntityUtils;
@@ -60,6 +58,7 @@ public class GoodsController {
 
         return result;
     }
+
 
     /**
      * @Author wangcc

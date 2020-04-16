@@ -12,7 +12,6 @@
 	<name>buyerbackground-server-cluster</name>
 	<description>子模块之注册中心</description>
 	<packaging>jar</packaging>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -33,7 +32,7 @@
 					</execution>
 				</executions>
 				<configuration>
-					<imageName>server-cluster</imageName>
+					<imageName>buyerbackgound/${project.artifactId}:${project.version}</imageName>
 					<!-- <dockerDirectory>src/main/docker</dockerDirectory>-->
 					<dockerHost>http://8.129.18.200:2375</dockerHost>
 					<baseImage>java:8</baseImage>
