@@ -1,6 +1,7 @@
 package com.hangyiyun.hangyiyun.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import com.hangyiyun.hangyiyun.annotation.AuthToken;
 import com.hangyiyun.hangyiyun.utils.HttpUtils;
 import com.hangyiyun.hangyiyun.utils.StringUtils;
 import com.hangyiyun.hangyiyun.utils.Util;
@@ -54,13 +55,11 @@ public class OrderController {
         headers.put("Content-Type", "application/json");
 
         /*不能从redis中获取token，能到这步说明就直接将头中的token传入*/
-
         logger.info("toke:" + token.toString());
         if (StringUtils.isNotBlank(token)) {
             headers.put("Authorization", token);
             //result = util.getResultForObj(order,url,method,headers);
         }
-
 
         return result;
     }
@@ -151,9 +150,4 @@ public class OrderController {
         }
         return result;
     }
-
-
-
-
-
 }
