@@ -4,6 +4,8 @@ import com.alibaba.fastjson.JSONObject;
 import com.hangyiyun.hangyiyun.utils.HttpUtils;
 import com.hangyiyun.hangyiyun.utils.Util;
 import com.shsr.objectvo.vo.good.GoodsInfoVO;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.apache.http.HttpResponse;
 import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
@@ -22,6 +24,7 @@ import java.util.Map;
  * @Author: 骄傲的骨傲天
  * @Date: 2020/3/29 13:33
  */
+@Api(tags = "GoodsController",description  = "商品管理")
 @RestController
 @RequestMapping("/Goods")
 public class GoodsController {
@@ -43,6 +46,7 @@ public class GoodsController {
      * @Param [goodsInfoVO]
      * @return com.alibaba.fastjson.JSONObject
      **/
+    @ApiOperation("商品添加")
     @RequestMapping(value = "/goodsinfos",method = RequestMethod.POST)
     public JSONObject addGoods(@RequestBody GoodsInfoVO goodsInfoVO){
         JSONObject result = new JSONObject();
@@ -67,6 +71,7 @@ public class GoodsController {
      * @Param [goodsInfoVO]
      * @return com.alibaba.fastjson.JSONObject
      **/
+    @ApiOperation("商品修改")
     @RequestMapping(value = "/goodsinfos",method = RequestMethod.PUT)
     public JSONObject updataGoods(@RequestBody GoodsInfoVO goodsInfoVO){
         JSONObject result = new JSONObject();
@@ -81,6 +86,7 @@ public class GoodsController {
 
         return result;
     }
+
 
 
     @RequestMapping("/selectByPag")
