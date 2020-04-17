@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/object-vo/pom.xml" />
         <option value="$PROJECT_DIR$/buyerbackground-hystrix/pom.xml" />
         <option value="$PROJECT_DIR$/buyerbackground-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/supplychainfinance/pom.xml" />
       </list>
     </option>
   </component>

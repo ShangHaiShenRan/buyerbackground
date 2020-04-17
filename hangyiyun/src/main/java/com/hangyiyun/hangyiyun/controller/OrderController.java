@@ -1,6 +1,7 @@
 package com.hangyiyun.hangyiyun.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import com.hangyiyun.hangyiyun.annotation.AuthToken;
 import com.hangyiyun.hangyiyun.utils.HttpUtils;
 import com.hangyiyun.hangyiyun.utils.StringUtils;
 import com.hangyiyun.hangyiyun.utils.Util;
@@ -17,7 +18,7 @@ import java.util.Map;
 
 /**
  * @Author wangcc
- * @Description //TODO 订单：增删改查
+ * @Description //TODO 订单：增删改查，添加token
  * @Date 0:56 2020/4/4
  * @Param
  * @return
@@ -36,11 +37,12 @@ public class OrderController {
     /**
      * @return java.lang.String
      * @Author wangcc
-     * @Description //TODO 添加订单
+     * @Description //TODO 添加订单，验证token
      * @Date 0:59 2020/4/4
      * @Param [order]
      **/
     @RequestMapping(value = "/addOrder", method = RequestMethod.POST)
+    @AuthToken
     public JSONObject addOrder(@RequestBody Order order, @RequestHeader("Authorization") String token) {
         logger.info("打印传入的内容" + order.getCityCode());
 
@@ -54,13 +56,11 @@ public class OrderController {
         headers.put("Content-Type", "application/json");
 
         /*不能从redis中获取token，能到这步说明就直接将头中的token传入*/
-
         logger.info("toke:" + token.toString());
         if (StringUtils.isNotBlank(token)) {
             headers.put("Authorization", token);
             //result = util.getResultForObj(order,url,method,headers);
         }
-
 
         return result;
     }
@@ -69,11 +69,12 @@ public class OrderController {
     /**
      * @return com.alibaba.fastjson.JSONObject
      * @Author wangcc
-     * @Description //TODO 查询订单(GET请求)
+     * @Description //TODO 查询订单(GET请求) 验证token
      * @Date 12:20 2020/4/4
      * @Param []
      **/
     @RequestMapping(value = "/getOrder", method = RequestMethod.GET)
+    @AuthToken
     public JSONObject getOrderBy(@RequestParam String pageNum, String pageSize, String type,@RequestHeader("Authorization") String token) {
 
         logger.info("***************************************************************");
@@ -116,8 +117,15 @@ public class OrderController {
         return result;
     }
 
-
+    /*/**
+     * @Author Wangcc
+     * @Description //TODO POST 查询订单
+     * @Date 10:40 2020/4/17
+     * @Param [paymentWay, selectTime, startTime, endTime, selectDetail, details, orderStatus, pageNum, pageSize, token]
+     * @return com.alibaba.fastjson.JSONObject
+     **/
     @RequestMapping(value = "/getOrderByPost", method = RequestMethod.POST)
+    @AuthToken
     public JSONObject getOrderByPost(@RequestBody String paymentWay,String selectTime,String startTime,String endTime,String selectDetail,String details,String orderStatus,String pageNum,String pageSize,@RequestHeader("Authorization") String token){
         JSONObject result = new JSONObject();
 
@@ -151,9 +159,4 @@ public class OrderController {
         }
         return result;
     }
-
-
-
-
-
 }

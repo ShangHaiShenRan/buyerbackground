@@ -1,4 +1,4 @@
-package com.hangyiyun.hangyiyun.zlz.entity;
+package com.shsr.objectvo.vo.company;
 
 import lombok.Data;
 

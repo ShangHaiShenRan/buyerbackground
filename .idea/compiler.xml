@@ -7,11 +7,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="object-vo" />
-        <module name="buyerbackground-gateway" />
-        <module name="hangyiyun" />
         <module name="buyerbackground-hystrix" />
+        <module name="hangyiyun" />
         <module name="buyerbackground-server-cluster" />
+        <module name="object-vo" />
+        <module name="supplychainfinance" />
+        <module name="buyerbackground-gateway" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -26,6 +27,7 @@
       <module name="eureka_service01" options="-parameters" />
       <module name="hangyiyun" options="-parameters" />
       <module name="object-vo" options="-parameters" />
+      <module name="supplychainfinance" options="-parameters" />
     </option>
   </component>
 </project>
