@@ -87,8 +87,13 @@ public class GoodsController {
         return result;
     }
 
-
-
+   /*/**
+    * @Author Wangcc
+    * @Description //TODO 按页查找商品
+    * @Date 10:38 2020/4/17
+    * @Param [pageNum, pageSize, goodsCategory, goodsAttributes, goodsName]
+    * @return com.alibaba.fastjson.JSONObject
+    **/
     @RequestMapping("/selectByPag")
     public JSONObject selectByPage(@RequestParam String pageNum ,String pageSize,String goodsCategory,String goodsAttributes,String goodsName ){
         JSONObject result = new JSONObject();
@@ -123,6 +128,13 @@ public class GoodsController {
         return result;
     }
 
+    /*/**
+     * @Author Wangcc
+     * @Description //TODO 按id查找
+     * @Date 10:38 2020/4/17
+     * @Param []
+     * @return com.alibaba.fastjson.JSONObject
+     **/
     @RequestMapping("/selectById")
     public JSONObject selectById(){
 
