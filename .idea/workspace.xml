@@ -1,38 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="10754e25-b9de-489f-b88e-f4d8db37b879" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/cors/CorsMappingConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hangyiyun/src/main/resources/docker-compose-app.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_lettuce_lettuce_core_5_2_1_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_43_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_43_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_43_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_43_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_43_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_43_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_7_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_redis_2_2_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_2_3_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_keyvalue_2_2_3_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_redis_2_2_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_5_2_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_2_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__redis_clients_jedis_3_1_0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buyerbackground-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/buyerbackground-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buyerbackground-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/buyerbackground-gateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buyerbackground-hystrix/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/buyerbackground-hystrix/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buyerbackground-hystrix/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/buyerbackground-hystrix/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buyerbackground-server-cluster/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/buyerbackground-server-cluster/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buyerbackground-server-cluster/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/buyerbackground-server-cluster/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hangyiyun/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hangyiyun/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/GoodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/GoodsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hangyiyun/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/hangyiyun/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/object-vo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/object-vo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/object-vo/src/main/java/com/shsr/objectvo/vo/good/GoodsInfoVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/object-vo/src/main/java/com/shsr/objectvo/vo/good/GoodsInfoVO.java" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/buyerbackground-hystrix/target/" />
+    <ignored path="$PROJECT_DIR$/buyerbackground-gateway/target/" />
+    <ignored path="$PROJECT_DIR$/buyerbackground-server-cluster/target/" />
+    <ignored path="$PROJECT_DIR$/hangyiyun/target/" />
+    <ignored path="$PROJECT_DIR$/object-vo/target/" />
+    <ignored path="$PROJECT_DIR$/supplychainfinance/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,11 +47,51 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="backup-test@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="21" selection-start-line="21" selection-end-line="22" />
+              <folding>
+                <element signature="docComment;method#loginOut#0;class#UserController#0" />
+                <element signature="method#loginOut#0;class#UserController#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hangyiyun/src/test/java/com/hangyiyun/hangyiyun/zlz/controller/EnterpriseControllerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="874">
+              <caret line="49" column="54" selection-start-line="49" selection-start-column="46" selection-end-line="49" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/utils/RedisUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1173">
+              <caret line="61" selection-start-line="61" selection-end-line="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -73,46 +111,250 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
-    <option name="PUSH_TAGS">
-      <GitPushTagMode>
-        <option name="argument" value="--tags" />
-        <option name="title" value="All" />
-      </GitPushTagMode>
-    </option>
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/utils/DESUtil.java" />
+        <option value="$PROJECT_DIR$/buyerbackground-server-cluster/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/hangyiyun/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/zlz/controller/EnterpriseController.java" />
+        <option value="$PROJECT_DIR$/object-vo/src/main/java/com/shsr/objectvo/vo/company/Enterprise.java" />
+        <option value="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/GoodsController.java" />
+        <option value="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/HangyiyunApplication.java" />
+        <option value="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/OrderController.java" />
+        <option value="$PROJECT_DIR$/supplychainfinance/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/supplychainfinance/src/main/java/com/shsr/supplychainfinance/SupplychainfinanceApplication.java" />
+        <option value="$PROJECT_DIR$/supplychainfinance/pom.xml" />
+        <option value="$PROJECT_DIR$/supplychainfinance/src/main/java/com/shsr/buyerbackground/supplychainfinance/SupplychainfinanceApplication.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/hangyiyun/pom.xml" />
+        <option value="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/EnterpriseController.java" />
+        <option value="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/interceptor/AuthorizationInterceptor.java" />
+        <option value="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/hangyiyun/src/test/java/com/hangyiyun/hangyiyun/zlz/controller/EnterpriseControllerTest.java" />
+        <option value="$PROJECT_DIR$/buyerbackground-gateway/src/main/java/com/shsr/buyerbackgroundgateway/cors/CorsMappingConfig.java" />
+      </list>
+    </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="C:/software/apache-maven-3.6.1" />
-        <option name="userSettingsFile" value="C:\software\apache-maven-3.6.1\conf\settings.xml" />
+        <option name="localRepository" value="D:\Program Files\Apache\SHSRRepository" />
+        <option name="mavenHome" value="D:/Program Files/Apache/apache-maven-3.6.1" />
+        <option name="userSettingsFile" value="D:\Program Files\Apache\apache-maven-3.6.1\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="downloadDocsAutomatically" value="true" />
         <option name="downloadSourcesAutomatically" value="true" />
-        <option name="importAutomatically" value="true" />
         <option name="lookForNested" value="true" />
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
   <component name="MavenRunner">
     <option name="jreName" value="1.8" />
+    <option name="vmOptions" value="-DarchetypeCatalog=internal" />
   </component>
-  <component name="ProjectId" id="1aWhdpeelyRIgCZxGWsKR81uA9K" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="570" />
+    <option name="y" value="-20" />
+    <option name="width" value="1155" />
+    <option name="height" value="1040" />
+  </component>
+  <component name="ProjectId" id="1aYiarvTQW0YD2O6q5Ed9lCEKOu" />
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Class structureJava</id>
+          </State>
+          <State>
+            <id>Code maturity issuesJava</id>
+          </State>
+          <State>
+            <id>JUnit issuesJava</id>
+          </State>
+          <State>
+            <id>Java</id>
+          </State>
+          <State>
+            <id>Java 5Java language level migration aidsJava</id>
+          </State>
+          <State>
+            <id>Java 7Java language level migration aidsJava</id>
+          </State>
+          <State>
+            <id>Java 8Java language level migration aidsJava</id>
+          </State>
+          <State>
+            <id>Java language level migration aidsJava</id>
+          </State>
+          <State>
+            <id>Javadoc issuesJava</id>
+          </State>
+          <State>
+            <id>Numeric issuesJava</id>
+          </State>
+          <State>
+            <id>Spring</id>
+          </State>
+          <State>
+            <id>Spring AOPSpring</id>
+          </State>
+          <State>
+            <id>Threading issuesJava</id>
+          </State>
+        </expanded-state>
+      </profile-state>
+    </entry>
+  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="buyerbackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buyerbackground" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buyerbackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buyerbackground" type="462c0819:PsiDirectoryNode" />
+              <item name="hangyiyun" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buyerbackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buyerbackground" type="462c0819:PsiDirectoryNode" />
+              <item name="hangyiyun" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buyerbackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buyerbackground" type="462c0819:PsiDirectoryNode" />
+              <item name="hangyiyun" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buyerbackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buyerbackground" type="462c0819:PsiDirectoryNode" />
+              <item name="hangyiyun" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buyerbackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buyerbackground" type="462c0819:PsiDirectoryNode" />
+              <item name="hangyiyun" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hangyiyun" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buyerbackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buyerbackground" type="462c0819:PsiDirectoryNode" />
+              <item name="hangyiyun" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hangyiyun" type="462c0819:PsiDirectoryNode" />
+              <item name="annotation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buyerbackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buyerbackground" type="462c0819:PsiDirectoryNode" />
+              <item name="hangyiyun" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hangyiyun" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buyerbackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buyerbackground" type="462c0819:PsiDirectoryNode" />
+              <item name="hangyiyun" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hangyiyun" type="462c0819:PsiDirectoryNode" />
+              <item name="interceptor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buyerbackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buyerbackground" type="462c0819:PsiDirectoryNode" />
+              <item name="supplychainfinance" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buyerbackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buyerbackground" type="462c0819:PsiDirectoryNode" />
+              <item name="supplychainfinance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buyerbackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buyerbackground" type="462c0819:PsiDirectoryNode" />
+              <item name="supplychainfinance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buyerbackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buyerbackground" type="462c0819:PsiDirectoryNode" />
+              <item name="supplychainfinance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buyerbackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buyerbackground" type="462c0819:PsiDirectoryNode" />
+              <item name="supplychainfinance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="supplychainfinance" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
@@ -120,12 +362,11 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.console.LAST_STATE" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/hangyiyun/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/redis" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -138,20 +379,14 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.20140515" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
-  </component>
-  <component name="ReactorSettings">
-    <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.hangyiyun.hangyiyun" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.hangyiyun.hangyiyun.cors" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\software\workspace\shsr\buyerbackground\hangyiyun\src\main\resources" />
       <recent name="E:\ProjectHome\SHSR\buyerbackground\hangyiyun\src\main\java\com\hangyiyun\hangyiyun\redis" />
       <recent name="E:\ProjectHome\SHSR\buyerbackground\hangyiyun\src\main\java\com\hangyiyun\hangyiyun\config" />
       <recent name="E:\ProjectHome\SHSR\buyerbackground\hangyiyun\src\main\java\com\hangyiyun\hangyiyun" />
@@ -164,8 +399,33 @@
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.BuyerbackgroundServerClusterApplication-peer2">
+  <component name="RunManager" selected="Spring Boot.BuyerbackgroundGatewayApplication">
+    <configuration name="EnterpriseControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hangyiyun" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hangyiyun.hangyiyun.zlz.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.hangyiyun.hangyiyun.zlz.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.hangyiyun.hangyiyun.zlz.controller.EnterpriseControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BuyerbackgroundGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="buyerbackground-gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.shsr.buyerbackgroundgateway.BuyerbackgroundGatewayApplication" />
@@ -212,37 +472,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SupplychainfinanceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="supplychainfinance" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.shsr.supplychainfinance.SupplychainfinanceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="JUnit.EnterpriseControllerTest" />
       <item itemvalue="Spring Boot.BuyerbackgroundServerClusterApplication-peer2" />
-      <item itemvalue="Spring Boot.BuyerbackgroundServerClusterApplication-peer1" />
-      <item itemvalue="Spring Boot.BuyerbackgroundHystrixApplication" />
-      <item itemvalue="Spring Boot.BuyerbackgroundGatewayApplication" />
-      <item itemvalue="Spring Boot.HangyiyunApplication" />
       <item itemvalue="Spring Boot.ObjectVoApplication" />
+      <item itemvalue="Spring Boot.BuyerbackgroundHystrixApplication" />
+      <item itemvalue="Spring Boot.BuyerbackgroundServerClusterApplication-peer1" />
+      <item itemvalue="Spring Boot.HangyiyunApplication" />
+      <item itemvalue="Spring Boot.BuyerbackgroundGatewayApplication" />
+      <item itemvalue="Spring Boot.SupplychainfinanceApplication" />
     </list>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
+    <recent_temporary>
       <list>
-        <serviceView>
-          <option name="contentProportion" value="0.27117488" />
-          <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Not Started" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-            </expand>
-            <select />
-          </treeState>
-        </serviceView>
+        <item itemvalue="JUnit.EnterpriseControllerTest" />
       </list>
-    </option>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration>C:\Users\lenovo\AppData\Roaming\Subversion</configuration>
@@ -299,14 +550,12 @@
       <workItem from="1586479963257" duration="98000" />
       <workItem from="1586683315934" duration="129000" />
       <workItem from="1586745820642" duration="541000" />
-      <workItem from="1586857350228" duration="1128000" />
-      <workItem from="1586872507673" duration="2304000" />
-      <workItem from="1586912240472" duration="7407000" />
-      <workItem from="1586930211507" duration="9678000" />
-      <workItem from="1586953363926" duration="2153000" />
-      <workItem from="1586962250847" duration="954000" />
-      <workItem from="1587001756828" duration="10922000" />
-      <workItem from="1587014424791" duration="6694000" />
+      <workItem from="1586916636892" duration="2515000" />
+      <workItem from="1586919443697" duration="5250000" />
+      <workItem from="1586928560943" duration="13258000" />
+      <workItem from="1586944082295" duration="598000" />
+      <workItem from="1586998326740" duration="12959000" />
+      <workItem from="1587046611118" duration="619000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1585718957405</created>
@@ -350,28 +599,35 @@
       <option name="project" value="LOCAL" />
       <updated>1586746230586</updated>
     </task>
-    <task id="LOCAL-00007" summary="测试git提交问题:&#10; 1.单纯提交代码;">
-      <created>1586850875851</created>
+    <task id="LOCAL-00007" summary="4/15:review注册，开通平台平台;">
+      <created>1586932998097</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1586850875851</updated>
+      <updated>1586932998097</updated>
     </task>
-    <task id="LOCAL-00008" summary="网关">
-      <created>1586852865104</created>
+    <task id="LOCAL-00008" summary="4/16:添加供应链金融服务">
+      <created>1587010606686</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1586852865104</updated>
+      <updated>1587010606686</updated>
     </task>
-    <task id="LOCAL-00009" summary="来自：zlz的提交&#10;时间：2020/4/15">
-      <created>1586929172367</created>
+    <task id="LOCAL-00009" summary="4/16:添加供应链金融服务模块2：&#10;       1.修改了路径,和其他服务路径不一样;">
+      <created>1587013818587</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1586929172367</updated>
+      <updated>1587013818587</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="4/16:首次合并提交">
+      <created>1587034220980</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1587034220980</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -384,6 +640,106 @@
     <history-entry file="All_in_buyerbackground_(1) - 2020.03.31 at 19h 37m 58s.xml">
       <configuration name="All in buyerbackground (1)" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="EnterpriseControllerTest - 2020.04.15 at 14h 33m 50s.xml">
+      <configuration name="EnterpriseControllerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EnterpriseControllerTest - 2020.04.16 at 13h 32m 59s.xml">
+      <configuration name="EnterpriseControllerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EnterpriseControllerTest - 2020.04.16 at 13h 37m 38s.xml">
+      <configuration name="EnterpriseControllerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EnterpriseControllerTest - 2020.04.16 at 13h 40m 49s.xml">
+      <configuration name="EnterpriseControllerTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="32728000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24932976" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.6303116" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.7167139" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49932975" weight="0.3286119" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50067025" side_tool="true" weight="0.5736544" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="13" visible="true" weight="0.3186969" />
+      <window_info anchor="bottom" id="Run Dashboard" order="14" sideWeight="0.49932975" weight="0.34702548" />
+      <window_info anchor="bottom" id="Messages" order="15" weight="0.3286119" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.21179625" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.3297587" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24262735" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49932975" weight="0.3286119" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50067025" side_tool="true" weight="0.5736544" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Version Control" order="13" visible="true" weight="0.3201133" />
+      <window_info anchor="bottom" id="Run Dashboard" order="14" sideWeight="0.49932975" weight="0.14730878" />
+      <window_info anchor="bottom" id="Messages" order="15" weight="0.3286119" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.21179625" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.3297587" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -403,13 +759,33 @@
       <map>
         <entry key="1">
           <value>
-            <State />
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
           </value>
         </entry>
         <entry key="MAIN">
           <value>
             <State>
-              <option name="COLUMN_ORDER" />
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
             </State>
           </value>
         </entry>
@@ -437,115 +813,32 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="second commit:&#10; 1.添加了一个类，test 作为测试" />
     <MESSAGE value="测试git提交问题:&#10; 1.单纯提交代码;" />
-    <MESSAGE value="网关" />
-    <MESSAGE value="来自：zlz的提交&#10;时间：2020/4/15" />
-    <option name="LAST_COMMIT_MESSAGE" value="来自：zlz的提交&#10;时间：2020/4/15" />
+    <MESSAGE value="4/15:review注册，开通平台平台;" />
+    <MESSAGE value="4/16:添加供应链金融服务" />
+    <MESSAGE value="4/16:添加供应链金融服务模块2：&#10;       1.修改了路径,和其他服务路径不一样;" />
+    <MESSAGE value="4/16:首次合并提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="4/16:首次合并提交" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="361" y="74" key="#Scopes" timestamp="1586857604022">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="361" y="74" key="#Scopes/0.0.1536.824@0.0.1536.824" timestamp="1586857604022" />
-    <state x="223" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586851410086">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="223" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1586851410086" />
-    <state x="527" y="221" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586940920172">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="527" y="221" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1586940920172" />
-    <state x="353" y="0" key="CommitChangelistDialog2" timestamp="1586929170247">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="353" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1586929170247" />
-    <state x="549" y="170" key="FileChooserDialogImpl" timestamp="1586857454921">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1586857454921" />
-    <state width="1493" height="175" key="GridCell.Tab.0.bottom" timestamp="1587025516441">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="175" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587025516441" />
-    <state width="1493" height="175" key="GridCell.Tab.0.center" timestamp="1587025516441">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="175" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587025516441" />
-    <state width="1493" height="175" key="GridCell.Tab.0.left" timestamp="1587025516441">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="175" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587025516441" />
-    <state width="1493" height="175" key="GridCell.Tab.0.right" timestamp="1587025516441">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="175" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587025516441" />
-    <state width="1066" height="214" key="GridCell.Tab.1.bottom" timestamp="1587014170364">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1066" height="214" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587014170364" />
-    <state width="1066" height="214" key="GridCell.Tab.1.center" timestamp="1587014170364">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1066" height="214" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1587014170364" />
-    <state width="1066" height="214" key="GridCell.Tab.1.left" timestamp="1587014170364">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1066" height="214" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1587014170364" />
-    <state width="1066" height="214" key="GridCell.Tab.1.right" timestamp="1587014170364">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1066" height="214" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1587014170364" />
-    <state width="1024" height="210" key="GridCell.Tab.2.bottom" timestamp="1586850895013">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1024" height="210" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586850895013" />
-    <state width="1024" height="210" key="GridCell.Tab.2.center" timestamp="1586850895011">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1024" height="210" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1586850895011" />
-    <state width="1024" height="210" key="GridCell.Tab.2.left" timestamp="1586850895011">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1024" height="210" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1586850895011" />
-    <state width="1024" height="210" key="GridCell.Tab.2.right" timestamp="1586850895013">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1024" height="210" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1586850895013" />
-    <state x="272" y="0" key="SettingsEditor" timestamp="1586857474213">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="272" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1586857474213" />
-    <state x="361" y="136" key="Vcs.Push.Dialog.v2" timestamp="1586929200345">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="361" y="136" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1586929200345" />
-    <state x="461" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1587014423510">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="461" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1587014423510" />
-    <state x="428" y="214" key="git4idea.merge.GitPullDialog" timestamp="1586852900254">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="428" y="214" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1586852900254" />
-    <state x="178" y="120" key="new project wizard" timestamp="1586855114311">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="178" y="120" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1586855114311" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1587013865254">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1587013865254" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1587013202437">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1587013202437" />
+    <state x="353" y="0" key="CommitChangelistDialog2" />
+    <state x="353" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" />
+    <state x="270" y="57" key="SettingsEditor" />
+    <state x="270" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" log-message="true" suspend="NONE" type="java-line">
-          <url>file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/OrderController.java</url>
-          <line>75</line>
-          <option name="timeStamp" value="3" />
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/interceptor/AuthorizationInterceptor.java</url>
+          <line>94</line>
+          <properties />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/interceptor/AuthorizationInterceptor.java</url>
+          <line>97</line>
+          <properties />
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -554,5 +847,343 @@
         <watch expression="this" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/object-vo/src/main/java/com/shsr/objectvo/ObjectVoApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="6" selection-start-line="6" selection-end-line="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/object-vo/src/main/java/com/shsr/objectvo/vo/user/PigcmsUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.2.RELEASE/spring-web-5.2.2.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="137" selection-start-line="137" selection-end-line="137" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/object-vo/src/main/java/com/shsr/objectvo/vo/company/Enterprise.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/object-vo/src/test/java/com/shsr/objectvo/ObjectVoApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangyiyun/src/test/java/com/hangyiyun/hangyiyun/HangyiyunApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buyerbackground-server-cluster/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="7" lean-forward="true" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buyerbackground-server-cluster/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buyerbackground-server-cluster/src/main/java/com/shsr/buyerbackgroundservercluster/BuyerbackgroundServerClusterApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/GoodsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="42" column="31" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/OrderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="method#addOrder#0;class#OrderController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="21" column="65" selection-start-line="21" selection-start-column="65" selection-end-line="21" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supplychainfinance/src/main/resources/application.yml" />
+    <entry file="file://$PROJECT_DIR$/supplychainfinance/src/main/java/com/shsr/supplychainfinance/SupplychainfinanceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#287#288#0" expanded="true" />
+            <element signature="e#367#368#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buyerbackground-gateway/src/main/java/com/shsr/buyerbackgroundgateway/BuyerbackgroundGatewayApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buyerbackground-gateway/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="39" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangyiyun/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1656">
+          <caret line="72" column="4" selection-start-line="72" selection-start-column="4" selection-end-line="72" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/HangyiyunApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supplychainfinance/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="34" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/zlz/returnforobj/Data.java" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="13" column="48" lean-forward="true" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/zlz/returnforobj/EnterpriseRegister.java" />
+    <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/zlz/returnforobj/OpenMall.java" />
+    <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/annotation/AuthToken.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.2.2.RELEASE/spring-webmvc-5.2.2.RELEASE-sources.jar!/org/springframework/web/servlet/HandlerExecutionChain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="140" selection-start-line="140" selection-end-line="140" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.2.2.RELEASE/spring-webmvc-5.2.2.RELEASE-sources.jar!/org/springframework/web/servlet/handler/ConversionServiceExposingInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.29/tomcat-embed-core-9.0.29-sources.jar!/org/apache/catalina/connector/Request.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11">
+          <caret line="1505" selection-start-line="1505" selection-end-line="1505" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.29/tomcat-embed-core-9.0.29-sources.jar!/org/apache/catalina/connector/RequestFacade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="539" selection-start-line="539" selection-end-line="539" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/EnterpriseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-241">
+          <caret line="12" column="61" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="61" />
+          <folding>
+            <element signature="docComment;method#register#0;class#EnterpriseController#0" />
+            <element signature="method#register#0;class#EnterpriseController#0" />
+            <element signature="n#!!doc;n#login#0;n#EnterpriseController#0" />
+            <element signature="method#login#0;class#EnterpriseController#0" />
+            <element signature="n#!!doc;n#openMall#0;n#EnterpriseController#0" />
+            <element signature="method#openMall#0;class#EnterpriseController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/utils/DESUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="26" column="44" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/interceptor/AuthorizationInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="35" column="38" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#AuthorizationInterceptor#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="21" selection-start-line="21" selection-end-line="22" />
+          <folding>
+            <element signature="docComment;method#loginOut#0;class#UserController#0" />
+            <element signature="method#loginOut#0;class#UserController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangyiyun/src/test/java/com/hangyiyun/hangyiyun/zlz/controller/EnterpriseControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="874">
+          <caret line="49" column="54" selection-start-line="49" selection-start-column="46" selection-end-line="49" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/utils/RedisUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.20140515" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>object-vo</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.20140515" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
