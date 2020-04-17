@@ -24,7 +24,7 @@ import java.util.Map;
  * @Author: 骄傲的骨傲天
  * @Date: 2020/3/29 13:33
  */
-@Api(tags = "GoodsController",description  = "商品管理")
+@Api(tags = "GoodsController",value  = "商品管理",description = "商品管理")
 @RestController
 @RequestMapping("/Goods")
 public class GoodsController {
@@ -89,6 +89,7 @@ public class GoodsController {
 
 
 
+    @ApiOperation("商品分页查询")
     @RequestMapping("/selectByPag")
     public JSONObject selectByPage(@RequestParam String pageNum ,String pageSize,String goodsCategory,String goodsAttributes,String goodsName ){
         JSONObject result = new JSONObject();
@@ -122,6 +123,7 @@ public class GoodsController {
 
         return result;
     }
+
 
     @RequestMapping("/selectById")
     public JSONObject selectById(){
