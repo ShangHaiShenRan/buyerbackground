@@ -40,7 +40,7 @@ public class UserController {
     /**
      * @return JSONObject
      * @Author wangcc
-     * @Description //TODO 根据名字验证登陆获得token
+     * @Description 根据名字验证登陆获得token
      * @Date 13:04 2020/4/1
      * @Param []
      **/
@@ -120,7 +120,7 @@ public class UserController {
     /**
      * @return com.alibaba.fastjson.JSONObject
      * @Author wangcc
-     * @Description //TODO 退出
+     * @Description 退出
      * @Date 11:31 2020/4/4
      * @Param [token]
      **/
