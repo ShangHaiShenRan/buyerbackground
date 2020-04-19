@@ -4,6 +4,8 @@ import com.alibaba.fastjson.JSONObject;
 import com.hangyiyun.hangyiyun.utils.HttpClientUtils;
 import com.hangyiyun.hangyiyun.utils.Util;
 import com.shsr.objectvo.vo.mall.TMpfMallInfo;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,13 +18,14 @@ import java.util.Map;
 
 /**
  * @Author wangcc
- * @Description //TODO 商城 添加，修改，查询
+ * @Description 商城 添加，修改，查询
  * @Date 13:52 2020/4/5
  * @Param 
  * @return 
  **/
 @RestController
 @RequestMapping("/Mall")
+@Api(tags = "MallController",description  = "Saas商店管理")
 public class MallController {
 
     final String HOST="http://xyyapi.michain.tech";
@@ -41,6 +44,7 @@ public class MallController {
      * @Date: 2020/3/29 11:39
      */
     @RequestMapping(value = "/by/id",method = RequestMethod.GET)
+    @ApiOperation("根据id查找saas商店")
     public JSONObject selectMallByID(String id){
         JSONObject result = new JSONObject();
 
@@ -67,11 +71,12 @@ public class MallController {
 
     /**
      * @Author wangcc
-     * @Description //TODO 新增商城
+     * @Description  新增商城
      * @Date 10:53 2020/4/3
      * @Param [mallInfo]
      * @return
      **/
+    @ApiOperation("添加saas平台上面的商城")
     @RequestMapping(value = "/addMall",method = RequestMethod.POST)
     public JSONObject addMall(@RequestBody TMpfMallInfo mallInfo){
 
@@ -90,12 +95,13 @@ public class MallController {
 
     /**
      * @Author wangcc
-     * @Description //TODO 修改界面
+     * @Description  修改界面
      * @Date 14:08 2020/4/3
      * @Param
      * @return
      **/
     @RequestMapping(value = "/editMall",method = RequestMethod.POST)
+    @ApiOperation("修改商城信息")
     public JSONObject editMall(@RequestBody TMpfMallInfo mallInfo) {
 
         logger.info("进入editMall.........................................");
@@ -116,7 +122,7 @@ public class MallController {
 
     /**
      * @Author wangcc
-     * @Description //TODO 删除(假删除-修改状态)
+     * @Description  删除(假删除-修改状态)
      * @Date 14:34 2020/4/3
      * @Param [mallInfo]
      * @return java.lang.String

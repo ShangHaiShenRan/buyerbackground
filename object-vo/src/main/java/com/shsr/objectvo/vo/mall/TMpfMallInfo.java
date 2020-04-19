@@ -2,7 +2,7 @@ package com.shsr.objectvo.vo.mall;
 
 /**
  * @Author wangcc
- * @Description //TODO 将最后两个createAt 和 UpdateAt 字段的类型进行更改将 timestamp类型转化成string类型，原因前端返回的mall对象不能匹配
+ * @Description将最后两个createAt 和 UpdateAt 字段的类型进行更改将 timestamp类型转化成string类型，原因前端返回的mall对象不能匹配
  * @Date 15:06 2020/4/7
  * @Param
  * @return

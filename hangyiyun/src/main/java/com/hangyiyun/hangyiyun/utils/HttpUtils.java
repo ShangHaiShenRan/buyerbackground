@@ -37,7 +37,7 @@ import java.util.Map;
 
 /**
  * @Author wangcc
- * @Description //TODO  目前未使用，当前使用的http(HttpClientUtils)是自己封装的，后期若需要复杂http可能hi考虑使用
+ * @Description 目前未使用，当前使用的http(HttpClientUtils)是自己封装的，后期若需要复杂http可能考虑使用
  * @Date 10:08 2020/4/6
  * @Param 
  * @return 

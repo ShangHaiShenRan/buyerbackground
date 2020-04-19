@@ -27,6 +27,7 @@ import java.util.Map;
  **/
 @RestController
 @RequestMapping("/User")
+@Api(tags = "UserController",description  = "企业管理")
 public class UserController {
 
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
@@ -47,6 +48,7 @@ public class UserController {
      * @Param []
      **/
     @RequestMapping("/loginByName")
+    @ApiOperation("企业登陆接口")
     public JSONObject loginByName(@RequestBody @NotNull PigcmsUser pigcmsUser) {
 
         String path = "/admin/login/mall";
@@ -102,7 +104,6 @@ public class UserController {
                         result.put("status", "false");
                         logger.error("存储参数有误！");
                     }
-
                 } else {
                     result.put("status", "false");
                     logger.error("返回值为空:", jsonResp.getString("message"));
@@ -128,6 +129,7 @@ public class UserController {
      **/
     @RequestMapping("/loginOut")
     @AuthToken
+    @ApiOperation("企业退出的")
     public JSONObject loginOut(@RequestHeader("Authorization") String token ) {
 
         JSONObject result = new JSONObject();
