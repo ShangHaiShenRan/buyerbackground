@@ -6,6 +6,8 @@ import com.hangyiyun.hangyiyun.utils.HttpClientUtils;
 import com.hangyiyun.hangyiyun.utils.HttpUtils;
 import com.shsr.objectvo.vo.company.Enterprise;
 import com.shsr.objectvo.vo.user.PigcmsUser;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.apache.http.HttpResponse;
 import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
@@ -25,6 +27,7 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/Enterprise")
+@Api(tags = "EnterpriseController",description  = "云登陆注册管理")
 public class EnterpriseController {
     private final String HOST = "https://enterprise.michain.tech";
     private final String KEY = "d811ad6ff50765b1e791318643239744";
@@ -41,6 +44,7 @@ public class EnterpriseController {
      * 中台注册接口
      */
     @RequestMapping("/register")
+    @ApiOperation("云平台注册")
     public JSONObject register(Enterprise enterprise) {
 
         String path = "/api/third/registerapi";
@@ -107,6 +111,7 @@ public class EnterpriseController {
      *      3.删除try{}catch() 代码块
      * */
     @RequestMapping("/login")
+    @ApiOperation("云平台登陆")
     public JSONObject login(PigcmsUser pigcmsUser) {
 
         JSONObject result = new JSONObject();
@@ -136,6 +141,7 @@ public class EnterpriseController {
      *  1.将两个参数变成一个参数，所有内容都通过Enterprise 传递，这个后期拆分方便;
      *
      * */
+    @ApiOperation("saas平台开店")
     public JSONObject openMall(Enterprise enterprise) throws Exception {
         String pathMall = "/api/third/mall/open";
         String method = "POST";

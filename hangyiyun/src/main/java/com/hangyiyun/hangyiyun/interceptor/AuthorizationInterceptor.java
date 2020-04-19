@@ -21,7 +21,7 @@ import java.lang.reflect.Method;
 
 /**
  * @Author wangcc
- * @Description //TODO 拦截器，验证前端Token  方法：要验证的类上添加@AuthToken
+ * @Description 拦截器，验证前端Token  方法：要验证的类上添加@AuthToken
  * @Date 23:17 2020/4/3
  * @Param 
  * @return 
