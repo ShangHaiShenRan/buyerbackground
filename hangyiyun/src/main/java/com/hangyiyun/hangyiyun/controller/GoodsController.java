@@ -12,7 +12,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -87,7 +89,7 @@ public class GoodsController {
         return result;
     }
 
-   /*/**
+   /**
     * @Author Wangcc
     * @Description //TODO 按页查找商品
     * @Date 10:38 2020/4/17
@@ -128,7 +130,7 @@ public class GoodsController {
         return result;
     }
 
-    /*/**
+    /**
      * @Author Wangcc
      * @Description //TODO 按id查找
      * @Date 10:38 2020/4/17

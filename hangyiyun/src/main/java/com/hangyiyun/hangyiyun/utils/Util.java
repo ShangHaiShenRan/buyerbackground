@@ -23,11 +23,10 @@ public class Util {
     @Autowired
     private RedisUtil redisUtil;
 
-
     /**
      * @return com.alibaba.fastjson.JSONObject
      * @Author wangcc
-     * @Description //TODO 封装：根据key拿到string类型中的value
+     * @Description封装：根据key拿到string类型中的value
      * @Date 1:21 2020/4/4
      * @Param []
      **/
@@ -41,7 +40,7 @@ public class Util {
 
     /***
      * @Author wangcc
-     * @Description //TODO 将对象转化JSONObject,在请求第三方接口
+     * @Description将对象转化JSONObject,在请求第三方接口
      * @Date 1:14 2020/4/4
      * @Param [HOST, path, method, object]
      * @return java.lang.String
@@ -77,7 +76,7 @@ public class Util {
     /**
      * @return com.alibaba.fastjson.JSONObject
      * @Author wangcc
-     * @Description //TODO 获得响应检测状态
+     * @Description获得响应检测状态
      * @Date 0:44 2020/4/6
      * @Param [jsonObject]
      **/
@@ -103,7 +102,6 @@ public class Util {
         if (redisUtil.hasKey(key)) {
             Object o = redisUtil.get(key);
             if (null == o || o.equals("")) {
-
                 String jsonResult = (String) o;
                 result = jsonResult;
             }
