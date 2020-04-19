@@ -57,7 +57,6 @@ public class EnterpriseController {
             enterprise.setMerchantType(2);//商户类型 0卖家 1买家 2买卖家
             enterprise.setTimestamp(new Date(System.currentTimeMillis()));//13位时间戳
 
-            logger.info("写入内容成功，开始转化并将利用约定好的token加密");
 
             /*加密, 加密的key是一个token,是双方提前约定好的*/
             String enterpriseJson = JSONObject.toJSONString(enterprise);
@@ -70,8 +69,10 @@ public class EnterpriseController {
             bodys.put("userCode", "COM5704601385");//代理商编码，固定: COM5704601385
             bodys.put("encryptMsg", encryptionCode);//加密数据
 
+            //调用注册接口
             JSONObject jsonResp = HttpClientUtils.doPost(url, method, headers, bodys);
 
+            logger.info("注册完成");
             Boolean respStatus = jsonResp.getBoolean("status");//获得返回内容中状态;
             JSONObject respData = jsonResp.getJSONObject("data");//获得返回内容中状态;
 
@@ -83,8 +84,10 @@ public class EnterpriseController {
 
                 JSONObject openMallResult = openMall(enterprise);
                 result = openMallResult;
+                logger.info(result.toJSONString());
             } else {
                 result = jsonResp;//注册失败，将失败消息返回前端
+                logger.info(result.toJSONString());
             }
         } catch (Exception e) {
             e.printStackTrace();

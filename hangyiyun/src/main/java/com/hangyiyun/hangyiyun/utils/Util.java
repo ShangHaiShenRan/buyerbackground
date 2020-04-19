@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import java.util.Map;
@@ -16,6 +17,7 @@ import java.util.Map;
  * @Date: 2020/4/4 1:05
  */
 @Component
+@Scope("prototype")
 public class Util {
 
     private static final Logger logger = LoggerFactory.getLogger(Util.class);
@@ -26,7 +28,7 @@ public class Util {
     /**
      * @return com.alibaba.fastjson.JSONObject
      * @Author wangcc
-     * @Description封装：根据key拿到string类型中的value
+     * @Description 封装：根据key拿到string类型中的value
      * @Date 1:21 2020/4/4
      * @Param []
      **/
@@ -40,7 +42,7 @@ public class Util {
 
     /***
      * @Author wangcc
-     * @Description将对象转化JSONObject,在请求第三方接口
+     * @Description 将对象转化JSONObject,在请求第三方接口
      * @Date 1:14 2020/4/4
      * @Param [HOST, path, method, object]
      * @return java.lang.String
@@ -50,8 +52,7 @@ public class Util {
         JSONObject result = new JSONObject();
 
         /*转换格式 obj => JSONObject*/
-        String strObj = JSONObject.toJSONString(object);
-        JSONObject JsonBody = JSONObject.parseObject(strObj);
+        JSONObject JsonBody = (JSONObject) JSONObject.toJSON(object);
         if (null == JsonBody) {
             result.put("status", "false");
             logger.error("转化obj对象错误！");
@@ -76,7 +77,7 @@ public class Util {
     /**
      * @return com.alibaba.fastjson.JSONObject
      * @Author wangcc
-     * @Description获得响应检测状态
+     * @Description 获得响应检测状态
      * @Date 0:44 2020/4/6
      * @Param [jsonObject]
      **/

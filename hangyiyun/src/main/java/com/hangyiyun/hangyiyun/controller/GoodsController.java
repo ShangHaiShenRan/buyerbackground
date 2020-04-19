@@ -2,6 +2,7 @@ package com.hangyiyun.hangyiyun.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import com.hangyiyun.hangyiyun.utils.HttpUtils;
+import com.hangyiyun.hangyiyun.utils.UploadImageUtil;
 import com.hangyiyun.hangyiyun.utils.Util;
 import com.shsr.objectvo.vo.good.GoodsInfoVO;
 import io.swagger.annotations.Api;
@@ -43,7 +44,7 @@ public class GoodsController {
 
     /**
      * @Author wangcc
-     * @Description //TODO 商品添加
+     * @Description  商品添加
      * @Date 11:39 2020/4/6
      * @Param [goodsInfoVO]
      * @return com.alibaba.fastjson.JSONObject
@@ -68,7 +69,7 @@ public class GoodsController {
 
     /**
      * @Author wangcc
-     * @Description //TODO 商品修改
+     * @Description  商品修改
      * @Date 11:40 2020/4/6
      * @Param [goodsInfoVO]
      * @return com.alibaba.fastjson.JSONObject
@@ -91,11 +92,12 @@ public class GoodsController {
 
    /**
     * @Author Wangcc
-    * @Description //TODO 按页查找商品
+    * @Description  按页查找商品
     * @Date 10:38 2020/4/17
     * @Param [pageNum, pageSize, goodsCategory, goodsAttributes, goodsName]
     * @return com.alibaba.fastjson.JSONObject
     **/
+    @ApiOperation("按页查找商品")
     @RequestMapping("/selectByPag")
     public JSONObject selectByPage(@RequestParam String pageNum ,String pageSize,String goodsCategory,String goodsAttributes,String goodsName ){
         JSONObject result = new JSONObject();
@@ -132,11 +134,12 @@ public class GoodsController {
 
     /**
      * @Author Wangcc
-     * @Description //TODO 按id查找
+     * @Description  按id查找
      * @Date 10:38 2020/4/17
      * @Param []
      * @return com.alibaba.fastjson.JSONObject
      **/
+    @ApiOperation("根据id查找商品")
     @RequestMapping("/selectById")
     public JSONObject selectById(){
 
@@ -162,7 +165,17 @@ public class GoodsController {
         return result;
     }
 
+    @ApiOperation("上传图片")
+    @RequestMapping("/uploadImage")
+    public JSONObject uploadImage(MultipartFile[] file, HttpServletRequest request){
+        String path = "/admin/upload/image";
+        String url = HOST+path;
 
+        Map<String, String> parame=new HashMap<String,String>();
+        JSONObject jsonObject = UploadImageUtil.postRequest(url, parame, file, request);
+        return jsonObject;
+
+    }
 
     public void test(){
         System.out.println("1");
