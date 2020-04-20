@@ -32,6 +32,7 @@ import java.util.Map;
 @RequestMapping("/Goods")
 public class GoodsController {
 
+
     int test = 0;
 
     final String HOST="http://xyyapi.michain.tech";
@@ -89,7 +90,7 @@ public class GoodsController {
         return result;
     }
 
-   /*/**
+   /**
     * @Author Wangcc
     * @Description  按页查找商品
     * @Date 10:38 2020/4/17
@@ -131,8 +132,7 @@ public class GoodsController {
         return result;
     }
 
-
-    /*/**
+    /**
      * @Author Wangcc
      * @Description  按id查找
      * @Date 10:38 2020/4/17

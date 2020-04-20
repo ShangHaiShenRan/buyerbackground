@@ -27,7 +27,7 @@ public class HttpClientUtils {
 
     /**
      * @Author wangcc
-     * @Description
+     * @Description  post请求
      * @Date 23:58 2020/4/5
      * @Param [postUrl, headers, bodys]
      * @return com.alibaba.fastjson.JSONObject
@@ -46,7 +46,6 @@ public class HttpClientUtils {
             //请求方式
             conn.setRequestMethod(method);
 
-//            设置请求头参数
             for (Map.Entry<String, String> param : headers.entrySet()) {
                 conn.setRequestProperty(param.getKey(),param.getValue());
             }
@@ -90,7 +89,7 @@ public class HttpClientUtils {
 
     /**
      * @Author wangcc
-     * @Description Get请求
+     * @Description  Get请求
      * @Date 0:11 2020/4/6
      * @Param [url, headers, param]
      * @return java.lang.String
