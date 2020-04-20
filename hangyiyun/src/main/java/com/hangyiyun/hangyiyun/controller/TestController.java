@@ -1,12 +1,9 @@
 package com.hangyiyun.hangyiyun.controller;
 
-import com.hangyiyun.hangyiyun.apiResult.Result;
-import com.hangyiyun.hangyiyun.apiResult.ResultCode;
+import com.hangyiyun.hangyiyun.apiResult.ResultTemplate;
 import com.hangyiyun.hangyiyun.apiResult.ResultGenerator;
-import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.json.JSONObject;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,7 +22,7 @@ public class TestController {
 
     @RequestMapping("/test")
     @ApiOperation(tags="写入测试方法",value="这里写入测试的值")
-    public Result<JSONObject> test(){
+    public ResultTemplate<JSONObject> test(){
 
         JSONObject result = new JSONObject();
         result.put("date","this is demo");

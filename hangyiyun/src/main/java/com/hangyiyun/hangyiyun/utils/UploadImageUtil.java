@@ -3,6 +3,7 @@ package com.hangyiyun.hangyiyun.utils;
 import com.alibaba.fastjson.JSONObject;
 import org.springframework.web.multipart.MultipartFile;
 
+
 import javax.servlet.http.HttpServletRequest;
 import java.io.*;
 import java.net.HttpURLConnection;
@@ -15,8 +16,8 @@ public class UploadImageUtil {
     private static final String CHARSET = "utf-8";                         //编码格式
     private static final String PREFIX = "--";                            //前缀
     private static final String BOUNDARY = UUID.randomUUID().toString();  //边界标识 随机生成
-    private static final String CONTENT_TYPE = "multipart/form-data";     //内容类型
     private static final String LINE_END = "\r\n";                        //换行
+    private static final String CONTENT_TYPE = "multipart/form-data";     //内容类型
     /**
      * post请求方法
      * */
