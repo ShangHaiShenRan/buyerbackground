@@ -32,7 +32,7 @@ public class HttpTools {
      * @Param [host, path, headers, bodys, parames]
      * @return com.alibaba.fastjson.JSONObject
      **/
-    public static JSONObject doPost(String host, String path, Map<String,String> headers, Map<String,String> bodys, Map<String,String> parames) throws IOException {
+    public static JSONObject doPost(String host, String path, Map<String,String> headers, /*Map<String,String>*/JSONObject bodys, Map<String,String> parames) throws IOException {
 
         JSONObject result = new JSONObject();
 
@@ -44,11 +44,11 @@ public class HttpTools {
         }
 
         /*传入bodys  坑点！！！！ 之前是通过常用的list传入，用的NameValuePair 会出现 错误请求的情况*/
-        JSONObject jsonObject = new JSONObject();
+        /*JSONObject jsonObject = new JSONObject();
         for (Map.Entry<String,String> mt:bodys.entrySet()){
             jsonObject.put(mt.getKey(),mt.getValue());
-        }
-        post.setEntity(new StringEntity(jsonObject.toString()));
+        }*/
+        post.setEntity(new StringEntity(bodys.toString()));
 
         CloseableHttpClient requestClient = HttpClients.createDefault();//创建一个默认请求客户端；
 
@@ -70,7 +70,6 @@ public class HttpTools {
         return result;
 
     }
-
 
     /**
      * @Author Wangcc
@@ -141,15 +140,19 @@ public class HttpTools {
     public void test() throws IOException {
 
         String HOST = "http://xyyapi.michain.tech";
-        String path = "/admin/goodsinfos/123";
+        String path = "/admin/login/mall";
 
         Map<String,String> headers = new HashMap<String,String>();
         Map<String,String> parames = new HashMap<String,String>();
+        JSONObject bodys = new JSONObject();
 
         headers.put("Content-Type","application/json;charset=UTF-8");
+        bodys.put("account","test1.1");
+        bodys.put("password","test2.2");
 
+        //JSONObject jsonObject = doGet(HOST, path, headers, parames);
 
-        JSONObject jsonObject = doGet(HOST, path, headers, parames);
+        JSONObject jsonObject = doPost(HOST,path,headers,bodys,parames);
 
         System.out.println("打印返回内容是"+jsonObject.toString());
 
