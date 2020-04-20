@@ -11,6 +11,8 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import org.junit.jupiter.api.Test;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -23,6 +25,8 @@ import java.util.Map;
  * @创建时间: 2020/4/19
  * @描述:
  **/
+@Component
+@Scope("prototype")
 public class HttpTools {
 
     /**
