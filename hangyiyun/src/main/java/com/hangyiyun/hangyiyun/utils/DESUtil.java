@@ -29,7 +29,7 @@ public class DESUtil {
         Key deskey = keyGenerator(key);
         // 实例化Cipher对象，它用于完成实际的加密操作  
         Cipher cipher = Cipher.getInstance(CIPHER_ALGORITHM);  
-        SecureRandom random = new SecureRandom();  
+        SecureRandom random = new SecureRandom();
             // 初始化Cipher对象，设置为加密模式
         cipher.init(Cipher.ENCRYPT_MODE, deskey, random);  
         byte[] results = cipher.doFinal(data.getBytes("utf-8"));  
@@ -37,7 +37,7 @@ public class DESUtil {
         return Hex.toHexString(results);
     }
 
-    
+
     /**  
      * 解密数据  
      * @param data 待解密数据  
