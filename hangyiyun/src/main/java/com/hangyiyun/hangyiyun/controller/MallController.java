@@ -3,7 +3,7 @@ package com.hangyiyun.hangyiyun.controller;
 import com.alibaba.fastjson.JSONObject;
 import com.hangyiyun.hangyiyun.utils.HttpClientUtils;
 import com.hangyiyun.hangyiyun.utils.Util;
-import com.shsr.objectvo.vo.mall.TMpfMallInfo;
+import com.shsr.objectvo.hangyiyun.vo.mall.TMpfMallInfo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;

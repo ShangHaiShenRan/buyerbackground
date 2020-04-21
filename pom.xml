@@ -90,7 +90,9 @@
       <version>2.9.2</version>
     </dependency>
 
-
+    <!--
+      公共包
+    -->
     <dependency>
       <groupId>com.shsr</groupId>
       <artifactId>object-vo</artifactId>

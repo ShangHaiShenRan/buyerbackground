@@ -1,19 +1,19 @@
 package com.hangyiyun.hangyiyun.controller;
 
-import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.hangyiyun.hangyiyun.utils.DESUtil;
 import com.hangyiyun.hangyiyun.utils.HttpClientUtils;
-import com.hangyiyun.hangyiyun.utils.HttpTools;
+import com.hangyiyun.hangyiyun.utils.HttpUtilPlus;
 import com.hangyiyun.hangyiyun.utils.HttpUtils;
-import com.shsr.objectvo.vo.company.Enterprise;
-import com.shsr.objectvo.vo.user.PigcmsUser;
+import com.shsr.objectvo.hangyiyun.vo.company.Enterprise;
+import com.shsr.objectvo.hangyiyun.vo.user.PigcmsUser;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.apache.http.HttpResponse;
 import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -31,6 +31,9 @@ import java.util.Map;
 @RequestMapping("/Enterprise")
 @Api(tags = "EnterpriseController",description  = "云登陆注册管理")
 public class EnterpriseController {
+
+    @Autowired
+    private HttpUtilPlus httpUtilPlus;
     private final String HOST = "https://enterprise.michain.tech";
     private final String KEY = "d811ad6ff50765b1e791318643239744";
 
@@ -55,8 +58,6 @@ public class EnterpriseController {
 
         JSONObject result = new JSONObject();
 
-        logger.info("打印内容:"+enterprise.toString());
-
         try {
             enterprise.setUserCode("COM3151811246");//设置代理商编号
             enterprise.setPlatformCode("COM26506");//设置平台编码
@@ -68,40 +69,27 @@ public class EnterpriseController {
 
             /*加密, 加密的key是一个token,是双方提前约定好的*/
             String enterpriseJson = JSONObject.toJSONString(enterprise);
+            System.out.println(enterpriseJson);
             String encryptionCode = DESUtil.encrypt(enterpriseJson, KEY);
-            String decrypt = DESUtil.decrypt(encryptionCode, KEY);
-
-            System.out.println("打印解密后的内容:"+decrypt.toString());
 
             Map<String, String> headers = new HashMap<String, String>();
-            headers.put("Content-Type", "application/x-www-form-urlencoded");//接口要求格式
-            //headers.put("Content-Type", "application/json");//接口要求格式
+            headers.put("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");//接口要求格式
+            headers.put("Accept-Charset","UTF-8");
+            Map<String, String> paramet = new HashMap<String, String>();
+            paramet.put("userCode", "COM5704601385");//代理商编码，固定: COM5704601385
+            paramet.put("encryptMsg", encryptionCode);//加密数据
 
-            Map<String,String> parames = new HashMap<>();
-            parames.put("userCode", "COM5704601385");//代理商编码，固定: COM5704601385
-            parames.put("encryptMsg", encryptionCode);//加密数据
+            Map<String, String> bodys = new HashMap<String, String>();
+//            调用注册接口
+//            JSONObject jsonResp = HttpClientUtils.doPost(url, method, headers, bodys);
+            JSONObject jsonResp = httpUtilPlus.post(url, headers,paramet , bodys);
 
-            //调用注册接口
-            //JSONObject jsonResp = HttpClientUtils.doPost(url, method, headers, bodys);
-            /*Boolean respStatus = jsonResp.getBoolean("status");//获得返回内容中状态;
-            JSONObject respData = jsonResp.getJSONObject("data");//获得返回内容中状态;*/
-
-
-            JSONObject bodys = new JSONObject();
-
-           // HttpResponse httpResponse = HttpUtils.doPost(HOST, path, method, headers, parames,bodys);
-            JSONObject jsonResp = HttpTools.doPost(HOST, path, headers, bodys, parames);
-
-            //HttpEntity entity = httpResponse.getEntity();
-
-            //String s = EntityUtils.toString(entity);
-
-            System.out.println("获取内容是:"+jsonResp);
-
-
+            logger.info("注册成功");
+            Boolean respStatus = jsonResp.getBoolean("status");//获得返回内容中状态;
+            JSONObject respData = jsonResp.getJSONObject("data");//获得返回内容中状态;
 
             /*验证返回结果为true时和返回消息不为空(接口验证时出现过返回为true但是结果为空注册失败的情况)，直接开通商城*/
-            /*if (respStatus && respData != null && "".equals(respData)) {
+            if (respStatus && respData != null && "".equals(respData)) {
 
                 String companyCode = respData.getString("companyCode");
                 enterprise.setCompanyCode(companyCode);//掉用开店方法前，将返回的消息整合成一个实体类;
@@ -112,7 +100,7 @@ public class EnterpriseController {
             } else {
                 result = jsonResp;//注册失败，将失败消息返回前端
                 logger.info(result.toJSONString());
-            }*/
+            }
         } catch (Exception e) {
             e.printStackTrace();
             result.put("status", false);

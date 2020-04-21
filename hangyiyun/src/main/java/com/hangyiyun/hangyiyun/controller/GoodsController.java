@@ -1,26 +1,30 @@
 package com.hangyiyun.hangyiyun.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import com.hangyiyun.hangyiyun.utils.HttpImgTool;
+import com.hangyiyun.hangyiyun.apiresult.Result;
+import com.hangyiyun.hangyiyun.apiresult.ResultCode;
+import com.hangyiyun.hangyiyun.utils.HttpTools;
 import com.hangyiyun.hangyiyun.utils.HttpUtils;
-import com.hangyiyun.hangyiyun.utils.UploadImageUtil;
 import com.hangyiyun.hangyiyun.utils.Util;
-import com.shsr.objectvo.vo.good.GoodsInfoVO;
+import com.shsr.objectvo.hangyiyun.vo.good.GoodsInfoVO;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import org.apache.http.HttpResponse;
 import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.UUID;
+
 
 /*
  * 功能描述: <br>
@@ -32,7 +36,7 @@ import java.util.UUID;
  */
 @Api(tags = "GoodsController",description  = "商品管理")
 @RestController
-@RequestMapping("/Goods")
+@RequestMapping(value = "/Goods" ,produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 public class GoodsController {
 
 
@@ -42,15 +46,11 @@ public class GoodsController {
 
     private static final Logger logger = LoggerFactory.getLogger(MallController.class);
 
-
-    private static final String PREFIX = "--";                            //前缀
-    private static final String BOUNDARY = UUID.randomUUID().toString();  //边界标识 随机生成
-    private static final String LINE_END = "\r\n";                        //换行
-    private static final String CONTENT_TYPE = "multipart/form-data";     //内容类型
-
-
     @Autowired
     private Util util;
+
+    @Autowired
+    private HttpTools httpTools;
 
     /**
      * @Author wangcc
@@ -59,21 +59,29 @@ public class GoodsController {
      * @Param [goodsInfoVO]
      * @return com.alibaba.fastjson.JSONObject
      **/
-    @ApiOperation("商品添加")
+    @ApiOperation(value = "商品添加")
+    @ApiImplicitParams({
+            @ApiImplicitParam(paramType = "body",name = "goodsInfoVO",required=true,value = "商品详情")
+    })
     @RequestMapping(value = "/goodsinfos",method = RequestMethod.POST)
-    public JSONObject addGoods(@RequestBody GoodsInfoVO goodsInfoVO){
-        JSONObject result = new JSONObject();
-
+    public Result<JSONObject> addGoods(@RequestBody GoodsInfoVO goodsInfoVO){
+        JSONObject result = null;
         String path="/admin/goodsinfos";
-        String url = HOST+path;
-        String method = "POST";
 
         Map<String,String> headers = new HashMap<String,String>();
-        headers.put("Content-Type", "application/json");
+        headers.put("Content-Type", "application/json; charset=UTF-8");
 
-        result = util.getResultForObj(goodsInfoVO,url,method,headers);
+        Map<String,String> paramtes = new HashMap<String,String>();
 
-        return result;
+//        Objcet==>JSONObject
+        JSONObject body= (JSONObject) JSONObject.toJSON(goodsInfoVO);
+        try {
+            result = httpTools.doPost(HOST,path,headers,body,paramtes);
+            return new Result<JSONObject>().setCode(ResultCode.SUCCESS).setMessage("添加成功").setData(result);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return new Result<JSONObject>().setCode(ResultCode.INTERNAL_SERVER_ERROR).setMessage("添加失败").setData(result);
+        }
     }
 
 
@@ -176,12 +184,27 @@ public class GoodsController {
     }
 
     @ApiOperation("上传图片")
-    @RequestMapping("/uploadImage")
-    public JSONObject uploadImage(MultipartFile file, HttpServletRequest request) throws IOException {
+    @RequestMapping(value = "/uploadImage",method = RequestMethod.POST)
+    public Result uploadImage(MultipartFile[] file){
         String path = "/admin/upload/image";
         String url = HOST+path;
-        JSONObject jsonObject = HttpImgTool.uploadFile(url,file);
-        return jsonObject;
+        String key="file";
+        try {
+            JSONObject jsonObject= httpTools.uploadImage(url,key,file,null);
+            return new Result<JSONObject>().setCode(ResultCode.SUCCESS)
+                    .setMessage("上传成功")
+                    .setData(jsonObject);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new Result<JSONObject>().setCode(ResultCode.INTERNAL_SERVER_ERROR)
+                    .setMessage("上传失败")
+                    .setData(null);
+        }
+
+
     }
 
+    public void test(){
+        System.out.println("1");
+    }
 }
