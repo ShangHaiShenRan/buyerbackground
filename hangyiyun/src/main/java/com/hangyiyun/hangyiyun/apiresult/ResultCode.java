@@ -1,4 +1,4 @@
-package com.hangyiyun.hangyiyun.apiresult;
+package com.hangyiyun.hangyiyun.apiResult;
 
 /**
  * @创建人: wangcc

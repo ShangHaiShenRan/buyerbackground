@@ -3,8 +3,8 @@ package com.hangyiyun.hangyiyun.zlz.controller;
 import com.alibaba.fastjson.JSONObject;
 import com.hangyiyun.hangyiyun.controller.EnterpriseController;
 import com.hangyiyun.hangyiyun.controller.TestController;
-import com.shsr.objectvo.vo.company.Enterprise;
-import com.shsr.objectvo.vo.user.PigcmsUser;
+
+import com.shsr.objectvo.hangyiyun.vo.company.Enterprise;
 import org.junit.Test;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
