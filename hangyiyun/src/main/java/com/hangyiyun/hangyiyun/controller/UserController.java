@@ -6,7 +6,9 @@ import com.hangyiyun.hangyiyun.utils.HttpClientUtils;
 import com.hangyiyun.hangyiyun.utils.RedisUtil;
 import com.hangyiyun.hangyiyun.utils.StringUtils;
 import com.hangyiyun.hangyiyun.utils.Util;
-import com.shsr.objectvo.vo.user.PigcmsUser;
+import com.shsr.objectvo.hangyiyun.vo.user.PigcmsUser;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,13 +20,14 @@ import java.util.Map;
 
 /**
  * @Author wangcc
- * @Description //TODO 登陆
+ * @Description 登陆
  * @Date 9:25 2020/4/2
  * @Param
  * @return
  **/
 @RestController
 @RequestMapping("/User")
+@Api(tags = "UserController",description  = "企业管理")
 public class UserController {
 
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
@@ -40,11 +43,12 @@ public class UserController {
     /**
      * @return JSONObject
      * @Author wangcc
-     * @Description //TODO 根据名字验证登陆获得token
+     * @Description 根据名字验证登陆获得token
      * @Date 13:04 2020/4/1
      * @Param []
      **/
     @RequestMapping("/loginByName")
+    @ApiOperation("企业登陆接口")
     public JSONObject loginByName(@RequestBody @NotNull PigcmsUser pigcmsUser) {
 
         String path = "/admin/login/mall";
@@ -100,7 +104,6 @@ public class UserController {
                         result.put("status", "false");
                         logger.error("存储参数有误！");
                     }
-
                 } else {
                     result.put("status", "false");
                     logger.error("返回值为空:", jsonResp.getString("message"));
@@ -120,12 +123,13 @@ public class UserController {
     /**
      * @return com.alibaba.fastjson.JSONObject
      * @Author wangcc
-     * @Description //TODO 退出
+     * @Description 退出
      * @Date 11:31 2020/4/4
      * @Param [token]
      **/
     @RequestMapping("/loginOut")
     @AuthToken
+    @ApiOperation("企业退出的")
     public JSONObject loginOut(@RequestHeader("Authorization") String token ) {
 
         JSONObject result = new JSONObject();

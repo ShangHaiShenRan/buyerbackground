@@ -15,7 +15,6 @@
   <packaging>pom</packaging>
 
   <modules>
-      <module>supplychainfinance</module>
       <module>buyerbackground-gateway</module>
       <module>buyerbackground-hystrix</module>
       <module>buyerbackground-server-cluster</module>
@@ -78,6 +77,22 @@
       <optional>true</optional>
     </dependency>
 
+    <!--swagger2-->
+    <dependency>
+      <groupId>io.springfox</groupId>
+      <artifactId>springfox-swagger2</artifactId>
+      <version>2.9.2</version>
+    </dependency>
+
+    <dependency>
+      <groupId>io.springfox</groupId>
+      <artifactId>springfox-swagger-ui</artifactId>
+      <version>2.9.2</version>
+    </dependency>
+
+    <!--
+      公共包
+    -->
     <dependency>
       <groupId>com.shsr</groupId>
       <artifactId>object-vo</artifactId>

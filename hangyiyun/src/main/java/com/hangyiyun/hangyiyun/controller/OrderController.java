@@ -1,30 +1,33 @@
 package com.hangyiyun.hangyiyun.controller;
 
-import com.alibaba.fastjson.JSONObject;
-import com.hangyiyun.hangyiyun.annotation.AuthToken;
-import com.hangyiyun.hangyiyun.utils.HttpUtils;
-import com.hangyiyun.hangyiyun.utils.StringUtils;
-import com.hangyiyun.hangyiyun.utils.Util;
-import com.shsr.objectvo.vo.order.Order;
-import org.apache.http.HttpResponse;
-import org.apache.http.util.EntityUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+        import com.alibaba.fastjson.JSONObject;
+        import com.hangyiyun.hangyiyun.annotation.AuthToken;
+        import com.hangyiyun.hangyiyun.utils.HttpUtils;
+        import com.hangyiyun.hangyiyun.utils.StringUtils;
+        import com.hangyiyun.hangyiyun.utils.Util;
+        import com.shsr.objectvo.hangyiyun.vo.order.Order;
+        import io.swagger.annotations.Api;
+        import io.swagger.annotations.ApiOperation;
+        import org.apache.http.HttpResponse;
+        import org.apache.http.util.EntityUtils;
+        import org.slf4j.Logger;
+        import org.slf4j.LoggerFactory;
+        import org.springframework.beans.factory.annotation.Autowired;
+        import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
-import java.util.Map;
+        import java.util.HashMap;
+        import java.util.Map;
 
 /**
  * @Author wangcc
- * @Description //TODO 订单：增删改查
+ * @Description 订单：增删改查，添加token
  * @Date 0:56 2020/4/4
  * @Param
  * @return
  **/
 @RestController
 @RequestMapping("/Order")
+@Api(tags = "OrderController",description  = "订单管理")
 public class OrderController {
 
     final String HOST = "http://xyyapi.michain.tech";
@@ -37,11 +40,13 @@ public class OrderController {
     /**
      * @return java.lang.String
      * @Author wangcc
-     * @Description //TODO 添加订单
+     * @Description 添加订单，验证token
      * @Date 0:59 2020/4/4
      * @Param [order]
      **/
     @RequestMapping(value = "/addOrder", method = RequestMethod.POST)
+    @ApiOperation("添加订单")
+    @AuthToken
     public JSONObject addOrder(@RequestBody Order order, @RequestHeader("Authorization") String token) {
         logger.info("打印传入的内容" + order.getCityCode());
 
@@ -58,7 +63,6 @@ public class OrderController {
         logger.info("toke:" + token.toString());
         if (StringUtils.isNotBlank(token)) {
             headers.put("Authorization", token);
-            //result = util.getResultForObj(order,url,method,headers);
         }
 
         return result;
@@ -68,11 +72,13 @@ public class OrderController {
     /**
      * @return com.alibaba.fastjson.JSONObject
      * @Author wangcc
-     * @Description //TODO 查询订单(GET请求)
+     * @Description 查询订单(GET请求) 验证token
      * @Date 12:20 2020/4/4
      * @Param []
      **/
+    @ApiOperation("查询订单")
     @RequestMapping(value = "/getOrder", method = RequestMethod.GET)
+    @AuthToken
     public JSONObject getOrderBy(@RequestParam String pageNum, String pageSize, String type,@RequestHeader("Authorization") String token) {
 
         logger.info("***************************************************************");
@@ -115,8 +121,16 @@ public class OrderController {
         return result;
     }
 
-
+    /*/**
+     * @Author Wangcc
+     * @Description // POST 查询订单
+     * @Date 10:40 2020/4/17
+     * @Param [paymentWay, selectTime, startTime, endTime, selectDetail, details, orderStatus, pageNum, pageSize, token]
+     * @return com.alibaba.fastjson.JSONObject
+     **/
+    @ApiOperation("查询订单(POST)")
     @RequestMapping(value = "/getOrderByPost", method = RequestMethod.POST)
+    @AuthToken
     public JSONObject getOrderByPost(@RequestBody String paymentWay,String selectTime,String startTime,String endTime,String selectDetail,String details,String orderStatus,String pageNum,String pageSize,@RequestHeader("Authorization") String token){
         JSONObject result = new JSONObject();
 

@@ -3,13 +3,17 @@ package com.hangyiyun.hangyiyun.controller;
 import com.alibaba.fastjson.JSONObject;
 import com.hangyiyun.hangyiyun.utils.DESUtil;
 import com.hangyiyun.hangyiyun.utils.HttpClientUtils;
+import com.hangyiyun.hangyiyun.utils.HttpUtilPlus;
 import com.hangyiyun.hangyiyun.utils.HttpUtils;
-import com.shsr.objectvo.vo.company.Enterprise;
-import com.shsr.objectvo.vo.user.PigcmsUser;
+import com.shsr.objectvo.hangyiyun.vo.company.Enterprise;
+import com.shsr.objectvo.hangyiyun.vo.user.PigcmsUser;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.apache.http.HttpResponse;
 import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,7 +29,11 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/Enterprise")
+@Api(tags = "EnterpriseController",description  = "云登陆注册管理")
 public class EnterpriseController {
+
+    @Autowired
+    private HttpUtilPlus httpUtilPlus;
     private final String HOST = "https://enterprise.michain.tech";
     private final String KEY = "d811ad6ff50765b1e791318643239744";
 
@@ -41,6 +49,7 @@ public class EnterpriseController {
      * 中台注册接口
      */
     @RequestMapping("/register")
+    @ApiOperation("云平台注册")
     public JSONObject register(Enterprise enterprise) {
 
         String path = "/api/third/registerapi";
@@ -57,21 +66,25 @@ public class EnterpriseController {
             enterprise.setMerchantType(2);//商户类型 0卖家 1买家 2买卖家
             enterprise.setTimestamp(new Date(System.currentTimeMillis()));//13位时间戳
 
-            logger.info("写入内容成功，开始转化并将利用约定好的token加密");
 
             /*加密, 加密的key是一个token,是双方提前约定好的*/
             String enterpriseJson = JSONObject.toJSONString(enterprise);
+            System.out.println(enterpriseJson);
             String encryptionCode = DESUtil.encrypt(enterpriseJson, KEY);
 
             Map<String, String> headers = new HashMap<String, String>();
-            headers.put("Content-Type", "application/x-www-form-urlencoded");//接口要求格式
+            headers.put("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");//接口要求格式
+            headers.put("Accept-Charset","UTF-8");
+            Map<String, String> paramet = new HashMap<String, String>();
+            paramet.put("userCode", "COM5704601385");//代理商编码，固定: COM5704601385
+            paramet.put("encryptMsg", encryptionCode);//加密数据
 
-            JSONObject bodys = new JSONObject();
-            bodys.put("userCode", "COM5704601385");//代理商编码，固定: COM5704601385
-            bodys.put("encryptMsg", encryptionCode);//加密数据
+            Map<String, String> bodys = new HashMap<String, String>();
+//            调用注册接口
+//            JSONObject jsonResp = HttpClientUtils.doPost(url, method, headers, bodys);
+            JSONObject jsonResp = httpUtilPlus.post(url, headers,paramet , bodys);
 
-            JSONObject jsonResp = HttpClientUtils.doPost(url, method, headers, bodys);
-
+            logger.info("注册成功");
             Boolean respStatus = jsonResp.getBoolean("status");//获得返回内容中状态;
             JSONObject respData = jsonResp.getJSONObject("data");//获得返回内容中状态;
 
@@ -83,8 +96,10 @@ public class EnterpriseController {
 
                 JSONObject openMallResult = openMall(enterprise);
                 result = openMallResult;
+                logger.info(result.toJSONString());
             } else {
                 result = jsonResp;//注册失败，将失败消息返回前端
+                logger.info(result.toJSONString());
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -104,6 +119,7 @@ public class EnterpriseController {
      *      3.删除try{}catch() 代码块
      * */
     @RequestMapping("/login")
+    @ApiOperation("云平台登陆")
     public JSONObject login(PigcmsUser pigcmsUser) {
 
         JSONObject result = new JSONObject();
@@ -133,6 +149,7 @@ public class EnterpriseController {
      *  1.将两个参数变成一个参数，所有内容都通过Enterprise 传递，这个后期拆分方便;
      *
      * */
+    @ApiOperation("saas平台开店")
     public JSONObject openMall(Enterprise enterprise) throws Exception {
         String pathMall = "/api/third/mall/open";
         String method = "POST";

@@ -15,11 +15,9 @@
 
 	<properties>
 		<fastjson.version>1.2.58</fastjson.version>
-		<target.dir>E:/data/jar</target.dir>
 	</properties>
 
 	<dependencies>
-
 		<!--json解析jar包-->
 		<dependency>
 			<groupId>com.alibaba</groupId>
@@ -27,13 +25,7 @@
 			<version>${fastjson.version}</version>
 		</dependency>
 
-		 <!--配置·redis-->
-		<dependency>
-			<groupId>org.springframework.data</groupId>
-			<artifactId>spring-data-redis</artifactId>
-			<version>RELEASE</version>
-		</dependency>
-
+		<!--配置·redis-->
 		<!-- redis -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -57,6 +49,7 @@
 			<artifactId>json</artifactId>
 			<version>20140107</version>
 		</dependency>
+
 		<dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
@@ -67,6 +60,14 @@
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
+		</dependency>
+		<!--
+     		如果需要灵活的传输文件，引入此依赖后会更加方便
+		-->
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpmime</artifactId>
+			<version>4.5.5</version>
 		</dependency>
 
 	</dependencies>
@@ -91,7 +92,7 @@
 					</execution>
 				</executions>
 				<configuration>
-					<imageName>hangyiyun7201</imageName>
+					<imageName>buyerbackgound/${project.artifactId}:${project.version}-plus</imageName>
 					<!-- <dockerDirectory>src/main/docker</dockerDirectory>-->
 					<dockerHost>http://8.129.18.200:2375</dockerHost>
 					<baseImage>java:8</baseImage>
@@ -107,6 +108,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
-
 </project>

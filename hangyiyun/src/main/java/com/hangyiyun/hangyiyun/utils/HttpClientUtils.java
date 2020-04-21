@@ -27,7 +27,7 @@ public class HttpClientUtils {
 
     /**
      * @Author wangcc
-     * @Description //TODO post请求
+     * @Description  post请求
      * @Date 23:58 2020/4/5
      * @Param [postUrl, headers, bodys]
      * @return com.alibaba.fastjson.JSONObject
@@ -62,7 +62,6 @@ public class HttpClientUtils {
             //flush输出流的缓冲
             out.flush();
 
-
             /*获取返回结果*/
             InputStream is = conn.getInputStream();
             //构造一个字符流缓存
@@ -71,7 +70,7 @@ public class HttpClientUtils {
             while ((str = br.readLine()) != null){
                 result += str;
             }
-            System.out.println(result);
+//            System.out.println(result);
             //关闭流
             is.close();
             //断开连接
@@ -90,7 +89,7 @@ public class HttpClientUtils {
 
     /**
      * @Author wangcc
-     * @Description //TODO Get请求
+     * @Description  Get请求
      * @Date 0:11 2020/4/6
      * @Param [url, headers, param]
      * @return java.lang.String

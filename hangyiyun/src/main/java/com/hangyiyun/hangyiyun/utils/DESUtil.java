@@ -7,6 +7,7 @@ import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.DESKeySpec;
+import java.net.URLEncoder;
 import java.security.Key;
 import java.security.SecureRandom;
 
@@ -28,7 +29,7 @@ public class DESUtil {
         Key deskey = keyGenerator(key);
         // 实例化Cipher对象，它用于完成实际的加密操作  
         Cipher cipher = Cipher.getInstance(CIPHER_ALGORITHM);  
-        SecureRandom random = new SecureRandom();  
+        SecureRandom random = new SecureRandom();
             // 初始化Cipher对象，设置为加密模式
         cipher.init(Cipher.ENCRYPT_MODE, deskey, random);  
         byte[] results = cipher.doFinal(data.getBytes("utf-8"));  
@@ -36,7 +37,7 @@ public class DESUtil {
         return Hex.toHexString(results);
     }
 
-    
+
     /**  
      * 解密数据  
      * @param data 待解密数据  
@@ -76,8 +77,16 @@ public class DESUtil {
     public static void main(String[] args) {
 
         try {
-            System.out.println(encrypt("15318828897","ded3f805f7dcfcbd6a63b0d08ea669fb"));
-            System.out.println(encrypt("15318828897,"+System.currentTimeMillis(),"ded3f805f7dcfcbd6a63b0d08ea669fb"));
+//            System.out.println(encrypt("{\"companyName\":\"测试数据企业无九方la\",\"merchantType\":2,\"origin\":8,\"password\":\"Zlz13117500158\",\"phone\":\"17611118815\",\"platformCode\":\"COM26506\",\"registerType\":0,\"timestamp\":1587347976744,\"userCode\":\"COM3151811246\"}\n","ded3f805f7dcfcbd6a63b0d08ea669fb"));
+//            System.out.println(decrypt(encrypt("{\"companyName\":\"测试数据企业无九方la\",\"merchantType\":2,\"origin\":8,\"password\":\"Zlz13117500158\",\"phone\":\"17611118815\",\"platformCode\":\"COM26506\",\"registerType\":0,\"timestamp\":1587347976744,\"userCode\":\"COM3151811246\"}\n","ded3f805f7dcfcbd6a63b0d08ea669fb"),"ded3f805f7dcfcbd6a63b0d08ea669fb"));
+            System.out.println(decrypt("b1e6a35b2f698d7fd3b8142813ec85ac021a4" +
+                    "1a35a22e6b7268c5c4c85023a00f0f072f5e5220e2d56f0452ffc9cf8671de806aa401aae90fa76" +
+                    "6149356f6307976c72d9b182806c72f47d9dd2d6f49c64095dc721ab2c83f2758a13080a9141ec567684dcb5d4d" +
+                    "9e29cc9d2775d1fa15c5d15057e4ca5e47c602c70e4723906940880cd1e8a0e070ddde7213791ae273b1194a32a435f86dfd" +
+                    "1cc828736666f1bdb5c6e000e375f21d57d78f834b2387af184ae459012ece5af2676cbe77b41a61901585756cceff136c" +
+                    "0a45e2a19863f26b5c4861579dfa42b6013e5df7d5c","COM5704601385"));
+
+
         } catch (Exception e) {
             e.printStackTrace();
         }
