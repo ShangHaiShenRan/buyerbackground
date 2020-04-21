@@ -19,10 +19,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -187,6 +187,47 @@ public class GoodsController {
         return result;
     }
 
+
+    /**
+     * @Author Wangcc
+     * @Description 通过mallCode获取商品
+     * @Date 21:17 2020/4/21
+     * @Param [pageNum, pageSize, mallCode, mallName, goodsName]
+     * @return com.hangyiyun.hangyiyun.apiResult.Result<com.alibaba.fastjson.JSONObject>
+     **/
+    @ApiOperation("根据mallCode查找每个店自己商品")
+    @RequestMapping("/selectByMallCode")
+    public Result<JSONObject> selectBymallCode(@RequestParam String pageNum,String pageSize ,String mallCode,String mallName,String goodsName){
+
+        String path = "/admin/xyy/do-get-all-goods-list-insale";
+
+        Map<String,String> params = new HashMap<String,String>();
+        Map<String,String> headers = new HashMap<String,String>();
+
+        headers.put("Content-Type", "multipart/form-data");
+        params.put("pageNum",pageNum);
+        params.put("pageSize",pageSize);
+        params.put("mallCode",mallCode);
+        params.put("mallName",mallName);
+        params.put("goodsName",goodsName);
+
+        try {
+            JSONObject jsonObject = httpTools.doGet(HOST, path, headers, params);
+            if(!jsonObject.isEmpty()){
+                return new Result<JSONObject>().setCode(ResultCode.SUCCESS).setMessage("请求成功").setData(jsonObject);
+            }else{
+                return   new Result<JSONObject>().setCode(ResultCode.INTERNAL_SERVER_ERROR).setMessage("获取数据失败").setData(null);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            return   new Result<JSONObject>().setCode(ResultCode.INTERNAL_SERVER_ERROR).setMessage("获取数据失败").setData(null);
+        }
+
+    }
+
+
+
+
     @ApiOperation("上传图片")
     @RequestMapping(value = "/uploadImage",method = RequestMethod.POST)
     public Result uploadImage(MultipartFile[] file){
@@ -214,8 +255,4 @@ public class GoodsController {
 
     }
 
-
-    public void test(){
-        System.out.println("1");
-    }
 }
