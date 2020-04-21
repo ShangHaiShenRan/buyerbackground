@@ -6,6 +6,7 @@ import com.hangyiyun.hangyiyun.apiresult.ResultCode;
 import com.hangyiyun.hangyiyun.controller.mall.MallController;
 import com.hangyiyun.hangyiyun.utils.HttpTools;
 import com.hangyiyun.hangyiyun.utils.HttpUtils;
+import com.hangyiyun.hangyiyun.utils.PageBean;
 import com.hangyiyun.hangyiyun.utils.Util;
 import com.shsr.objectvo.hangyiyun.vo.good.GoodsInfoVO;
 import io.swagger.annotations.Api;
@@ -38,6 +39,7 @@ import java.util.Map;
 @RestController
 @RequestMapping(value = "/Goods" ,produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 public class GoodsController {
+
 
     final String HOST="http://xyyapi.michain.tech";
 
@@ -206,6 +208,7 @@ public class GoodsController {
 
 
     }
+
 
     public void test(){
         System.out.println("1");

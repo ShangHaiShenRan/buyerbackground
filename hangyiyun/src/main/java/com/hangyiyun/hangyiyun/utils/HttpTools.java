@@ -44,7 +44,7 @@ public class HttpTools {
      * @Param [host, path, headers, bodys, parames]
      * @return com.alibaba.fastjson.JSONObject
      **/
-    public JSONObject doPost(String host, String path, Map<String,String> headers, /*Map<String,String>*/JSONObject bodys, Map<String,String> parames) throws IOException {
+    public JSONObject doPost(String host, String path, Map<String,String> headers, JSONObject bodys, Map<String,String> parames) throws IOException {
 
         JSONObject result = new JSONObject();
 
