@@ -15,7 +15,6 @@
   <packaging>pom</packaging>
 
   <modules>
-      <module>supplychainfinance</module>
       <module>buyerbackground-gateway</module>
       <module>buyerbackground-hystrix</module>
       <module>buyerbackground-server-cluster</module>

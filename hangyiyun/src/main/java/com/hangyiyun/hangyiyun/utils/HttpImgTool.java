@@ -16,11 +16,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.servlet.http.HttpServletRequest;
 import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.UUID;
 
 /**
  * @创建人: wangcc
@@ -30,9 +28,6 @@ import java.util.UUID;
 public class HttpImgTool {
 
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
-
-
-
 
     public static JSONObject uploadFile(String requestUrl, final MultipartFile multipartFile) throws IOException {
 

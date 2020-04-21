@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="10754e25-b9de-489f-b88e-f4d8db37b879" name="Default Changelist" comment="">
+    <list default="true" id="10754e25-b9de-489f-b88e-f4d8db37b879" name="Default Changelist" comment="4/1: 拉取内容;">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/GoodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/GoodsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/utils/HttpImgTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/utils/HttpImgTool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
+    <list id="ebf58cce-852d-4847-8ee2-09af65b7af1d" name="4/17: 拉取内容;" comment="">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <list id="d6566049-7f25-40aa-8b83-86e6b4a6d0fa" name="4/1: 拉取内容2;" comment="4/20: 提交 Result;" />
+    <list id="12f6fa66-f76f-4c09-a98a-4774d8855fda" name="4/1: 拉取内容;" comment="" />
+    <ignored path="$PROJECT_DIR$/buyerbackground-server-cluster/target/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/hangyiyun/target/" />
+    <ignored path="$PROJECT_DIR$/buyerbackground-gateway/target/" />
+    <ignored path="$PROJECT_DIR$/buyerbackground-hystrix/target/" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/object-vo/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,6 +42,118 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/utils/HttpUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4094">
+              <caret line="290" column="34" selection-start-line="290" selection-start-column="26" selection-end-line="290" selection-end-column="34" />
+              <folding>
+                <element signature="method#doGet#0;class#HttpUtils#0" />
+                <element signature="method#doGet#1;class#HttpUtils#0" />
+                <element signature="docComment;method#doPost#0;class#HttpUtils#0" />
+                <element signature="method#doPost#0;class#HttpUtils#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.2.RELEASE/spring-web-5.2.2.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="580">
+              <caret line="189" selection-start-line="189" selection-end-line="189" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/TestController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="23" column="47" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/utils/HttpImgTool.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1196">
+              <caret line="52" column="20" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#test#0;class#HttpImgTool#0" />
+                <element signature="method#readFile#0;class#HttpImgTool#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="235">
+              <caret line="127" column="38" selection-start-line="127" selection-end-line="128" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/apiResult/ResultTemplate.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="8" column="27" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/apiResult/ResultGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="483">
+              <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/apiResult/ResultCode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+              <folding>
+                <element signature="e#338#339#0" expanded="true" />
+                <element signature="e#370#371#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/utils/UploadImageUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="21" column="15" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="15" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://D:/Program Files/java/jdk1.8.0_121/src.zip!/java/util/UUID.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2691">
+              <caret line="140" column="23" selection-start-line="140" selection-start-column="23" selection-end-line="140" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -45,25 +172,62 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
-    <option name="PUSH_TAGS">
-      <GitPushTagMode>
-        <option name="argument" value="--tags" />
-        <option name="title" value="All" />
-      </GitPushTagMode>
-    </option>
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
+    </option>
+    <option name="PREVIEW_PUSH_PROTECTED_ONLY" value="true" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/interceptor/AuthorizationInterceptor.java" />
+        <option value="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/annotation/AuthToken.java" />
+        <option value="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/MallController.java" />
+        <option value="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/OrderController.java" />
+        <option value="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/utils/HttpClientUtil.java" />
+        <option value="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/httpClient/Util.java" />
+        <option value="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/utils/HttpUtils.java" />
+        <option value="$PROJECT_DIR$/hangyiyun/src/test/java/com/hangyiyun/hangyiyun/zlz/controller/EnterpriseControllerTest.java" />
+        <option value="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/utils/DESUtil.java" />
+        <option value="$PROJECT_DIR$/hangyiyun/pom.xml" />
+        <option value="$PROJECT_DIR$/hangyiyun/src/test/java/com/hangyiyun/hangyiyun/httpClientTest/httpClientTest.java" />
+        <option value="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/utils/HttpTools.java" />
+        <option value="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/EnterpriseController.java" />
+        <option value="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/httpClient/HttpClientUtil.java" />
+        <option value="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/httpClient/HttpProcessException.java" />
+        <option value="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/utils/UploadImageUtil.java" />
+        <option value="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/GoodsController.java" />
+        <option value="$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/utils/HttpImgTool.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/pom.xml">
+      <ranges>
+        <range start1="17" end1="18" start2="17" end2="17" changelist="10754e25-b9de-489f-b88e-f4d8db37b879" />
+        <range start1="93" end1="94" start2="92" end2="92" changelist="ebf58cce-852d-4847-8ee2-09af65b7af1d" />
+        <range start1="114" end1="115" start2="112" end2="138" changelist="ebf58cce-852d-4847-8ee2-09af65b7af1d" />
+      </ranges>
+    </file>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="C:/software/apache-maven-3.6.1" />
-        <option name="userSettingsFile" value="C:\software\apache-maven-3.6.1\conf\settings.xml" />
+        <option name="localRepository" value="D:\Program Files\Apache\SHSRRepository" />
+        <option name="mavenHome" value="D:/Program Files/Apache/apache-maven-3.6.1" />
+        <option name="userSettingsFile" value="D:\Program Files\Apache\apache-maven-3.6.1\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -78,9 +242,90 @@
   <component name="MavenRunner">
     <option name="jreName" value="1.8" />
   </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="570" />
+    <option name="y" value="-20" />
+    <option name="width" value="1155" />
+    <option name="height" value="1040" />
+  </component>
   <component name="ProjectId" id="1aWhdpeelyRIgCZxGWsKR81uA9K" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="buyerbackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buyerbackground" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buyerbackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buyerbackground" type="462c0819:PsiDirectoryNode" />
+              <item name="hangyiyun" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buyerbackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buyerbackground" type="462c0819:PsiDirectoryNode" />
+              <item name="hangyiyun" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buyerbackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buyerbackground" type="462c0819:PsiDirectoryNode" />
+              <item name="hangyiyun" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buyerbackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buyerbackground" type="462c0819:PsiDirectoryNode" />
+              <item name="hangyiyun" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buyerbackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buyerbackground" type="462c0819:PsiDirectoryNode" />
+              <item name="hangyiyun" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hangyiyun" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buyerbackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buyerbackground" type="462c0819:PsiDirectoryNode" />
+              <item name="hangyiyun" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hangyiyun" type="462c0819:PsiDirectoryNode" />
+              <item name="apiResult" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="buyerbackground" type="b2602c69:ProjectViewProjectNode" />
+              <item name="buyerbackground" type="462c0819:PsiDirectoryNode" />
+              <item name="hangyiyun" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hangyiyun" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -107,7 +352,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.20140515" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
@@ -116,6 +361,10 @@
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\ProjectHome\SHSR\buyerbackground\hangyiyun\src\main\resources\Imgs" />
+      <recent name="E:\ProjectHome\SHSR\buyerbackground\hangyiyun\src\main\java\Img" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.hangyiyun.hangyiyun" />
     </key>
@@ -136,8 +385,98 @@
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+    <option name="contentProportion" value="0.31690675" />
   </component>
-  <component name="RunManager" selected="Spring Boot.BuyerbackgroundServerClusterApplication-peer2">
+  <component name="RunManager" selected="Spring Boot.BuyerbackgroundHystrixApplication">
+    <configuration name="EnterpriseControllerTest.register" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hangyiyun" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hangyiyun.hangyiyun.zlz.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.hangyiyun.hangyiyun.zlz.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.hangyiyun.hangyiyun.zlz.controller.EnterpriseControllerTest" />
+      <option name="METHOD_NAME" value="register" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HttpImgTool" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hangyiyun" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hangyiyun.hangyiyun.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.hangyiyun.hangyiyun.utils" />
+      <option name="MAIN_CLASS_NAME" value="com.hangyiyun.hangyiyun.utils.HttpImgTool" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HttpImgTool.readMethod2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hangyiyun" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hangyiyun.hangyiyun.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.hangyiyun.hangyiyun.utils" />
+      <option name="MAIN_CLASS_NAME" value="com.hangyiyun.hangyiyun.utils.HttpImgTool" />
+      <option name="METHOD_NAME" value="readMethod2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HttpImgTool.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hangyiyun" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hangyiyun.hangyiyun.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.hangyiyun.hangyiyun.utils" />
+      <option name="MAIN_CLASS_NAME" value="com.hangyiyun.hangyiyun.utils.HttpImgTool" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HttpTools.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hangyiyun" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hangyiyun.hangyiyun.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.hangyiyun.hangyiyun.utils" />
+      <option name="MAIN_CLASS_NAME" value="com.hangyiyun.hangyiyun.utils.HttpTools" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BuyerbackgroundGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="buyerbackground-gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.shsr.buyerbackgroundgateway.BuyerbackgroundGatewayApplication" />
@@ -185,6 +524,11 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.EnterpriseControllerTest.register" />
+      <item itemvalue="JUnit.HttpTools.test" />
+      <item itemvalue="JUnit.HttpImgTool.test" />
+      <item itemvalue="JUnit.HttpImgTool" />
+      <item itemvalue="JUnit.HttpImgTool.readMethod2" />
       <item itemvalue="Spring Boot.BuyerbackgroundServerClusterApplication-peer2" />
       <item itemvalue="Spring Boot.BuyerbackgroundServerClusterApplication-peer1" />
       <item itemvalue="Spring Boot.BuyerbackgroundHystrixApplication" />
@@ -192,6 +536,15 @@
       <item itemvalue="Spring Boot.HangyiyunApplication" />
       <item itemvalue="Spring Boot.ObjectVoApplication" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.HttpImgTool.test" />
+        <item itemvalue="JUnit.HttpImgTool.readMethod2" />
+        <item itemvalue="JUnit.HttpImgTool" />
+        <item itemvalue="JUnit.HttpTools.test" />
+        <item itemvalue="JUnit.EnterpriseControllerTest.register" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -286,6 +639,11 @@
       <workItem from="1587014424791" duration="6775000" />
       <workItem from="1587044682233" duration="3653000" />
       <workItem from="1587085624616" duration="4031000" />
+      <workItem from="1587276718841" duration="19085000" />
+      <workItem from="1587343381144" duration="30822000" />
+      <workItem from="1587389751165" duration="8038000" />
+      <workItem from="1587400051787" duration="681000" />
+      <workItem from="1587432350011" duration="2284000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1585718957405</created>
@@ -364,19 +722,138 @@
       <option name="project" value="LOCAL" />
       <updated>1587086882008</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="4/1: 拉取完毕整合提交;">
+      <created>1587264546449</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1587264546449</updated>
+    </task>
+    <task id="LOCAL-00013" summary="4/1: 删除注释;">
+      <created>1587264816755</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1587264816755</updated>
+    </task>
+    <task id="LOCAL-00014" summary="4/17: 提交遗漏类;">
+      <created>1587264991955</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1587264991955</updated>
+    </task>
+    <task id="LOCAL-00015" summary="4/20: 单独提交封装httpClient/Get&amp;Post工具类;">
+      <created>1587353822486</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1587353822486</updated>
+    </task>
+    <task id="LOCAL-00016" summary="4/20:更改post参数类型;">
+      <created>1587356262727</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1587356262727</updated>
+    </task>
+    <task id="LOCAL-00017" summary="4/1: 拉取内容提交加密工具类;">
+      <created>1587360582014</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1587360582014</updated>
+    </task>
+    <task id="LOCAL-00018" summary="4/20:专门提交返回模板;">
+      <created>1587360673611</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1587360673611</updated>
+    </task>
+    <task id="LOCAL-00019" summary="4/21: 提交完整内容;">
+      <created>1587400740080</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1587400740080</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_buyerbackground - 2020.03.31 at 16h 13m 03s.xml">
-      <configuration name="All in buyerbackground" configurationId="JUnit" />
+    <history-entry file="HttpImgTool_readMethod2 - 2020.04.20 at 15h 21m 58s.xml">
+      <configuration name="HttpImgTool.readMethod2" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_buyerbackground - 2020.03.31 at 16h 31m 38s.xml">
-      <configuration name="All in buyerbackground" configurationId="JUnit" />
+    <history-entry file="HttpImgTool_readMethod2 - 2020.04.20 at 15h 35m 14s.xml">
+      <configuration name="HttpImgTool.readMethod2" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_buyerbackground_(1) - 2020.03.31 at 19h 37m 58s.xml">
-      <configuration name="All in buyerbackground (1)" configurationId="JUnit" />
+    <history-entry file="HttpImgTool_readMethod2 - 2020.04.20 at 15h 37m 21s.xml">
+      <configuration name="HttpImgTool.readMethod2" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="HttpImgTool_readMethod2 - 2020.04.20 at 15h 39m 42s.xml">
+      <configuration name="HttpImgTool.readMethod2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HttpImgTool_readMethod2 - 2020.04.20 at 15h 40m 05s.xml">
+      <configuration name="HttpImgTool.readMethod2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HttpImgTool_test - 2020.04.20 at 15h 42m 34s.xml">
+      <configuration name="HttpImgTool.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HttpImgTool_test - 2020.04.20 at 15h 44m 06s.xml">
+      <configuration name="HttpImgTool.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HttpImgTool_test - 2020.04.20 at 15h 50m 49s.xml">
+      <configuration name="HttpImgTool.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HttpImgTool_test - 2020.04.20 at 15h 52m 03s.xml">
+      <configuration name="HttpImgTool.test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HttpImgTool_test - 2020.04.20 at 15h 53m 30s.xml">
+      <configuration name="HttpImgTool.test" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="64509000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24329759" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8927614" weight="0.1203966" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49865952" weight="0.3286119" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49932975" weight="0.04390935" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49932975" weight="0.15439093" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.09986595" side_tool="true" visible="true" weight="0.04249292" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" sideWeight="0.49932975" weight="0.3611898" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.49798927" weight="0.0694051" />
+      <window_info anchor="bottom" id="Run Dashboard" order="14" sideWeight="0.900134" visible="true" weight="0.04249292" />
+      <window_info anchor="bottom" id="Messages" order="15" sideWeight="0.47788203" weight="0.4957507" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.07707775" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.3297587" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.3297587" />
+    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -396,13 +873,44 @@
       <map>
         <entry key="1">
           <value>
-            <State />
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
           </value>
         </entry>
         <entry key="MAIN">
           <value>
             <State>
-              <option name="COLUMN_ORDER" />
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
             </State>
           </value>
         </entry>
@@ -412,7 +920,13 @@
       <map>
         <entry key="Branch">
           <value>
-            <list />
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/master" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
         <entry key="User">
@@ -434,7 +948,17 @@
     <MESSAGE value="来自：zlz的提交&#10;时间：2020/4/15" />
     <MESSAGE value="来自：zlz的提交&#10;时间：2020/4/16 18:36" />
     <MESSAGE value="来自：zlz的提交&#10;时间：2020/4/17 9:27&#10;内容：加了swgger2" />
-    <option name="LAST_COMMIT_MESSAGE" value="来自：zlz的提交&#10;时间：2020/4/17 9:27&#10;内容：加了swgger2" />
+    <MESSAGE value="4/1: 拉取完毕整合提交;" />
+    <MESSAGE value="4/1: 删除注释;" />
+    <MESSAGE value="4/17: 提交遗漏类;" />
+    <MESSAGE value="4/20: 单独提交封装httpClient/Get&amp;Post工具类;" />
+    <MESSAGE value="4/20:更改post参数类型;" />
+    <MESSAGE value="4/20: 提交 Result;" />
+    <MESSAGE value="4/1: 拉取内容;" />
+    <MESSAGE value="4/1: 拉取内容提交加密工具类;" />
+    <MESSAGE value="4/20:专门提交返回模板;" />
+    <MESSAGE value="4/21: 提交完整内容;" />
+    <option name="LAST_COMMIT_MESSAGE" value="4/21: 提交完整内容;" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="74" key="#Scopes" timestamp="1586857604022">
@@ -552,14 +1076,431 @@
         <line-breakpoint enabled="true" log-message="true" suspend="NONE" type="java-line">
           <url>file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/OrderController.java</url>
           <line>75</line>
+          <properties />
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/EnterpriseController.java</url>
+          <line>92</line>
+          <properties />
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="SpringBootApplicationConfigurationType">
         <watch expression="this" />
+        <watch expression="((PoolingHttpClientConnectionManager)((ConnectionHolder)((ResponseEntityProxy)((DecompressingEntity)respBody).wrappedEntity).connHolder).manager).log" custom="org.apache.http.impl.execchain.ConnectionHolder,org.apache.http.client.entity.DecompressingEntity,org.apache.http.impl.conn.PoolingHttpClientConnectionManager,org.apache.http.impl.execchain.ResponseEntityProxy" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/interceptor/AuthorizationInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/annotation/AuthToken.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/OrderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1077">
+          <caret line="74" column="19" selection-start-line="74" selection-start-column="19" selection-end-line="74" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.4.12/httpcore-4.4.12-sources.jar!/org/apache/http/NameValuePair.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpcore/4.4.12/httpcore-4.4.12-sources.jar!/org/apache/http/message/AbstractHttpMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="124" column="39" selection-start-line="124" selection-start-column="33" selection-end-line="124" selection-end-column="39" />
+          <folding>
+            <element signature="e#3867#3868#0" expanded="true" />
+            <element signature="e#3919#3920#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/java/jdk1.8.0_121/jre/lib/rt.jar!/sun/net/www/protocol/http/HttpURLConnection.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2898" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangyiyun/src/test/java/com/hangyiyun/hangyiyun/HangyiyunApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="10" column="5" selection-start-line="9" selection-start-column="24" selection-end-line="10" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/MallController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-759">
+          <caret line="20" column="23" selection-start-line="20" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/utils/HttpClientUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="65" column="34" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/utils/DESUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="25" column="38" lean-forward="true" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+          <folding>
+            <element signature="method#encrypt#0;class#DESUtil#0" />
+            <element signature="method#encrypt01#0;class#DESUtil#0" />
+            <element signature="method#decrypt01#0;class#DESUtil#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.2.RELEASE/spring-web-5.2.2.RELEASE-sources.jar!/org/springframework/web/multipart/MultipartFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="43" column="30" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpclient/4.5.10/httpclient-4.5.10-sources.jar!/org/apache/http/client/methods/HttpPost.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="73" column="5" lean-forward="true" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangyiyun/src/test/java/com/hangyiyun/hangyiyun/zlz/controller/EnterpriseControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="44" column="27" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#test#0;class#EnterpriseControllerTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangyiyun/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="63" column="50" selection-start-line="63" selection-start-column="50" selection-end-line="63" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangyiyun/src/test/java/com/hangyiyun/hangyiyun/httpClientTest/httpClientTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="65" column="49" selection-start-line="65" selection-start-column="43" selection-end-line="65" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#buildUrl#0;class#httpClientTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpmime/4.5.2/httpmime-4.5.2-sources.jar!/org/apache/http/entity/mime/HttpMultipartMode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="25" column="3" lean-forward="true" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/httpClient/Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" column="44" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/httpClient/HttpClientUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/httpClient/HttpProcessException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding>
+            <element signature="docComment;class#HttpProcessException#0" />
+            <element signature="e#197#198#0" expanded="true" />
+            <element signature="e#221#222#0" expanded="true" />
+            <element signature="docComment;method#HttpProcessException#1;class#HttpProcessException#0" />
+            <element signature="e#305#306#0" expanded="true" />
+            <element signature="e#331#332#0" expanded="true" />
+            <element signature="docComment;method#HttpProcessException#2;class#HttpProcessException#0" />
+            <element signature="e#459#460#0" expanded="true" />
+            <element signature="e#492#493#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/cors/CorsMappingConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="14" selection-start-line="13" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/java/jdk1.8.0_121/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="40" column="22" lean-forward="true" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/EnterpriseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="695">
+          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#register#0;class#EnterpriseController#0" />
+            <element signature="n#!!doc;n#login#0;n#EnterpriseController#0" />
+            <element signature="method#login#0;class#EnterpriseController#0" />
+            <element signature="n#!!doc;n#openMall#0;n#EnterpriseController#0" />
+            <element signature="method#openMall#0;class#EnterpriseController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/utils/Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="759">
+          <caret line="49" column="37" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.2.2.RELEASE/spring-webmvc-5.2.2.RELEASE-sources.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="47">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/utils/HttpTools.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="713">
+          <caret line="47" column="19" selection-start-line="47" selection-end-line="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#doPost#0;class#HttpTools#0" />
+            <element signature="docComment;method#doGet#0;class#HttpTools#0" />
+            <element signature="method#buildUrl#0;class#HttpTools#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/GoodsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1771">
+          <caret line="181" column="31" selection-start-line="181" selection-start-column="31" selection-end-line="181" selection-end-column="31" />
+          <folding>
+            <element signature="method#addGoods#0;class#GoodsController#0" />
+            <element signature="docComment;method#updataGoods#0;class#GoodsController#0" />
+            <element signature="method#updataGoods#0;class#GoodsController#0" />
+            <element signature="method#selectByPage#0;class#GoodsController#0" />
+            <element signature="method#selectById#0;class#GoodsController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/utils/HttpUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4094">
+          <caret line="290" column="34" selection-start-line="290" selection-start-column="26" selection-end-line="290" selection-end-column="34" />
+          <folding>
+            <element signature="method#doGet#0;class#HttpUtils#0" />
+            <element signature="method#doGet#1;class#HttpUtils#0" />
+            <element signature="docComment;method#doPost#0;class#HttpUtils#0" />
+            <element signature="method#doPost#0;class#HttpUtils#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/apiResult/ResultTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/apiResult/ResultGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/apiResult/ResultCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+          <folding>
+            <element signature="e#338#339#0" expanded="true" />
+            <element signature="e#370#371#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/utils/UploadImageUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="21" column="15" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/java/jdk1.8.0_121/src.zip!/java/util/UUID.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2691">
+          <caret line="140" column="23" selection-start-line="140" selection-start-column="23" selection-end-line="140" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/controller/TestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="47" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.2.RELEASE/spring-web-5.2.2.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="189" selection-start-line="189" selection-end-line="189" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hangyiyun/src/main/java/com/hangyiyun/hangyiyun/utils/HttpImgTool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1196">
+          <caret line="52" column="20" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#test#0;class#HttpImgTool#0" />
+            <element signature="method#readFile#0;class#HttpImgTool#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="127" column="38" selection-start-line="127" selection-end-line="128" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.20140515" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.20140515" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring|buyerbackground</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.20140515" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
