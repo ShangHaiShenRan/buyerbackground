@@ -22,6 +22,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -64,6 +65,10 @@ public class GoodsController {
     })
     @RequestMapping(value = "/goodsinfos",method = RequestMethod.POST)
     public Result<JSONObject> addGoods(@RequestBody GoodsInfoVO goodsInfoVO){
+        logger.info(goodsInfoVO.toString());
+        if(goodsInfoVO==null){
+            return new Result<JSONObject>().setCode(ResultCode.BAD_REQUEST).setMessage("坏的请求，参数不可为空").setData(null);
+        }
         JSONObject result = null;
         String path="/admin/goodsinfos";
 
@@ -79,7 +84,7 @@ public class GoodsController {
             return new Result<JSONObject>().setCode(ResultCode.SUCCESS).setMessage("添加成功").setData(result);
         } catch (IOException e) {
             e.printStackTrace();
-            return new Result<JSONObject>().setCode(ResultCode.INTERNAL_SERVER_ERROR).setMessage("添加失败").setData(result);
+            return new Result<JSONObject>().setCode(ResultCode.INTERNAL_SERVER_ERROR).setMessage("添加失败").setData(null);
         }
     }
 
