@@ -61,6 +61,14 @@
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
 		</dependency>
+		<!--
+     		如果需要灵活的传输文件，引入此依赖后会更加方便
+		-->
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpmime</artifactId>
+			<version>4.5.5</version>
+		</dependency>
 
 	</dependencies>
 
@@ -84,7 +92,7 @@
 					</execution>
 				</executions>
 				<configuration>
-					<imageName>buyerbackgound/${project.artifactId}:${project.version}</imageName>
+					<imageName>buyerbackgound/${project.artifactId}:${project.version}-plus</imageName>
 					<!-- <dockerDirectory>src/main/docker</dockerDirectory>-->
 					<dockerHost>http://8.129.18.200:2375</dockerHost>
 					<baseImage>java:8</baseImage>

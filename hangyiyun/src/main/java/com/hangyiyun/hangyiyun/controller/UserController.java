@@ -6,7 +6,7 @@ import com.hangyiyun.hangyiyun.utils.HttpClientUtils;
 import com.hangyiyun.hangyiyun.utils.RedisUtil;
 import com.hangyiyun.hangyiyun.utils.StringUtils;
 import com.hangyiyun.hangyiyun.utils.Util;
-import com.shsr.objectvo.vo.user.PigcmsUser;
+import com.shsr.objectvo.hangyiyun.vo.user.PigcmsUser;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;

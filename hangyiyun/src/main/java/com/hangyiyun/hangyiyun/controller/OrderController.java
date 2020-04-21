@@ -5,7 +5,7 @@ package com.hangyiyun.hangyiyun.controller;
         import com.hangyiyun.hangyiyun.utils.HttpUtils;
         import com.hangyiyun.hangyiyun.utils.StringUtils;
         import com.hangyiyun.hangyiyun.utils.Util;
-        import com.shsr.objectvo.vo.order.Order;
+        import com.shsr.objectvo.hangyiyun.vo.order.Order;
         import io.swagger.annotations.Api;
         import io.swagger.annotations.ApiOperation;
         import org.apache.http.HttpResponse;

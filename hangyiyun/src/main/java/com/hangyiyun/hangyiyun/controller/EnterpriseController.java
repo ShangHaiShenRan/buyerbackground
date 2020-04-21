@@ -3,15 +3,17 @@ package com.hangyiyun.hangyiyun.controller;
 import com.alibaba.fastjson.JSONObject;
 import com.hangyiyun.hangyiyun.utils.DESUtil;
 import com.hangyiyun.hangyiyun.utils.HttpClientUtils;
+import com.hangyiyun.hangyiyun.utils.HttpUtilPlus;
 import com.hangyiyun.hangyiyun.utils.HttpUtils;
-import com.shsr.objectvo.vo.company.Enterprise;
-import com.shsr.objectvo.vo.user.PigcmsUser;
+import com.shsr.objectvo.hangyiyun.vo.company.Enterprise;
+import com.shsr.objectvo.hangyiyun.vo.user.PigcmsUser;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.apache.http.HttpResponse;
 import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -29,6 +31,9 @@ import java.util.Map;
 @RequestMapping("/Enterprise")
 @Api(tags = "EnterpriseController",description  = "云登陆注册管理")
 public class EnterpriseController {
+
+    @Autowired
+    private HttpUtilPlus httpUtilPlus;
     private final String HOST = "https://enterprise.michain.tech";
     private final String KEY = "d811ad6ff50765b1e791318643239744";
 
@@ -64,19 +69,22 @@ public class EnterpriseController {
 
             /*加密, 加密的key是一个token,是双方提前约定好的*/
             String enterpriseJson = JSONObject.toJSONString(enterprise);
+            System.out.println(enterpriseJson);
             String encryptionCode = DESUtil.encrypt(enterpriseJson, KEY);
 
             Map<String, String> headers = new HashMap<String, String>();
-            headers.put("Content-Type", "application/x-www-form-urlencoded");//接口要求格式
+            headers.put("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");//接口要求格式
+            headers.put("Accept-Charset","UTF-8");
+            Map<String, String> paramet = new HashMap<String, String>();
+            paramet.put("userCode", "COM5704601385");//代理商编码，固定: COM5704601385
+            paramet.put("encryptMsg", encryptionCode);//加密数据
 
-            JSONObject bodys = new JSONObject();
-            bodys.put("userCode", "COM5704601385");//代理商编码，固定: COM5704601385
-            bodys.put("encryptMsg", encryptionCode);//加密数据
+            Map<String, String> bodys = new HashMap<String, String>();
+//            调用注册接口
+//            JSONObject jsonResp = HttpClientUtils.doPost(url, method, headers, bodys);
+            JSONObject jsonResp = httpUtilPlus.post(url, headers,paramet , bodys);
 
-            //调用注册接口
-            JSONObject jsonResp = HttpClientUtils.doPost(url, method, headers, bodys);
-
-            logger.info("注册完成");
+            logger.info("注册成功");
             Boolean respStatus = jsonResp.getBoolean("status");//获得返回内容中状态;
             JSONObject respData = jsonResp.getJSONObject("data");//获得返回内容中状态;
 
