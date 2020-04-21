@@ -1,8 +1,8 @@
 package com.hangyiyun.hangyiyun.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import com.hangyiyun.hangyiyun.apiResult.Result;
-import com.hangyiyun.hangyiyun.apiResult.ResultCode;
+import com.hangyiyun.hangyiyun.apiresult.Result;
+import com.hangyiyun.hangyiyun.apiresult.ResultCode;
 import com.hangyiyun.hangyiyun.utils.HttpTools;
 import com.hangyiyun.hangyiyun.utils.HttpUtils;
 import com.hangyiyun.hangyiyun.utils.Util;
@@ -17,12 +17,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+
 
 /*
  * 功能描述: <br>
@@ -77,6 +79,7 @@ public class GoodsController {
             return new Result<JSONObject>().setCode(ResultCode.INTERNAL_SERVER_ERROR).setMessage("添加失败").setData(result);
         }
     }
+
 
     /**
      * @Author wangcc
@@ -185,9 +188,15 @@ public class GoodsController {
         String key="file";
         try {
             JSONObject jsonObject= httpTools.uploadImage(url,key,file,null);
-            return new Result<JSONObject>().setCode(ResultCode.SUCCESS)
-                    .setMessage("上传成功")
-                    .setData(jsonObject);
+            if(jsonObject!=null){
+                return new Result<JSONObject>().setCode(ResultCode.SUCCESS)
+                        .setMessage("上传成功")
+                        .setData(jsonObject);
+            }else{
+                return new Result<JSONObject>().setCode(ResultCode.INTERNAL_SERVER_ERROR)
+                        .setMessage("上传失败")
+                        .setData(null);
+            }
         } catch (Exception e) {
             e.printStackTrace();
             return new Result<JSONObject>().setCode(ResultCode.INTERNAL_SERVER_ERROR)
