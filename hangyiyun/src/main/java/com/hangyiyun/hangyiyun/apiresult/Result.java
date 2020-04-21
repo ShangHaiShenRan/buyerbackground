@@ -1,4 +1,4 @@
-package com.hangyiyun.hangyiyun.apiresult;
+package com.hangyiyun.hangyiyun.apiResult;
 
 import com.alibaba.fastjson.JSON;
 
