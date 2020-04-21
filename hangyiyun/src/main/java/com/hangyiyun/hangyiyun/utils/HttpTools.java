@@ -158,10 +158,12 @@ public class HttpTools {
         CloseableHttpResponse response = null;
 
         MultipartEntityBuilder multipartEntityBuilder = MultipartEntityBuilder.create();
-        if (files.length<=0)
+        if (files==null)
             return null;
 
         for (MultipartFile file : files) {
+            long size = file.getSize();
+            System.err.println(size);
             multipartEntityBuilder.addBinaryBody(key, file.getBytes(),ContentType.MULTIPART_FORM_DATA, files[0].getOriginalFilename());
         }
         // 第二个文件(多个文件的话，使用同一个key就行，后端用数组或集合进行接收即可)

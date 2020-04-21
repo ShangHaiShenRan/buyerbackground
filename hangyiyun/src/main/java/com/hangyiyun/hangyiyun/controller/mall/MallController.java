@@ -1,4 +1,4 @@
-package com.hangyiyun.hangyiyun.controller;
+package com.hangyiyun.hangyiyun.controller.mall;
 
 import com.alibaba.fastjson.JSONObject;
 import com.hangyiyun.hangyiyun.utils.HttpClientUtils;
