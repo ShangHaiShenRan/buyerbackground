@@ -1,10 +1,7 @@
 package com.hangyiyun.hangyiyun.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import com.hangyiyun.hangyiyun.utils.DESUtil;
-import com.hangyiyun.hangyiyun.utils.HttpClientUtils;
-import com.hangyiyun.hangyiyun.utils.HttpUtilPlus;
-import com.hangyiyun.hangyiyun.utils.HttpUtils;
+import com.hangyiyun.hangyiyun.utils.*;
 import com.shsr.objectvo.hangyiyun.vo.company.Enterprise;
 import com.shsr.objectvo.hangyiyun.vo.user.PigcmsUser;
 import io.swagger.annotations.Api;
@@ -37,6 +34,11 @@ public class EnterpriseController {
 
     @Autowired
     private HttpUtilPlus httpUtilPlus;
+
+    @Autowired
+    private RedisUtil redisUtil;
+
+
     private final String HOST = "https://enterprise.michain.tech";
     private final String KEY = "d811ad6ff50765b1e791318643239744";
 
@@ -141,7 +143,17 @@ public class EnterpriseController {
 
         JSONObject post = HttpClientUtils.doPost(HOST + path, "POST", headers, bodys);
 
-        result = post;
+        JSONObject jsonData = post.getJSONObject("data");
+
+        if(!jsonData.isEmpty()){
+            String strUserCode = jsonData.getString("userCode");
+            if(!strUserCode.isEmpty()){//验证redis中有没有相同的key，如果没有就直接存入redis
+                if(!redisUtil.hasKey(strUserCode)){
+                    redisUtil.set(pigcmsUser.getPhone()+"COM",strUserCode);//存储，key是电话
+                    result = post;
+                }
+            }
+        }
         return result;
     }
 
