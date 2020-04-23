@@ -48,7 +48,7 @@ public class UserController {
      * @Param []
      **/
     @RequestMapping("/loginByName")
-    @ApiOperation("企业登陆接口")
+    @ApiOperation("店中店登录")
     public JSONObject loginByName(@RequestBody @NotNull PigcmsUser pigcmsUser) {
 
         String path = "/admin/login/mall";

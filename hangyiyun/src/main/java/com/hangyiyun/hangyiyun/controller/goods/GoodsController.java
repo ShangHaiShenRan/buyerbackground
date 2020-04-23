@@ -65,7 +65,8 @@ public class GoodsController {
     })
     @RequestMapping(value = "/goodsinfos",method = RequestMethod.POST)
     public Result<JSONObject> addGoods(@RequestBody GoodsInfoVO goodsInfoVO){
-        logger.info(goodsInfoVO.toString());
+        logger.warn(goodsInfoVO.toString());
+        logger.warn(JSONObject.toJSONString(goodsInfoVO));
         if(goodsInfoVO==null){
             return new Result<JSONObject>().setCode(ResultCode.BAD_REQUEST).setMessage("坏的请求，参数不可为空").setData(null);
         }
@@ -97,6 +98,9 @@ public class GoodsController {
      * @return com.alibaba.fastjson.JSONObject
      **/
     @ApiOperation("商品修改")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name="GoodsInfoVO")
+    })
     @RequestMapping(value = "/goodsinfos",method = RequestMethod.PUT)
     public JSONObject updataGoods(@RequestBody GoodsInfoVO goodsInfoVO){
         JSONObject result = new JSONObject();

@@ -9,12 +9,15 @@ import com.shsr.objectvo.hangyiyun.vo.company.Enterprise;
 import com.shsr.objectvo.hangyiyun.vo.user.PigcmsUser;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.apache.http.HttpRequest;
 import org.apache.http.HttpResponse;
 import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Date;
@@ -92,7 +95,7 @@ public class EnterpriseController {
             if (respStatus && respData != null && "".equals(respData)) {
 
                 String companyCode = respData.getString("companyCode");
-                enterprise.setCompanyCode(companyCode);//掉用开店方法前，将返回的消息整合成一个实体类;
+                enterprise.setCompanyCode(companyCode);//调用开店方法前，将返回的消息整合成一个实体类;
 
                 JSONObject openMallResult = openMall(enterprise);
                 result = openMallResult;
@@ -118,9 +121,10 @@ public class EnterpriseController {
      *      2.将返回类型改变为JSONObject;
      *      3.删除try{}catch() 代码块
      * */
-    @RequestMapping("/login")
+
     @ApiOperation("云平台登陆")
-    public JSONObject login(PigcmsUser pigcmsUser) {
+    @RequestMapping(value = "/login",method = RequestMethod.POST)
+    public JSONObject login(@RequestBody PigcmsUser pigcmsUser) {
 
         JSONObject result = new JSONObject();
 

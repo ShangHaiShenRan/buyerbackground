@@ -4,6 +4,7 @@ import com.hangyiyun.hangyiyun.apiresult.Result;
 import com.hangyiyun.hangyiyun.apiresult.ResultGenerator;
 import io.swagger.annotations.ApiOperation;
 import org.json.JSONObject;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,6 +20,8 @@ public class TestController {
 
 
 
+    @Value("${host}")
+    String host;
 
     @RequestMapping("/test")
     @ApiOperation(tags="写入测试方法",value="这里写入测试的值")
@@ -26,7 +29,8 @@ public class TestController {
 
         JSONObject result = new JSONObject();
         result.put("date","this is demo");
-
+        System.out.println("==================");
+        System.out.println(host);
         return ResultGenerator.successResult();
     }
 }
