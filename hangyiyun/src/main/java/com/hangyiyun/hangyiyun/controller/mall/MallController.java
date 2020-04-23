@@ -1,5 +1,6 @@
 package com.hangyiyun.hangyiyun.controller.mall;
 
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.hangyiyun.hangyiyun.utils.*;
 import com.shsr.objectvo.hangyiyun.vo.mall.TMpfMallInfo;
@@ -36,9 +37,6 @@ public class MallController {
     @Autowired
     private Util util;
     
-    @Autowired
-    private RedisUtil redisUtil;
-
     @Autowired
     private RedisUtil redisUtil;
 
@@ -86,7 +84,7 @@ public class MallController {
     @ApiOperation("添加saas平台上面的商城")
     @RequestMapping(value = "/addMall",method = RequestMethod.POST)
     public JSONObject addMall(@RequestBody TMpfMallInfo mallInfo) throws Exception {
-
+        logger.info(JSON.toJSONString(mallInfo));
         String path="/admin/mall";
         String url = HOST+path;
 
@@ -118,7 +116,7 @@ public class MallController {
     public JSONObject editMall(@RequestBody TMpfMallInfo mallInfo) {
 
         logger.info("进入editMall.........................................");
-
+        logger.info(JSON.toJSONString(mallInfo));
         JSONObject result = new JSONObject();
 
         String path="/admin/mall/edit";

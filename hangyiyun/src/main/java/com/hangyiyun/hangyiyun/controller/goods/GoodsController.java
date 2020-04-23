@@ -2,8 +2,8 @@ package com.hangyiyun.hangyiyun.controller.goods;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;;
-import com.hangyiyun.hangyiyun.apiResult.Result;
-import com.hangyiyun.hangyiyun.apiResult.ResultCode;
+import com.hangyiyun.hangyiyun.apiresult.Result;
+import com.hangyiyun.hangyiyun.apiresult.ResultCode;
 import com.hangyiyun.hangyiyun.controller.mall.MallController;
 import com.hangyiyun.hangyiyun.utils.HttpTools;
 import com.hangyiyun.hangyiyun.utils.HttpUtils;
@@ -62,7 +62,7 @@ public class GoodsController {
     @ApiImplicitParams({
             @ApiImplicitParam(paramType = "body",name = "goodsInfoVO",required=true,value = "商品详情")
     })
-    @RequestMapping(value = "/goodsinfos",method = RequestMethod.POST)
+    @RequestMapping(value = "/goodsInfos",method = RequestMethod.POST)
     public Result<JSONObject> addGoods(@RequestBody GoodsInfoVO goodsInfoVO){
         logger.warn(goodsInfoVO.toString());
         logger.warn(JSONObject.toJSONString(goodsInfoVO));

@@ -38,7 +38,6 @@ public class EnterpriseController {
     @Autowired
     private RedisUtil redisUtil;
 
-
     private final String HOST = "https://enterprise.michain.tech";
     private final String KEY = "d811ad6ff50765b1e791318643239744";
 

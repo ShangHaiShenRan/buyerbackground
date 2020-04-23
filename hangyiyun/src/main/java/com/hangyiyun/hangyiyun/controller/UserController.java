@@ -72,12 +72,13 @@ public class UserController {
             /*判断用户是否经过平台方允许进入*/
             String phone = pigcmsUser.getPhone();
             String userCode = (String)redisUtil.get(phone+"COM");
+            logger.info("userCode==="+userCode);
             if(!"COM5704601385".equals(userCode)){
                 return result;//权限不对直接返回;
             }
-
             /*根据电话获取+"ACT"*/
             String encryptData = (String)redisUtil.get(phone + "ACT");
+            logger.info("encryptData==="+encryptData);
 
             String decrypt = DESUtil.decrypt(encryptData, Key);//解密
             JSONObject jsonData = JSON.parseObject(decrypt);
@@ -100,7 +101,6 @@ public class UserController {
                 e.printStackTrace();
             }
             if (null == jsonResp) {
-
                 result.put("status", "false");
                 logger.error("返回数据为空");
             }
