@@ -93,7 +93,6 @@ public class Util {
         } else {
             result = jsonObject;
         }
-
         return result;
     }
 

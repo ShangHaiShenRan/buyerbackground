@@ -11,6 +11,7 @@ import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,7 +26,7 @@ import java.util.Map;
  * 用户登录注册接口
  */
 @RestController
-@RequestMapping("/Enterprise")
+@RequestMapping(value = "/Enterprise",produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 @Api(tags = "EnterpriseController",description  = "云登陆注册管理")
 public class EnterpriseController {
 
@@ -34,7 +35,6 @@ public class EnterpriseController {
 
     @Autowired
     private RedisUtil redisUtil;
-
 
     private final String HOST = "https://enterprise.michain.tech";
     private final String KEY = "d811ad6ff50765b1e791318643239744";
@@ -121,14 +121,14 @@ public class EnterpriseController {
      *      2.将返回类型改变为JSONObject;
      *      3.删除try{}catch() 代码块
      * */
-    @RequestMapping("/login")
+    @RequestMapping(value = "/login",produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @ApiOperation("云平台登陆")
     public JSONObject login(PigcmsUser pigcmsUser) {
 
-        JSONObject result = new JSONObject();
+        logger.info("进入登陆平台---------------------------");
 
+        JSONObject result = new JSONObject();
         String path = "/login";
-        String method = "POST";
 
         Map<String, String> headers = new HashMap<String, String>();
         headers.put("Content-Type", "application/json");
@@ -139,8 +139,9 @@ public class EnterpriseController {
         bodys.put("loginVerifyCode", "xyypt20");
 
         JSONObject post = HttpClientUtils.doPost(HOST + path, "POST", headers, bodys);
-
         JSONObject jsonData = post.getJSONObject("data");
+
+        logger.info("打印data内容"+jsonData.toString());
 
         if(!jsonData.isEmpty()){
             String strUserCode = jsonData.getString("userCode");
@@ -151,6 +152,7 @@ public class EnterpriseController {
                 }
             }
         }
+        logger.warn("打印返回信息"+result.toString());
         return result;
     }
 
