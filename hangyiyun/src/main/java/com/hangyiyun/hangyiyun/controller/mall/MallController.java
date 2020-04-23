@@ -1,5 +1,6 @@
 package com.hangyiyun.hangyiyun.controller.mall;
 
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.hangyiyun.hangyiyun.utils.*;
 import com.shsr.objectvo.hangyiyun.vo.mall.TMpfMallInfo;
@@ -25,7 +26,7 @@ import java.util.Map;
  * @return 
  **/
 @RestController
-@RequestMapping(value = "/Mall")
+@RequestMapping(value = "/Mall",produces = {"application/json;charset=UTF-8"})
 public class MallController {
 
     final String HOST="http://xyyapi.michain.tech";
@@ -83,8 +84,8 @@ public class MallController {
      **/
     @ApiOperation("添加saas平台上面的商城")
     @RequestMapping(value = "/addMall",method = RequestMethod.POST)
-    public JSONObject addMall(@RequestBody TMpfMallInfo mallInfo) throws Exception {
-
+    public JSONObject addMall(@RequestBody TMpfMallInfo mallInfo,@RequestHeader("Authorization") String token) throws Exception {
+        logger.info(JSON.toJSONString(mallInfo));
         String path="/admin/mall";
         String url = HOST+path;
 
@@ -92,6 +93,7 @@ public class MallController {
 
         Map<String,String> headers = new HashMap<String,String>();
         headers.put("Content-Type", "application/json");
+        headers.put("Authorization",token);
 
         result = util.getResultForObj(mallInfo,HOST,path,"POST",headers);
 
@@ -118,7 +120,7 @@ public class MallController {
     public JSONObject editMall(@RequestBody TMpfMallInfo mallInfo) {
 
         logger.info("进入editMall.........................................");
-
+        logger.info(JSON.toJSONString(mallInfo));
         JSONObject result = new JSONObject();
 
         String path="/admin/mall/edit";

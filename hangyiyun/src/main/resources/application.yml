@@ -7,7 +7,7 @@ spring:
     database: 0
     host: 8.129.18.200
     port: 6379
-    password: "@Shsr_1320_@"
+    password: '@Shsr_1320_@'
     jedis:
       pool:
         max-active: 100
@@ -31,3 +31,10 @@ management:
 logging:
   level:
     com.hangyiyun.hangyiyun.mapper: debug
+
+
+
+
+# 自定义参数
+host: https://enterprise.michain.tech
+key: d811ad6ff50765b1e791318643239744

@@ -3,7 +3,9 @@ package com.hangyiyun.hangyiyun.zlz.controller;
 import com.alibaba.fastjson.JSONObject;
 import com.hangyiyun.hangyiyun.controller.EnterpriseController;
 
+import com.hangyiyun.hangyiyun.controller.UserController;
 import com.shsr.objectvo.hangyiyun.vo.company.Enterprise;
+import com.shsr.objectvo.hangyiyun.vo.user.PigcmsUser;
 import org.junit.Test;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -21,8 +23,11 @@ import java.util.Map;
 public class EnterpriseControllerTest {
     @Autowired
     EnterpriseController enterpriseController;
+    @Autowired
+    UserController userController;
 
     private Enterprise enterprise;
+    private PigcmsUser pigcmsUser;
     @BeforeEach
     void setUp() {
     }
@@ -33,13 +38,15 @@ public class EnterpriseControllerTest {
     }
 
     @Test
-    public void register() {
-        enterprise=new Enterprise();
-        enterprise.setPhone("18516022033");
+    public void register() throws Exception {
+        /*enterprise=new Enterprise();
+        enterprise.setPhone("18851886188");
         enterprise.setPassword("Zlz13117500158");
-        enterprise.setCompanyName("This is Test Data:数据测试数据测试9");
+        enterprise.setCompanyName("This is Test Data:数据测试数据测试9");*/
+        pigcmsUser = new PigcmsUser();
+        pigcmsUser.setPhone("17611118813");
 
-        JSONObject register = enterpriseController.register(enterprise);
+        JSONObject register =userController.loginByName(pigcmsUser);
         System.out.println(register.toString());
 
         /*

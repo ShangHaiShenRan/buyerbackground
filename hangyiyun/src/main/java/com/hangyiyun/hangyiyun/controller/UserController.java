@@ -7,6 +7,7 @@ import com.hangyiyun.hangyiyun.utils.*;
 import com.shsr.objectvo.hangyiyun.vo.user.PigcmsUser;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import javafx.application.Application;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +26,7 @@ import java.util.Map;
  * @return
  **/
 @RestController
-@RequestMapping("/User")
+@RequestMapping(value = "/User",produces = {"application/json;charset=UTF-8"})
 @Api(tags = "UserController",description  = "企业管理")
 public class UserController {
 
@@ -69,12 +70,13 @@ public class UserController {
             /*判断用户是否经过平台方允许进入*/
             String phone = pigcmsUser.getPhone();
             String userCode = (String)redisUtil.get(phone+"COM");
-            if(!"COM5704601385".equals(userCode)){
+            logger.info("userCode==="+userCode);
+            if(!"COM3151811246".equals(userCode)){
                 return result;//权限不对直接返回;
             }
-
             /*根据电话获取+"ACT"*/
             String encryptData = (String)redisUtil.get(phone + "ACT");
+            logger.info("encryptData==="+encryptData);
 
             String decrypt = DESUtil.decrypt(encryptData, Key);//解密
             JSONObject jsonData = JSON.parseObject(decrypt);
@@ -83,8 +85,6 @@ public class UserController {
 
             pigcmsUser.setAccount(account);//传入pwd，account
             pigcmsUser.setPassword(pwd);
-
-
 
             headers.put("Content-Type", "application/json");
 
@@ -97,7 +97,6 @@ public class UserController {
                 e.printStackTrace();
             }
             if (null == jsonResp) {
-
                 result.put("status", "false");
                 logger.error("返回数据为空");
             }

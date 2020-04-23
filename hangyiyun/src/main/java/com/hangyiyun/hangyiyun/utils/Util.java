@@ -38,23 +38,29 @@ public class Util {
 
         JSONObject jsonObject = JSONObject.parseObject(str);
         String value = jsonObject.getString(key);
-        logger.info("获取内容:"+value.toString());
+        logger.info("获取内容:" + value.toString());
         return value;
     }
 
     /***
      * @Author wangcc
-     * @Description 将对象转化JSONObject,在请求第三方接口
+     * @Description 将对象转化JSONObject, 在请求第三方接口
      * @Date 1:14 2020/4/4
      * @Param [HOST, path, method, object]
      * @return java.lang.String
      **/
-    public JSONObject getResultForObj(Object object, String host,String path, String method, Map<String, String> headers) throws IOException {
+    public JSONObject getResultForObj(Object object, String host, String path, String method, Map<String, String> headers) throws IOException {
         logger.info("打印传输进来的内容：" + object.toString());
         JSONObject result = new JSONObject();
 
+
+
+
         /*转换格式 obj => JSONObject*/
         JSONObject jsonBody = (JSONObject) JSONObject.toJSON(object);
+
+        logger.info("打印转化后的JSONObject对象内容" + jsonBody.toString());
+
         if (null == jsonBody) {
             result.put("status", "false");
             logger.error("转化obj对象错误！");
@@ -63,13 +69,10 @@ public class Util {
         JSONObject respResult = null;
 
         /*判断连接类型，连接三方获取响应*/
-        if (null != method && !method.equals("")) {
-            Map<String,String> parames = new HashMap<String,String>();
+        Map<String, String> parames = new HashMap<String, String>();
+        respResult = HttpTools.doPost(host, path, headers, jsonBody, parames);
 
-            respResult = HttpTools.doPost(host, path, headers, jsonBody, parames);
-
-            //respResult = HttpClientUtils.doPost(url, method, headers, JsonBody)
-        }
+        //respResult = HttpClientUtils.doPost(url, method, headers, JsonBody)
         /*检测响应*/
         result = checkRespStatusAndGetMsg(respResult);
 

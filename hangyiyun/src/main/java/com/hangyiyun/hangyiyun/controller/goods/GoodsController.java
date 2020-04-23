@@ -59,7 +59,7 @@ public class GoodsController {
     @ApiImplicitParams({
             @ApiImplicitParam(paramType = "body",name = "goodsInfoVO",required=true,value = "商品详情")
     })
-    @RequestMapping(value = "/goodsinfos",method = RequestMethod.POST)
+    @RequestMapping(value = "/goodsInfos",method = RequestMethod.POST)
     public Result<JSONObject> addGoods(@RequestBody GoodsInfoVO goodsInfoVO){
         logger.warn(goodsInfoVO.toString());
         logger.warn(JSONObject.toJSONString(goodsInfoVO));

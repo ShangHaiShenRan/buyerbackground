@@ -2,6 +2,7 @@ package com.shsr.objectvo.hangyiyun.vo.good;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
 
 import java.util.List;
 
@@ -11,6 +12,7 @@ import java.util.List;
  * @author: JayLee
  * @create: 2018-10-07 14:32
  **/
+@Data
 @ApiModel(value = "商品信息VO实体类")
 public class GoodsInfoVO {
     //商品基础信息

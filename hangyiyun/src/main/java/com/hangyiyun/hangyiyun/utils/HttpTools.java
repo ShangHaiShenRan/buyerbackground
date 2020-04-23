@@ -3,6 +3,7 @@ package com.hangyiyun.hangyiyun.utils;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import org.apache.http.HttpEntity;
+import org.apache.http.ProtocolVersion;
 import org.apache.http.StatusLine;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
@@ -62,16 +63,15 @@ public class HttpTools {
         CloseableHttpResponse response = requestClient.execute(post);//发送请求，获取返回内容;
 
         StatusLine statusLine = response.getStatusLine();//获取返回状态头;
-        statusLine.getStatusCode();//获得状态码;
-        statusLine.getProtocolVersion();//获得返回http版本;
-        statusLine.getReasonPhrase();//获得的的返回....Emmmm 忘了叫什么了.....
+        int statusCode = statusLine.getStatusCode();//获得状态码;
+        ProtocolVersion protocolVersion = statusLine.getProtocolVersion();//获得返回http版本;
+        String reasonPhrase = statusLine.getReasonPhrase();//获得的的返回....Emmmm 忘了叫什么了.....
 
         HttpEntity entity = response.getEntity();//获得返回的响应体 Body
         if (entity != null) {
             String strResp = EntityUtils.toString(entity);
 
             JSONObject jsonResp = JSONObject.parseObject(strResp);
-
             result = jsonResp;
         }
         return result;
