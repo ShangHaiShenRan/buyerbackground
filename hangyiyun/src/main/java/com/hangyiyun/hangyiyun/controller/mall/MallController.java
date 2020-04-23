@@ -35,6 +35,9 @@ public class MallController {
 
     @Autowired
     private Util util;
+    
+    @Autowired
+    private RedisUtil redisUtil;
 
     @Autowired
     private RedisUtil redisUtil;

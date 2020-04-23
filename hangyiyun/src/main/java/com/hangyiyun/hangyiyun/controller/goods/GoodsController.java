@@ -1,12 +1,12 @@
 package com.hangyiyun.hangyiyun.controller.goods;
 
-import com.alibaba.fastjson.JSONObject;
-import com.hangyiyun.hangyiyun.apiresult.Result;
-import com.hangyiyun.hangyiyun.apiresult.ResultCode;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;;
+import com.hangyiyun.hangyiyun.apiResult.Result;
+import com.hangyiyun.hangyiyun.apiResult.ResultCode;
 import com.hangyiyun.hangyiyun.controller.mall.MallController;
 import com.hangyiyun.hangyiyun.utils.HttpTools;
 import com.hangyiyun.hangyiyun.utils.HttpUtils;
-import com.hangyiyun.hangyiyun.utils.PageBean;
 import com.hangyiyun.hangyiyun.utils.Util;
 import com.shsr.objectvo.hangyiyun.vo.good.GoodsInfoVO;
 import io.swagger.annotations.Api;
@@ -15,6 +15,7 @@ import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import org.apache.http.HttpResponse;
 import org.apache.http.util.EntityUtils;
+import org.omg.PortableInterceptor.SUCCESSFUL;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,9 +42,7 @@ import java.util.Map;
 @RequestMapping(value = "/Goods" ,produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 public class GoodsController {
 
-
     final String HOST="http://xyyapi.michain.tech";
-
     private static final Logger logger = LoggerFactory.getLogger(MallController.class);
 
     @Autowired

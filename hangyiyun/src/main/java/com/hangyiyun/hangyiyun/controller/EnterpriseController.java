@@ -99,7 +99,8 @@ public class EnterpriseController {
                 String companyCode = respData.getString("companyCode");
                 enterprise.setCompanyCode(companyCode);//调用开店方法前，将返回的消息整合成一个实体类;
 
-                JSONObject openMallResult = openMall(enterprise);
+                JSONObject openMallResult = openMall(enterprise);//获取开店的权限
+
                 result = openMallResult;
                 logger.info(result.toJSONString());
             } else {
