@@ -10,11 +10,9 @@ import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.constraints.NotNull;
-import java.awt.*;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -27,7 +25,7 @@ import java.util.Map;
  * @return
  **/
 @RestController
-@RequestMapping(value = "/User",produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+@RequestMapping("/User")
 @Api(tags = "UserController",description  = "企业管理")
 public class UserController {
 
@@ -43,9 +41,6 @@ public class UserController {
     @Autowired
     private Util util;
 
-    @Autowired
-    private HttpTools httpTools;
-
 
     /**
      * @return JSONObject
@@ -54,8 +49,9 @@ public class UserController {
      * @Date 13:04 2020/4/1
      * @Param []
      **/
-    @RequestMapping(value = "/loginByName",produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+
     @ApiOperation("商城登陆接口")
+    @RequestMapping(value = "/loginByName",method = RequestMethod.POST)
     public JSONObject loginByName(@RequestBody @NotNull PigcmsUser pigcmsUser) throws Exception {
 
         String path = "/admin/login/mall";
@@ -85,8 +81,8 @@ public class UserController {
             String account = jsonData.getString("account");
             String pwd = jsonData.getString("passwd");
 
-            pigcmsUser.setAccount(account);//写入账户名
-            pigcmsUser.setPassword(pwd);//写入密码
+            pigcmsUser.setAccount(account);//传入pwd，account
+            pigcmsUser.setPassword(pwd);
 
 
 
@@ -96,12 +92,12 @@ public class UserController {
             bodys.put("password", pigcmsUser.getPassword().toString());
 
             try {
-                jsonResp = httpTools.doPost(HOST,path,headers,bodys,parames);
+                jsonResp = HttpTools.doPost(HOST,path,headers,bodys,parames);
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
             if (null == jsonResp) {
+
                 result.put("status", "false");
                 logger.error("返回数据为空");
             }
@@ -147,7 +143,6 @@ public class UserController {
             logger.error("输入有空，请检查后输入");
         }
 
-        logger.info("打印返回的内容"+result.toString());
         return result;
     }
 

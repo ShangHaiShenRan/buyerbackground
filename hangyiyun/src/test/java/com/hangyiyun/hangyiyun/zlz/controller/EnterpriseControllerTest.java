@@ -2,7 +2,6 @@ package com.hangyiyun.hangyiyun.zlz.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import com.hangyiyun.hangyiyun.controller.EnterpriseController;
-import com.hangyiyun.hangyiyun.controller.TestController;
 
 import com.shsr.objectvo.hangyiyun.vo.company.Enterprise;
 import org.junit.Test;
@@ -23,8 +22,6 @@ public class EnterpriseControllerTest {
     @Autowired
     EnterpriseController enterpriseController;
 
-    @Autowired
-    TestController testController;
     private Enterprise enterprise;
     @BeforeEach
     void setUp() {

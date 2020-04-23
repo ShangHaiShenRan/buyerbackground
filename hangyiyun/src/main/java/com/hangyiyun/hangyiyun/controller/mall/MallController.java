@@ -8,10 +8,12 @@ import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -23,8 +25,7 @@ import java.util.Map;
  * @return 
  **/
 @RestController
-@RequestMapping("/Mall")
-@Api(tags = "MallController",description  = "Saas商店管理")
+@RequestMapping(value = "/Mall")
 public class MallController {
 
     final String HOST="http://xyyapi.michain.tech";
@@ -48,7 +49,7 @@ public class MallController {
      * @Date: 2020/3/29 11:39
      */
     @RequestMapping(value = "/by/id",method = RequestMethod.GET)
-    @ApiOperation("根据id查找saas商店")
+//    @ApiOperation("根据id查找saas商店")
     public JSONObject selectMallByID(String id){
         JSONObject result = new JSONObject();
 
@@ -92,7 +93,9 @@ public class MallController {
         Map<String,String> headers = new HashMap<String,String>();
         headers.put("Content-Type", "application/json");
 
-        result = util.getResultForObj(mallInfo,url,"POST",headers);
+        result = util.getResultForObj(mallInfo,HOST,path,"POST",headers);
+
+        logger.warn(result.toString());
         boolean notBlank = StringUtils.isNotBlank(result.toString());
         if(notBlank){
             String encryptData = result.getString("data");
@@ -111,7 +114,7 @@ public class MallController {
      * @return
      **/
     @RequestMapping(value = "/editMall",method = RequestMethod.POST)
-    @ApiOperation("修改商城信息")
+//    @ApiOperation("修改商城信息")
     public JSONObject editMall(@RequestBody TMpfMallInfo mallInfo) {
 
         logger.info("进入editMall.........................................");
@@ -125,7 +128,11 @@ public class MallController {
         headers.put("Content-Type", "application/json");
 
         /*进行重构将这个传输改为fegin*/
-        result = util.getResultForObj(mallInfo,url,"POST",headers);
+        try {
+            result = util.getResultForObj(mallInfo,HOST,path,"POST",headers);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         return  result;
     }

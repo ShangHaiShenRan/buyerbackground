@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import java.io.IOException;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -47,13 +49,13 @@ public class Util {
      * @Param [HOST, path, method, object]
      * @return java.lang.String
      **/
-    public JSONObject getResultForObj(Object object, String url, String method, Map<String, String> headers) {
+    public JSONObject getResultForObj(Object object, String host,String path, String method, Map<String, String> headers) throws IOException {
         logger.info("打印传输进来的内容：" + object.toString());
         JSONObject result = new JSONObject();
 
         /*转换格式 obj => JSONObject*/
-        JSONObject JsonBody = (JSONObject) JSONObject.toJSON(object);
-        if (null == JsonBody) {
+        JSONObject jsonBody = (JSONObject) JSONObject.toJSON(object);
+        if (null == jsonBody) {
             result.put("status", "false");
             logger.error("转化obj对象错误！");
         }
@@ -62,11 +64,11 @@ public class Util {
 
         /*判断连接类型，连接三方获取响应*/
         if (null != method && !method.equals("")) {
+            Map<String,String> parames = new HashMap<String,String>();
 
-            logger.info(url,method,headers,JsonBody);
+            respResult = HttpTools.doPost(host, path, headers, jsonBody, parames);
 
-            respResult = HttpClientUtils.doPost(url, method, headers, JsonBody);
-
+            //respResult = HttpClientUtils.doPost(url, method, headers, JsonBody)
         }
         /*检测响应*/
         result = checkRespStatusAndGetMsg(respResult);

@@ -11,8 +11,9 @@ import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Date;
@@ -26,8 +27,8 @@ import java.util.Map;
  * 用户登录注册接口
  */
 @RestController
-@RequestMapping(value = "/Enterprise",produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-@Api(tags = "EnterpriseController",description  = "云登陆注册管理")
+@RequestMapping("/Enterprise")
+//@Api(tags = "EnterpriseController",description  = "云登陆注册管理")
 public class EnterpriseController {
 
     @Autowired
@@ -35,6 +36,7 @@ public class EnterpriseController {
 
     @Autowired
     private RedisUtil redisUtil;
+
 
     private final String HOST = "https://enterprise.michain.tech";
     private final String KEY = "d811ad6ff50765b1e791318643239744";
@@ -94,7 +96,7 @@ public class EnterpriseController {
             if (respStatus && respData != null && "".equals(respData)) {
 
                 String companyCode = respData.getString("companyCode");
-                enterprise.setCompanyCode(companyCode);//掉用开店方法前，将返回的消息整合成一个实体类;
+                enterprise.setCompanyCode(companyCode);//调用开店方法前，将返回的消息整合成一个实体类;
 
                 JSONObject openMallResult = openMall(enterprise);//获取开店的权限
 
@@ -121,14 +123,16 @@ public class EnterpriseController {
      *      2.将返回类型改变为JSONObject;
      *      3.删除try{}catch() 代码块
      * */
-    @RequestMapping(value = "/login",produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+
     @ApiOperation("云平台登陆")
-    public JSONObject login(PigcmsUser pigcmsUser) {
+    @RequestMapping("/login")
+    public JSONObject login(@RequestBody PigcmsUser pigcmsUser) {
 
-        logger.info("进入登陆平台---------------------------");
-
+        logger.warn("打印user内容是:"+pigcmsUser.toString());
         JSONObject result = new JSONObject();
+
         String path = "/login";
+        String method = "POST";
 
         Map<String, String> headers = new HashMap<String, String>();
         headers.put("Content-Type", "application/json");
@@ -139,20 +143,18 @@ public class EnterpriseController {
         bodys.put("loginVerifyCode", "xyypt20");
 
         JSONObject post = HttpClientUtils.doPost(HOST + path, "POST", headers, bodys);
-        JSONObject jsonData = post.getJSONObject("data");
 
-        logger.info("打印data内容"+jsonData.toString());
+        JSONObject jsonData = post.getJSONObject("data");
 
         if(!jsonData.isEmpty()){
             String strUserCode = jsonData.getString("userCode");
-            if(!strUserCode.isEmpty()){//验证redis中有没有相同的key，如果没有就直接存入redis
+            if(!strUserCode.isEmpty()&& redisUtil.hasKey(pigcmsUser.getPhone()+"COM") ){//验证redis中有没有相同的key，如果没有就直接存入redis
                 if(!redisUtil.hasKey(strUserCode)){
                     redisUtil.set(pigcmsUser.getPhone()+"COM",strUserCode);//存储，key是电话
                     result = post;
                 }
             }
         }
-        logger.warn("打印返回信息"+result.toString());
         return result;
     }
 

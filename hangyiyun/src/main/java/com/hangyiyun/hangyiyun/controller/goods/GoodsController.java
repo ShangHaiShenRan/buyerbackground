@@ -48,9 +48,6 @@ public class GoodsController {
     @Autowired
     private Util util;
 
-    @Autowired
-    private HttpTools httpTools;
-
     /**
      * @Author wangcc
      * @Description  商品添加
@@ -64,6 +61,11 @@ public class GoodsController {
     })
     @RequestMapping(value = "/goodsinfos",method = RequestMethod.POST)
     public Result<JSONObject> addGoods(@RequestBody GoodsInfoVO goodsInfoVO){
+        logger.warn(goodsInfoVO.toString());
+        logger.warn(JSONObject.toJSONString(goodsInfoVO));
+        if(goodsInfoVO==null){
+            return new Result<JSONObject>().setCode(ResultCode.BAD_REQUEST).setMessage("坏的请求，参数不可为空").setData(null);
+        }
         JSONObject result = null;
         String path="/admin/goodsinfos";
 
@@ -75,11 +77,11 @@ public class GoodsController {
 //        Objcet==>JSONObject
         JSONObject body= (JSONObject) JSONObject.toJSON(goodsInfoVO);
         try {
-            result = httpTools.doPost(HOST,path,headers,body,paramtes);
+            result = HttpTools.doPost(HOST,path,headers,body,paramtes);
             return new Result<JSONObject>().setCode(ResultCode.SUCCESS).setMessage("添加成功").setData(result);
         } catch (IOException e) {
             e.printStackTrace();
-            return new Result<JSONObject>().setCode(ResultCode.INTERNAL_SERVER_ERROR).setMessage("添加失败").setData(result);
+            return new Result<JSONObject>().setCode(ResultCode.INTERNAL_SERVER_ERROR).setMessage("添加失败").setData(null);
         }
     }
 
@@ -92,6 +94,9 @@ public class GoodsController {
      * @return com.alibaba.fastjson.JSONObject
      **/
     @ApiOperation("商品修改")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name="GoodsInfoVO")
+    })
     @RequestMapping(value = "/goodsinfos",method = RequestMethod.PUT)
     public JSONObject updataGoods(@RequestBody GoodsInfoVO goodsInfoVO){
         JSONObject result = new JSONObject();
@@ -102,7 +107,11 @@ public class GoodsController {
         Map<String,String> headers = new HashMap<String,String>();
         headers.put("Content-Type", "application/json");
 
-        result = util.getResultForObj(goodsInfoVO,url,"PUT",headers);
+        try {
+            result = util.getResultForObj(goodsInfoVO,HOST,path,"PUT",headers);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         return result;
     }
@@ -207,7 +216,7 @@ public class GoodsController {
         params.put("goodsName",goodsName);
 
         try {
-            JSONObject jsonObject = httpTools.doGet(HOST, path, headers, params);
+            JSONObject jsonObject = HttpTools.doGet(HOST, path, headers, params);
             if(!jsonObject.isEmpty()){
                 return new Result<JSONObject>().setCode(ResultCode.SUCCESS).setMessage("请求成功").setData(jsonObject);
             }else{
@@ -230,7 +239,7 @@ public class GoodsController {
         String url = HOST+path;
         String key="file";
         try {
-            JSONObject jsonObject= httpTools.uploadImage(url,key,file,null);
+            JSONObject jsonObject= HttpTools.uploadImage(url,key,file,null);
             if(jsonObject!=null){
                 return new Result<JSONObject>().setCode(ResultCode.SUCCESS)
                         .setMessage("上传成功")
