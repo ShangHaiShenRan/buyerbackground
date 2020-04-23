@@ -1,8 +1,7 @@
 package com.hangyiyun.hangyiyun.controller.mall;
 
 import com.alibaba.fastjson.JSONObject;
-import com.hangyiyun.hangyiyun.utils.HttpClientUtils;
-import com.hangyiyun.hangyiyun.utils.Util;
+import com.hangyiyun.hangyiyun.utils.*;
 import com.shsr.objectvo.hangyiyun.vo.mall.TMpfMallInfo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -32,8 +31,13 @@ public class MallController {
 
     private static final Logger logger = LoggerFactory.getLogger(MallController.class);
 
+    private static final String tokenKey = "d811ad6ff50765b1e791318643239744";
+
     @Autowired
     private Util util;
+    
+    @Autowired
+    private RedisUtil redisUtil;
 
     /*
      * 功能描述: <br>
@@ -78,7 +82,7 @@ public class MallController {
      **/
     @ApiOperation("添加saas平台上面的商城")
     @RequestMapping(value = "/addMall",method = RequestMethod.POST)
-    public JSONObject addMall(@RequestBody TMpfMallInfo mallInfo){
+    public JSONObject addMall(@RequestBody TMpfMallInfo mallInfo) throws Exception {
 
         String path="/admin/mall";
         String url = HOST+path;
@@ -89,7 +93,13 @@ public class MallController {
         headers.put("Content-Type", "application/json");
 
         result = util.getResultForObj(mallInfo,url,"POST",headers);
+        boolean notBlank = StringUtils.isNotBlank(result.toString());
+        if(notBlank){
+            String encryptData = result.getString("data");
 
+            /*将加密数据存储到redise*/
+            boolean userMsgToRedise = redisUtil.set(mallInfo.getPhone()+"ACT",encryptData.toString() );
+        }
         return result;
     }
 

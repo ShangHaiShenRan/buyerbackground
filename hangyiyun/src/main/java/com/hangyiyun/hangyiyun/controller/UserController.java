@@ -1,11 +1,9 @@
 package com.hangyiyun.hangyiyun.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.hangyiyun.hangyiyun.annotation.AuthToken;
-import com.hangyiyun.hangyiyun.utils.HttpClientUtils;
-import com.hangyiyun.hangyiyun.utils.RedisUtil;
-import com.hangyiyun.hangyiyun.utils.StringUtils;
-import com.hangyiyun.hangyiyun.utils.Util;
+import com.hangyiyun.hangyiyun.utils.*;
 import com.shsr.objectvo.hangyiyun.vo.user.PigcmsUser;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -15,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.constraints.NotNull;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -34,11 +33,17 @@ public class UserController {
 
     final String HOST = "http://xyyapi.michain.tech";
 
+    private static final String Key = "d811ad6ff50765b1e791318643239744";
+
     @Autowired
     private RedisUtil redisUtil;
 
     @Autowired
     private Util util;
+
+    @Autowired
+    private HttpTools httpTools;
+
 
     /**
      * @return JSONObject
@@ -48,8 +53,8 @@ public class UserController {
      * @Param []
      **/
     @RequestMapping("/loginByName")
-    @ApiOperation("企业登陆接口")
-    public JSONObject loginByName(@RequestBody @NotNull PigcmsUser pigcmsUser) {
+    @ApiOperation("商城登陆接口")
+    public JSONObject loginByName(@RequestBody @NotNull PigcmsUser pigcmsUser) throws Exception {
 
         String path = "/admin/login/mall";
         String url = HOST + path;
@@ -59,9 +64,29 @@ public class UserController {
 
         Map<String, String> headers = new HashMap<String, String>();
         JSONObject bodys = new JSONObject();
-        Map<String, String> querys = new HashMap<String, String>();
+        Map<String, String> parames = new HashMap<String, String>();
 
         if (pigcmsUser != null) {
+
+            /*判断用户是否经过平台方允许进入*/
+            String phone = pigcmsUser.getPhone();
+            String userCode = (String)redisUtil.get(phone+"COM");
+            if(!"COM5704601385".equals(userCode)){
+                return result;//权限不对直接返回;
+            }
+
+            /*根据电话获取+"ACT"*/
+            String encryptData = (String)redisUtil.get(phone + "ACT");
+
+            String decrypt = DESUtil.decrypt(encryptData, Key);//解密
+            JSONObject jsonData = JSON.parseObject(decrypt);
+            String account = jsonData.getString("account");
+            String pwd = jsonData.getString("passwd");
+
+            pigcmsUser.setAccount(account);//传入pwd，account
+            pigcmsUser.setPassword(pwd);
+
+
 
             headers.put("Content-Type", "application/json");
 
@@ -69,12 +94,12 @@ public class UserController {
             bodys.put("password", pigcmsUser.getPassword().toString());
 
             try {
-                jsonResp = HttpClientUtils.doPost(url, "POST", headers, bodys);
-            } catch (Exception e) {
+                jsonResp = httpTools.doPost(HOST,path,headers,bodys,parames);
+            } catch (IOException e) {
                 e.printStackTrace();
             }
-            if (null == jsonResp) {
 
+            if (null == jsonResp) {
                 result.put("status", "false");
                 logger.error("返回数据为空");
             }
@@ -83,6 +108,9 @@ public class UserController {
             String getRespStatus = jsonResp.getString("success");
             String tokenForResp = jsonResp.getString("token");
             String dataForResp = jsonResp.getString("data");
+
+            /*存储到redise里*/
+            boolean set = redisUtil.set(tokenForResp, pigcmsUser.getAccount().toString());
 
             String getMallCodeForDataForResp = util.getValueForStr(dataForResp, "mallCode");
             /*非空判断*/
