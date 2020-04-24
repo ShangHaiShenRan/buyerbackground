@@ -181,6 +181,8 @@ public class EnterpriseController {
 
         Map<String, String> bodyMall = null;//参数需要
 
+
+
         HttpResponse httpResponseMall = HttpUtils.doPost(HOST, pathMall, method, headersMall, querysMall, bodyMall);
 
         /*格式转化*/
