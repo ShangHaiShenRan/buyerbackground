@@ -36,7 +36,7 @@ import java.util.Map;
  */
 @Api(tags = "GoodsController",description  = "商品管理")
 @RestController
-@RequestMapping(value = "/Goods" ,produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+@RequestMapping(value = "/Goods" ,produces = {"application/json;charset=UTF-8"})
 public class GoodsController {
 
     final String HOST="http://xyyapi.michain.tech";
