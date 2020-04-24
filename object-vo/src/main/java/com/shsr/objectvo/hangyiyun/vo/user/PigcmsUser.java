@@ -1,6 +1,8 @@
 package com.shsr.objectvo.hangyiyun.vo.user;
 
+import lombok.Data;
 
+@Data
 public class PigcmsUser {
 
 
@@ -69,6 +71,7 @@ public class PigcmsUser {
   private String account;
   private String memberCard;
   private long birthday;
+  private String userCode;
 
 
   public long getUid() {

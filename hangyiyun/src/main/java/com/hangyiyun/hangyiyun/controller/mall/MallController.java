@@ -2,10 +2,13 @@ package com.hangyiyun.hangyiyun.controller.mall;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.hangyiyun.hangyiyun.annotation.AuthToken;
 import com.hangyiyun.hangyiyun.apiresult.Result;
 import com.hangyiyun.hangyiyun.apiresult.ResultCode;
+import com.hangyiyun.hangyiyun.controller.EnterpriseController;
 import com.hangyiyun.hangyiyun.utils.*;
 import com.shsr.objectvo.hangyiyun.vo.mall.TMpfMallInfo;
+import com.shsr.objectvo.hangyiyun.vo.user.PigcmsUser;
 import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,7 +30,7 @@ import java.util.Map;
  * @return 
  **/
 @RestController
-@RequestMapping(value = "/Mall",produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/Mall",produces = {"application/json;charset=UTF-8"})
 public class MallController {
 
     final String HOST="http://xyyapi.michain.tech";
@@ -39,6 +42,9 @@ public class MallController {
     
     @Autowired
     private RedisUtil redisUtil;
+
+    @Autowired
+    private EnterpriseController enterpriseController;
 
     /*
      * 功能描述: <br>
@@ -80,7 +86,8 @@ public class MallController {
      * @return
      **/
     @ApiOperation("添加saas平台上面的商城")
-    @RequestMapping(value = "/addMall",method = RequestMethod.POST)
+    @RequestMapping(value = "/addMall",produces = MediaType.APPLICATION_JSON_VALUE,method = RequestMethod.POST)
+    @AuthToken
     public Result<JSONObject> addMall(@RequestBody TMpfMallInfo mallInfo, @RequestHeader("Authorization") String token) throws Exception {
         String path="/admin/mall";
         String url = HOST+path;
@@ -149,4 +156,6 @@ public class MallController {
 
         return null;
     }
+
+
 }

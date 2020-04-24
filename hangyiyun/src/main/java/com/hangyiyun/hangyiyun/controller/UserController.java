@@ -35,7 +35,6 @@ public class UserController {
     /*读取配置文件中定义内容*/
     /*@Value("${host}")
     private String HOST;//获取域名信息
-
     @Value("${key}")
     private String Key;
 
@@ -78,7 +77,7 @@ public class UserController {
         Map<String, String> parames = new HashMap<String, String>();
 
         if (pigcmsUser == null) {
-            return new Result<JSONObject>().setCode(ResultCode.FAIL).setMessage("失败").setData(null);
+            return new Result<JSONObject>().setCode(ResultCode.INTERNAL_SERVER_ERROR).setMessage("失败").setData(null);
         }
 
         /*判断用户是否经过平台方允许进入*/
@@ -132,7 +131,7 @@ public class UserController {
 
         /*非空判断*/
         if (!StringUtils.isNotBlank(getMallCodeForDataForResp)) {
-            return new Result<JSONObject>().setCode(ResultCode.FAIL).setMessage("失败").setData(null);
+            return new Result<JSONObject>().setCode(ResultCode.INTERNAL_SERVER_ERROR).setMessage("失败").setData(null);
         }
 
         if (null != getRespStatus && getRespStatus.equals("true") && StringUtils.isNotBlank(tokenForResp)) {
@@ -148,11 +147,11 @@ public class UserController {
             if (setTokenResult && setTimeResult) {
                 return new Result<JSONObject>().setCode(ResultCode.SUCCESS).setMessage("成功").setData(jsonResp);
             } else {
-                return new Result<JSONObject>().setCode(ResultCode.FAIL).setMessage("失败").setData(null);
+                return new Result<JSONObject>().setCode(ResultCode.INTERNAL_SERVER_ERROR).setMessage("失败").setData(null);
             }
         } else {
             logger.error("返回值为空:", jsonResp.getString("message"));
-            return new Result<JSONObject>().setCode(ResultCode.FAIL).setMessage("失败").setData(null);
+            return new Result<JSONObject>().setCode(ResultCode.INTERNAL_SERVER_ERROR).setMessage("失败").setData(null);
         }
     }
 
@@ -185,6 +184,36 @@ public class UserController {
         redisUtil.del(token, mallCode, time);
 
         return new Result<>().setCode(ResultCode.SUCCESS).setMessage("成功").setData(null);
+    }
+
+
+    /**
+     * @Author Wangcc
+     * @Description
+     * @Date 19:34 2020/4/24
+     * @Param [pigcmsUser]
+     * @return com.hangyiyun.hangyiyun.apiresult.Result<com.alibaba.fastjson.JSONObject>
+     **/
+    @RequestMapping(value = "/check",method = RequestMethod.POST)
+    @ApiOperation("检查用户状态")
+    public Result<JSONObject> checkAccount(@RequestBody PigcmsUser pigcmsUser){
+        logger.info("打印用户"+pigcmsUser.toString());
+
+        String userCode = pigcmsUser.getUserCode();
+        String phone = pigcmsUser.getPhone();
+
+        if (!"COM3151811246".equals(userCode)) {//判断userCode比较是否成功
+            return new Result<JSONObject>().setCode(ResultCode.INVALID_SCOPE).setMessage("非会员，拒绝开店").setData(null);//权限不对直接返回;
+        }
+
+        /*根据电话获取+"ACT"*/
+        String encryptData = (String) redisUtil.get(phone + "ACT");
+        if (StringUtils.isBlank(encryptData)) {
+            return new Result<JSONObject>().setCode(ResultCode.INTERNAL_SERVER_ERROR).setMessage("是会员,但没有开店").setData(null);
+        }
+
+        /*验证成功直接返回*/
+        return  new Result<>().setCode(ResultCode.SUCCESS).setMessage("是会员而且已经开通店铺").setData(null);
     }
 
 }
