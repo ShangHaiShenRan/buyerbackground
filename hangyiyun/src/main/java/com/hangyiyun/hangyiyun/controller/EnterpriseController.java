@@ -2,8 +2,8 @@ package com.hangyiyun.hangyiyun.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.hangyiyun.hangyiyun.apiResult.Result;
-import com.hangyiyun.hangyiyun.apiResult.ResultCode;
+import com.hangyiyun.hangyiyun.apiresult.Result;
+import com.hangyiyun.hangyiyun.apiresult.ResultCode;
 import com.hangyiyun.hangyiyun.utils.*;
 import com.shsr.objectvo.hangyiyun.vo.company.Enterprise;
 import com.shsr.objectvo.hangyiyun.vo.user.PigcmsUser;
@@ -14,6 +14,7 @@ import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -30,7 +31,7 @@ import java.util.Map;
  * 用户登录注册接口
  */
 @RestController
-@RequestMapping(value = "/Enterprise",produces = {"application/json;charset=UTF-8"})
+@RequestMapping(value = "/Enterprise",produces = MediaType.APPLICATION_JSON_VALUE)
 //@Api(tags = "EnterpriseController",description  = "云登陆注册管理")
 public class EnterpriseController {
 
@@ -123,7 +124,7 @@ public class EnterpriseController {
      * */
 
     @ApiOperation("云平台登陆")
-    @RequestMapping(value = "/login",produces ={"application/json;charset=UTF-8"})
+    @RequestMapping(value = "/login",produces = MediaType.APPLICATION_JSON_VALUE)
     public Result<JSONObject> login(@RequestBody PigcmsUser pigcmsUser) {
         String path = "/login";
         String method = "POST";

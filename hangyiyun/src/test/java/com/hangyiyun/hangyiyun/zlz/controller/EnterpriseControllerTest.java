@@ -1,7 +1,7 @@
 package com.hangyiyun.hangyiyun.zlz.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import com.hangyiyun.hangyiyun.apiResult.Result;
+import com.hangyiyun.hangyiyun.apiresult.Result;
 import com.hangyiyun.hangyiyun.controller.EnterpriseController;
 
 import com.hangyiyun.hangyiyun.controller.UserController;

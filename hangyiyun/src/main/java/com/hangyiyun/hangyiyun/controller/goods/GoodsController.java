@@ -1,9 +1,8 @@
 package com.hangyiyun.hangyiyun.controller.goods;
 
-import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;;
-import com.hangyiyun.hangyiyun.apiResult.Result;
-import com.hangyiyun.hangyiyun.apiResult.ResultCode;
+import com.hangyiyun.hangyiyun.apiresult.Result;
+import com.hangyiyun.hangyiyun.apiresult.ResultCode;
 import com.hangyiyun.hangyiyun.controller.mall.MallController;
 import com.hangyiyun.hangyiyun.utils.HttpTools;
 import com.hangyiyun.hangyiyun.utils.HttpUtils;
@@ -15,12 +14,10 @@ import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import org.apache.http.HttpResponse;
 import org.apache.http.util.EntityUtils;
-import org.omg.PortableInterceptor.SUCCESSFUL;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -47,6 +44,9 @@ public class GoodsController {
 
     @Autowired
     private Util util;
+
+    @Autowired
+    private HttpTools httpTools;
 
     /**
      * @Author wangcc
@@ -77,7 +77,7 @@ public class GoodsController {
 //        Objcet==>JSONObject
         JSONObject body= (JSONObject) JSONObject.toJSON(goodsInfoVO);
         try {
-            result = HttpTools.doPost(HOST,path,headers,body,paramtes);
+            result = httpTools.doPost(HOST,path,headers,body,paramtes);
             return new Result<JSONObject>().setCode(ResultCode.SUCCESS).setMessage("添加成功").setData(result);
         } catch (IOException e) {
             e.printStackTrace();
@@ -216,7 +216,7 @@ public class GoodsController {
         params.put("goodsName",goodsName);
 
         try {
-            JSONObject jsonObject = HttpTools.doGet(HOST, path, headers, params);
+            JSONObject jsonObject = httpTools.doGet(HOST, path, headers, params);
             if(!jsonObject.isEmpty()){
                 return new Result<JSONObject>().setCode(ResultCode.SUCCESS).setMessage("请求成功").setData(jsonObject);
             }else{
@@ -239,7 +239,7 @@ public class GoodsController {
         String url = HOST+path;
         String key="file";
         try {
-            JSONObject jsonObject= HttpTools.uploadImage(url,key,file,null);
+            JSONObject jsonObject= httpTools.uploadImage(url,key,file,null);
             if(jsonObject!=null){
                 return new Result<JSONObject>().setCode(ResultCode.SUCCESS)
                         .setMessage("上传成功")

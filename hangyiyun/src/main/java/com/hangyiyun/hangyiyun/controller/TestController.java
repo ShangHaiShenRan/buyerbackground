@@ -1,7 +1,7 @@
 package com.hangyiyun.hangyiyun.controller;
 
-import com.hangyiyun.hangyiyun.apiResult.Result;
-import com.hangyiyun.hangyiyun.apiResult.ResultGenerator;
+import com.hangyiyun.hangyiyun.apiresult.Result;
+import com.hangyiyun.hangyiyun.apiresult.ResultGenerator;
 import io.swagger.annotations.ApiOperation;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Value;

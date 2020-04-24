@@ -3,16 +3,17 @@ package com.hangyiyun.hangyiyun.controller;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.hangyiyun.hangyiyun.annotation.AuthToken;
-import com.hangyiyun.hangyiyun.apiResult.Result;
-import com.hangyiyun.hangyiyun.apiResult.ResultCode;
+import com.hangyiyun.hangyiyun.apiresult.Result;
+import com.hangyiyun.hangyiyun.apiresult.ResultCode;
 import com.hangyiyun.hangyiyun.utils.*;
 import com.shsr.objectvo.hangyiyun.vo.user.PigcmsUser;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import javafx.application.Application;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.constraints.NotNull;
@@ -28,21 +29,35 @@ import java.util.Map;
  * @return
  **/
 @RestController
-@RequestMapping(value = "/User", produces = {"application/json;charset=UTF-8"})
+@RequestMapping(value = "/User",produces = {"application/json"})
 @Api(tags = "UserController", description = "企业管理")
 public class UserController {
 
+    /*读取配置文件中定义内容*/
+    @Value("${host}")
+    private String HOST;//获取域名信息
+
+    @Value("${key}")
+    private String Key;
+
+    @Value("${userCode}")
+    private String getCodeFormConfig;
+
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
-    final String HOST = "http://xyyapi.michain.tech";
+   // final String HOST = "http://xyyapi.michain.tech";
 
-    private static final String Key = "d811ad6ff50765b1e791318643239744";
+    //private static final String Key = "d811ad6ff50765b1e791318643239744";
+
+
+    @Autowired
+    private Util util;
 
     @Autowired
     private RedisUtil redisUtil;
 
     @Autowired
-    private Util util;
+    private HttpTools httpTools;
 
 
     /**
@@ -52,14 +67,15 @@ public class UserController {
      * @Date 13:04 2020/4/1
      * @Param []
      **/
-
     @ApiOperation("商城登陆接口")
     @RequestMapping(value = "/loginByName", method = RequestMethod.POST)
     public Result<JSONObject> loginByName(@RequestBody @NotNull PigcmsUser pigcmsUser) throws Exception {
 
+        logger.warn("打印输出的内容:"+HOST+"-----------"+Key+"--------------"+getCodeFormConfig);
+
+
         String path = "/admin/login/mall";
-        String url = HOST + path;
-        JSONObject jsonResp = new JSONObject();
+        //JSONObject jsonResp = new JSONObject();
 
         Map<String, String> headers = new HashMap<String, String>();
         JSONObject bodys = new JSONObject();
@@ -73,7 +89,7 @@ public class UserController {
         String phone = pigcmsUser.getPhone();
         String userCode = (String) redisUtil.get(phone + "COM");
         logger.info("userCode===" + userCode);
-        if (!"COM3151811246".equals(userCode)) {
+        if (!getCodeFormConfig.equals(userCode)) {
             return new Result<>().setCode(ResultCode.FAIL).setMessage("失败").setData(null);//权限不对直接返回;
         }
         /*根据电话获取+"ACT"*/
@@ -100,12 +116,11 @@ public class UserController {
         bodys.put("account", pigcmsUser.getAccount().toString());
         bodys.put("password", pigcmsUser.getPassword().toString());
 
+        JSONObject jsonResp = null;
         try {
-            jsonResp = HttpTools.doPost(HOST, path, headers, bodys, parames);
+            jsonResp = httpTools.doPost(HOST, path, headers, bodys, parames);
         } catch (IOException e) {
             e.printStackTrace();
-        }
-        if (null == jsonResp) {
             return new Result<>().setCode(ResultCode.FAIL).setMessage("失败").setData(null);
         }
 
@@ -115,9 +130,10 @@ public class UserController {
         String dataForResp = jsonResp.getString("data");
 
         /*存储到redise里*/
-        boolean set = redisUtil.set(tokenForResp, pigcmsUser.getAccount().toString());
+        redisUtil.set(tokenForResp, pigcmsUser.getAccount().toString());
 
         String getMallCodeForDataForResp = util.getValueForStr(dataForResp, "mallCode");
+
         /*非空判断*/
         if (!StringUtils.isNotBlank(getMallCodeForDataForResp)) {
             return new Result<>().setCode(ResultCode.FAIL).setMessage("失败").setData(null);

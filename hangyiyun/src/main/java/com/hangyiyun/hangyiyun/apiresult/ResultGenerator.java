@@ -1,7 +1,7 @@
-package com.hangyiyun.hangyiyun.apiResult;
+package com.hangyiyun.hangyiyun.apiresult;
 
-import com.hangyiyun.hangyiyun.apiResult.Result;
-import com.hangyiyun.hangyiyun.apiResult.ResultCode;
+import com.hangyiyun.hangyiyun.apiresult.Result;
+import com.hangyiyun.hangyiyun.apiresult.ResultCode;
 
 /**
  * @创建人: wangcc
