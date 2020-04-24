@@ -72,6 +72,7 @@ public class UserController {
         //logger.warn("打印输出的内容:"+HOST+"-----------"+Key+"--------------"+getCodeFormConfig);
         String path = "/admin/login/mall";
 
+
         Map<String, String> headers = new HashMap<String, String>();
         JSONObject bodys = new JSONObject();
         Map<String, String> parames = new HashMap<String, String>();

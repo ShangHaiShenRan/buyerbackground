@@ -3,6 +3,7 @@ package com.shsr.objectvo.hangyiyun.vo.user;
 
 public class PigcmsUser {
 
+
   private long uid;
   private String nickname;
   private String ticket;
