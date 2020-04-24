@@ -50,6 +50,7 @@ public class MallController {
      * @Date: 2020/3/29 11:39
      */
     @RequestMapping(value = "/by/id",method = RequestMethod.GET)
+
 //    @ApiOperation("根据id查找saas商店")
     public JSONObject selectMallByID(String id){
         JSONObject result = new JSONObject();

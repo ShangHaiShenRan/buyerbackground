@@ -34,6 +34,7 @@ public class Util {
      * @Date 1:21 2020/4/4
      * @Param []
      **/
+
     public String getValueForStr(String str, String key) {
 
         JSONObject jsonObject = JSONObject.parseObject(str);
@@ -52,9 +53,6 @@ public class Util {
     public JSONObject getResultForObj(Object object, String host, String path, String method, Map<String, String> headers) throws IOException {
         logger.info("打印传输进来的内容：" + object.toString());
         JSONObject result = new JSONObject();
-
-
-
 
         /*转换格式 obj => JSONObject*/
         JSONObject jsonBody = (JSONObject) JSONObject.toJSON(object);
@@ -75,6 +73,7 @@ public class Util {
         //respResult = HttpClientUtils.doPost(url, method, headers, JsonBody)
         /*检测响应*/
         result = checkRespStatusAndGetMsg(respResult);
+
 
         return result;
     }

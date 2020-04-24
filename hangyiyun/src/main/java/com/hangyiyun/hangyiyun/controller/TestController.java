@@ -19,6 +19,7 @@ public class TestController {
     private static final String DEFAULT_SUCCESS_MESSAGE = "SUCCESS";
 
     @Value("${host}")
+
     String host;
 
     @RequestMapping("/test")

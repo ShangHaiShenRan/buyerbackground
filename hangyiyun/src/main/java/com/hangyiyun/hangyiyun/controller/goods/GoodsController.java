@@ -39,6 +39,7 @@ import java.util.Map;
 @RequestMapping(value = "/Goods" ,produces = {"application/json;charset=UTF-8"})
 public class GoodsController {
 
+
     final String HOST="http://xyyapi.michain.tech";
     private static final Logger logger = LoggerFactory.getLogger(MallController.class);
 

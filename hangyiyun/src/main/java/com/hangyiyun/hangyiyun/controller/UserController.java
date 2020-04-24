@@ -54,6 +54,7 @@ public class UserController {
 
     @ApiOperation("商城登陆接口")
     @RequestMapping(value = "/loginByName", method = RequestMethod.POST)
+
     public Result<JSONObject> loginByName(@RequestBody @NotNull PigcmsUser pigcmsUser) throws Exception {
 
         String path = "/admin/login/mall";

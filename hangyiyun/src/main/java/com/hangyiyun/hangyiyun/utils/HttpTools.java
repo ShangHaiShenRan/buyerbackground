@@ -31,6 +31,7 @@ import java.util.Map;
  **/
 public class HttpTools {
 
+
     /**
      * @Author Wangcc
      * @Description post请求封装工具类
@@ -38,7 +39,7 @@ public class HttpTools {
      * @Param [host, path, headers, bodys, parames]
      * @return com.alibaba.fastjson.JSONObject
      **/
-    public static JSONObject doPost(String host, String path, Map<String,String> headers, JSONObject bodys, Map<String,String> parames) throws IOException {
+    public  JSONObject doPost(String host, String path, Map<String,String> headers, JSONObject bodys, Map<String,String> parames) throws IOException {
 
         JSONObject result = new JSONObject();
 
@@ -85,7 +86,7 @@ public class HttpTools {
      * @Param [host, path, headers, parames]
      * @return com.alibaba.fastjson.JSONObject
      **/
-    public static JSONObject doGet(String host,String path,Map<String,String> headers,Map<String,String> parames) throws IOException {
+    public  JSONObject doGet(String host,String path,Map<String,String> headers,Map<String,String> parames) throws IOException {
 
         JSONObject result = new JSONObject();
 
@@ -111,7 +112,7 @@ public class HttpTools {
     }
 
     /*将parames,host,path 进行拼接*/
-    private static String buildUrl(String host, String path, Map<String, String> parames) throws UnsupportedEncodingException {
+    private  String buildUrl(String host, String path, Map<String, String> parames) throws UnsupportedEncodingException {
         StringBuilder sbUrl = new StringBuilder();
         sbUrl.append(host);
         if (!StringUtils.isBlank(path)) {
@@ -145,7 +146,7 @@ public class HttpTools {
     /*
     * 文件上传post请求
     * */
-    public static JSONObject uploadImage(String url, String key, MultipartFile[] files, Map<String, String> paramter)throws Exception{
+    public JSONObject uploadImage(String url, String key, MultipartFile[] files, Map<String, String> paramter)throws Exception{
         CloseableHttpClient httpClient  = HttpClientBuilder.create().build();
         HttpPost httpPost=new HttpPost(url);
         CloseableHttpResponse response = null;
