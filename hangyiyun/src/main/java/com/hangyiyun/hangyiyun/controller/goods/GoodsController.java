@@ -12,6 +12,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
+import org.apache.http.HttpRequest;
 import org.apache.http.HttpResponse;
 import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
@@ -41,6 +42,7 @@ public class GoodsController {
 
     final String HOST="http://xyyapi.michain.tech";
     private static final Logger logger = LoggerFactory.getLogger(MallController.class);
+
 
     @Autowired
     private Util util;
@@ -124,9 +126,15 @@ public class GoodsController {
     * @return com.alibaba.fastjson.JSONObject
     **/
     @ApiOperation("按页查找商品")
-    @RequestMapping("/selectByPag")
+    @RequestMapping(value = "/selectByPag",method = RequestMethod.GET)
     public JSONObject selectByPage(@RequestParam String pageNum ,String pageSize,String goodsCategory,String goodsAttributes,String goodsName ){
         JSONObject result = new JSONObject();
+
+        logger.info("pageNum="+pageNum);
+        logger.info("pageSize="+pageSize);
+        logger.info("goodsCategory="+goodsCategory);
+        logger.info("goodsAttributes="+goodsAttributes);
+        logger.info("goodsName="+goodsName);
 
         String path = "/admin/goodsinfos/insales";
         String url = HOST+path;

@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Date;
@@ -52,8 +53,8 @@ public class EnterpriseController {
      * 4.将调用开店部分参数进行了整合
      * 中台注册接口
      */
-    @RequestMapping("/register")
-    @ApiOperation("云平台注册")
+    @RequestMapping(value = "/register",method = RequestMethod.POST)
+    @ApiOperation(value = "云平台注册")
     public Result<JSONObject> register(Enterprise enterprise) {
 
         String path = "/api/third/registerapi";
@@ -71,7 +72,8 @@ public class EnterpriseController {
 
             /*加密, 加密的key是一个token,是双方提前约定好的*/
             String enterpriseJson = JSONObject.toJSONString(enterprise);
-            System.out.println(enterpriseJson);
+//            日志输出
+            logger.info(enterpriseJson);
             String encryptionCode = DESUtil.encrypt(enterpriseJson, KEY);
 
             Map<String, String> headers = new HashMap<String, String>();
@@ -86,7 +88,7 @@ public class EnterpriseController {
 //            JSONObject jsonResp = HttpClientUtils.doPost(url, method, headers, bodys);
             JSONObject jsonResp = httpUtilPlus.post(url, headers,paramet , bodys);
 
-            logger.info("注册成功");
+
             Boolean respStatus = jsonResp.getBoolean("status");//获得返回内容中状态;
             JSONObject respData = jsonResp.getJSONObject("data");//获得返回内容中状态;
 
@@ -97,12 +99,12 @@ public class EnterpriseController {
                 enterprise.setCompanyCode(companyCode);//调用开店方法前，将返回的消息整合成一个实体类;
 
                 JSONObject openMallResult = openMall(enterprise);//获取开店的权限
-
+                logger.info("注册成功");
                 logger.info(openMallResult.toJSONString());
                 return  new Result<JSONObject>().setCode(ResultCode.SUCCESS).setMessage("获取成功").setData(openMallResult);
             } else {
 
-                logger.info(jsonResp.toJSONString());
+                logger.error(jsonResp.toJSONString());
                 return new Result<JSONObject>().setCode(ResultCode.FAIL).setMessage("失败").setData(jsonResp);//注册失败，将失败消息返回前端
 
             }
@@ -121,11 +123,11 @@ public class EnterpriseController {
      * */
 
     @ApiOperation("云平台登陆")
-    @RequestMapping(value = "/login",produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/login")
     public Result<JSONObject> login(@RequestBody PigcmsUser pigcmsUser) {
         String path = "/login";
         String method = "POST";
-
+        logger.info(JSONObject.toJSONString(pigcmsUser));
         Map<String, String> headers = new HashMap<String, String>();
         headers.put("Content-Type", "application/json");
 

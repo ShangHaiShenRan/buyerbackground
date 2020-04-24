@@ -18,6 +18,7 @@ public class UploadImageUtil {
     private static final String BOUNDARY = UUID.randomUUID().toString();  //边界标识 随机生成
     private static final String LINE_END = "\r\n";                        //换行
     private static final String CONTENT_TYPE = "multipart/form-data";     //内容类型
+
     /**
      * post请求方法
      * */

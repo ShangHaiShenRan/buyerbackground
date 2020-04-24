@@ -35,6 +35,7 @@ import java.util.Map;
 @Scope("prototype")
 public class HttpTools {
 
+
     /**
      * @Author Wangcc
      * @Description post请求封装工具类
