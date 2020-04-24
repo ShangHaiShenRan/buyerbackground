@@ -2,10 +2,7 @@ package com.shsr.objectvo.hangyiyun.vo.user;
 
 import lombok.Data;
 
-@Data
 public class PigcmsUser {
-
-
   private long uid;
   private String nickname;
   private String ticket;
@@ -73,7 +70,6 @@ public class PigcmsUser {
   private long birthday;
   private String userCode;
 
-
   public long getUid() {
     return uid;
   }
@@ -81,7 +77,6 @@ public class PigcmsUser {
   public void setUid(long uid) {
     this.uid = uid;
   }
-
 
   public String getNickname() {
     return nickname;
@@ -91,7 +86,6 @@ public class PigcmsUser {
     this.nickname = nickname;
   }
 
-
   public String getTicket() {
     return ticket;
   }
@@ -99,7 +93,6 @@ public class PigcmsUser {
   public void setTicket(String ticket) {
     this.ticket = ticket;
   }
-
 
   public String getPassword() {
     return password;
@@ -109,7 +102,6 @@ public class PigcmsUser {
     this.password = password;
   }
 
-
   public String getPhone() {
     return phone;
   }
@@ -117,7 +109,6 @@ public class PigcmsUser {
   public void setPhone(String phone) {
     this.phone = phone;
   }
-
 
   public String getOpenid() {
     return openid;
@@ -127,7 +118,6 @@ public class PigcmsUser {
     this.openid = openid;
   }
 
-
   public String getAppOpenid() {
     return appOpenid;
   }
@@ -135,7 +125,6 @@ public class PigcmsUser {
   public void setAppOpenid(String appOpenid) {
     this.appOpenid = appOpenid;
   }
-
 
   public String getWeiboUid() {
     return weiboUid;
@@ -145,7 +134,6 @@ public class PigcmsUser {
     this.weiboUid = weiboUid;
   }
 
-
   public String getQqOpenid() {
     return qqOpenid;
   }
@@ -153,7 +141,6 @@ public class PigcmsUser {
   public void setQqOpenid(String qqOpenid) {
     this.qqOpenid = qqOpenid;
   }
-
 
   public long getRegTime() {
     return regTime;
@@ -163,7 +150,6 @@ public class PigcmsUser {
     this.regTime = regTime;
   }
 
-
   public long getRegIp() {
     return regIp;
   }
@@ -171,7 +157,6 @@ public class PigcmsUser {
   public void setRegIp(long regIp) {
     this.regIp = regIp;
   }
-
 
   public long getLastTime() {
     return lastTime;
@@ -181,7 +166,6 @@ public class PigcmsUser {
     this.lastTime = lastTime;
   }
 
-
   public long getLastIp() {
     return lastIp;
   }
@@ -189,7 +173,6 @@ public class PigcmsUser {
   public void setLastIp(long lastIp) {
     this.lastIp = lastIp;
   }
-
 
   public long getCheckPhone() {
     return checkPhone;
@@ -199,7 +182,6 @@ public class PigcmsUser {
     this.checkPhone = checkPhone;
   }
 
-
   public long getLoginCount() {
     return loginCount;
   }
@@ -207,7 +189,6 @@ public class PigcmsUser {
   public void setLoginCount(long loginCount) {
     this.loginCount = loginCount;
   }
-
 
   public long getStatus() {
     return status;
@@ -217,7 +198,6 @@ public class PigcmsUser {
     this.status = status;
   }
 
-
   public String getIntro() {
     return intro;
   }
@@ -225,7 +205,6 @@ public class PigcmsUser {
   public void setIntro(String intro) {
     this.intro = intro;
   }
-
 
   public String getAvatar() {
     return avatar;
@@ -235,7 +214,6 @@ public class PigcmsUser {
     this.avatar = avatar;
   }
 
-
   public long getIsWeixin() {
     return isWeixin;
   }
@@ -243,7 +221,6 @@ public class PigcmsUser {
   public void setIsWeixin(long isWeixin) {
     this.isWeixin = isWeixin;
   }
-
 
   public long getStores() {
     return stores;
@@ -253,7 +230,6 @@ public class PigcmsUser {
     this.stores = stores;
   }
 
-
   public String getToken() {
     return token;
   }
@@ -261,7 +237,6 @@ public class PigcmsUser {
   public void setToken(String token) {
     this.token = token;
   }
-
 
   public long getSmscount() {
     return smscount;
@@ -271,7 +246,6 @@ public class PigcmsUser {
     this.smscount = smscount;
   }
 
-
   public double getPointBalance() {
     return pointBalance;
   }
@@ -279,7 +253,6 @@ public class PigcmsUser {
   public void setPointBalance(double pointBalance) {
     this.pointBalance = pointBalance;
   }
-
 
   public double getPointUnbalance() {
     return pointUnbalance;
@@ -289,7 +262,6 @@ public class PigcmsUser {
     this.pointUnbalance = pointUnbalance;
   }
 
-
   public double getPointGift() {
     return pointGift;
   }
@@ -297,7 +269,6 @@ public class PigcmsUser {
   public void setPointGift(double pointGift) {
     this.pointGift = pointGift;
   }
-
 
   public double getSpendPointGift() {
     return spendPointGift;
@@ -307,7 +278,6 @@ public class PigcmsUser {
     this.spendPointGift = spendPointGift;
   }
 
-
   public double getPointUsed() {
     return pointUsed;
   }
@@ -315,7 +285,6 @@ public class PigcmsUser {
   public void setPointUsed(double pointUsed) {
     this.pointUsed = pointUsed;
   }
-
 
   public String getSessionId() {
     return sessionId;
@@ -325,7 +294,6 @@ public class PigcmsUser {
     this.sessionId = sessionId;
   }
 
-
   public String getServerKey() {
     return serverKey;
   }
@@ -333,7 +301,6 @@ public class PigcmsUser {
   public void setServerKey(String serverKey) {
     this.serverKey = serverKey;
   }
-
 
   public String getSourceSiteUrl() {
     return sourceSiteUrl;
@@ -343,7 +310,6 @@ public class PigcmsUser {
     this.sourceSiteUrl = sourceSiteUrl;
   }
 
-
   public String getPaymentUrl() {
     return paymentUrl;
   }
@@ -351,7 +317,6 @@ public class PigcmsUser {
   public void setPaymentUrl(String paymentUrl) {
     this.paymentUrl = paymentUrl;
   }
-
 
   public String getNotifyUrl() {
     return notifyUrl;
@@ -361,7 +326,6 @@ public class PigcmsUser {
     this.notifyUrl = notifyUrl;
   }
 
-
   public String getOauthUrl() {
     return oauthUrl;
   }
@@ -369,7 +333,6 @@ public class PigcmsUser {
   public void setOauthUrl(String oauthUrl) {
     this.oauthUrl = oauthUrl;
   }
-
 
   public long getIsSeller() {
     return isSeller;
@@ -379,7 +342,6 @@ public class PigcmsUser {
     this.isSeller = isSeller;
   }
 
-
   public String getThirdId() {
     return thirdId;
   }
@@ -387,7 +349,6 @@ public class PigcmsUser {
   public void setThirdId(String thirdId) {
     this.thirdId = thirdId;
   }
-
 
   public long getDrpStoreId() {
     return drpStoreId;
@@ -397,7 +358,6 @@ public class PigcmsUser {
     this.drpStoreId = drpStoreId;
   }
 
-
   public long getAppId() {
     return appId;
   }
@@ -405,7 +365,6 @@ public class PigcmsUser {
   public void setAppId(long appId) {
     this.appId = appId;
   }
-
 
   public long getAdminId() {
     return adminId;
@@ -415,7 +374,6 @@ public class PigcmsUser {
     this.adminId = adminId;
   }
 
-
   public long getItemStoreId() {
     return itemStoreId;
   }
@@ -423,7 +381,6 @@ public class PigcmsUser {
   public void setItemStoreId(long itemStoreId) {
     this.itemStoreId = itemStoreId;
   }
-
 
   public long getType() {
     return type;
@@ -433,7 +390,6 @@ public class PigcmsUser {
     this.type = type;
   }
 
-
   public long getPermissionsGroupId() {
     return permissionsGroupId;
   }
@@ -441,7 +397,6 @@ public class PigcmsUser {
   public void setPermissionsGroupId(long permissionsGroupId) {
     this.permissionsGroupId = permissionsGroupId;
   }
-
 
   public long getWeixinBind() {
     return weixinBind;
@@ -451,7 +406,6 @@ public class PigcmsUser {
     this.weixinBind = weixinBind;
   }
 
-
   public long getSex() {
     return sex;
   }
@@ -459,7 +413,6 @@ public class PigcmsUser {
   public void setSex(long sex) {
     this.sex = sex;
   }
-
 
   public String getProvince() {
     return province;
@@ -469,7 +422,6 @@ public class PigcmsUser {
     this.province = province;
   }
 
-
   public String getCity() {
     return city;
   }
@@ -477,7 +429,6 @@ public class PigcmsUser {
   public void setCity(String city) {
     this.city = city;
   }
-
 
   public double getPointTotal() {
     return pointTotal;
@@ -487,7 +438,6 @@ public class PigcmsUser {
     this.pointTotal = pointTotal;
   }
 
-
   public long getInviteAdmin() {
     return inviteAdmin;
   }
@@ -495,7 +445,6 @@ public class PigcmsUser {
   public void setInviteAdmin(long inviteAdmin) {
     this.inviteAdmin = inviteAdmin;
   }
-
 
   public double getPointGiven() {
     return pointGiven;
@@ -505,7 +454,6 @@ public class PigcmsUser {
     this.pointGiven = pointGiven;
   }
 
-
   public double getPointReceived() {
     return pointReceived;
   }
@@ -513,7 +461,6 @@ public class PigcmsUser {
   public void setPointReceived(double pointReceived) {
     this.pointReceived = pointReceived;
   }
-
 
   public long getPackageId() {
     return packageId;
@@ -523,7 +470,6 @@ public class PigcmsUser {
     this.packageId = packageId;
   }
 
-
   public long getPackageChange() {
     return packageChange;
   }
@@ -531,7 +477,6 @@ public class PigcmsUser {
   public void setPackageChange(long packageChange) {
     this.packageChange = packageChange;
   }
-
 
   public long getExpiration() {
     return expiration;
@@ -541,7 +486,6 @@ public class PigcmsUser {
     this.expiration = expiration;
   }
 
-
   public long getLastEditTime() {
     return lastEditTime;
   }
@@ -549,7 +493,6 @@ public class PigcmsUser {
   public void setLastEditTime(long lastEditTime) {
     this.lastEditTime = lastEditTime;
   }
-
 
   public long getVisitedPhysicalId() {
     return visitedPhysicalId;
@@ -559,7 +502,6 @@ public class PigcmsUser {
     this.visitedPhysicalId = visitedPhysicalId;
   }
 
-
   public long getCashierHotKey() {
     return cashierHotKey;
   }
@@ -567,7 +509,6 @@ public class PigcmsUser {
   public void setCashierHotKey(long cashierHotKey) {
     this.cashierHotKey = cashierHotKey;
   }
-
 
   public double getCash() {
     return cash;
@@ -577,7 +518,6 @@ public class PigcmsUser {
     this.cash = cash;
   }
 
-
   public double getCashCount() {
     return cashCount;
   }
@@ -585,7 +525,6 @@ public class PigcmsUser {
   public void setCashCount(double cashCount) {
     this.cashCount = cashCount;
   }
-
 
   public double getCashFreeze() {
     return cashFreeze;
@@ -595,7 +534,6 @@ public class PigcmsUser {
     this.cashFreeze = cashFreeze;
   }
 
-
   public String getCashierAuth() {
     return cashierAuth;
   }
@@ -603,7 +541,6 @@ public class PigcmsUser {
   public void setCashierAuth(String cashierAuth) {
     this.cashierAuth = cashierAuth;
   }
-
 
   public String getMarketingAuth() {
     return marketingAuth;
@@ -613,7 +550,6 @@ public class PigcmsUser {
     this.marketingAuth = marketingAuth;
   }
 
-
   public long getUnionId() {
     return unionId;
   }
@@ -621,7 +557,6 @@ public class PigcmsUser {
   public void setUnionId(long unionId) {
     this.unionId = unionId;
   }
-
 
   public long getUserTypeId() {
     return userTypeId;
@@ -631,7 +566,6 @@ public class PigcmsUser {
     this.userTypeId = userTypeId;
   }
 
-
   public String getAccount() {
     return account;
   }
@@ -639,7 +573,6 @@ public class PigcmsUser {
   public void setAccount(String account) {
     this.account = account;
   }
-
 
   public String getMemberCard() {
     return memberCard;
@@ -649,7 +582,6 @@ public class PigcmsUser {
     this.memberCard = memberCard;
   }
 
-
   public long getBirthday() {
     return birthday;
   }
@@ -658,4 +590,11 @@ public class PigcmsUser {
     this.birthday = birthday;
   }
 
+  public String getUserCode() {
+    return userCode;
+  }
+
+  public void setUserCode(String userCode) {
+    this.userCode = userCode;
+  }
 }
