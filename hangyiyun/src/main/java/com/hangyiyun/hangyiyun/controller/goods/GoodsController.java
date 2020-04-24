@@ -1,9 +1,8 @@
 package com.hangyiyun.hangyiyun.controller.goods;
 
-import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;;
-import com.hangyiyun.hangyiyun.apiResult.Result;
-import com.hangyiyun.hangyiyun.apiResult.ResultCode;
+import com.hangyiyun.hangyiyun.apiresult.Result;
+import com.hangyiyun.hangyiyun.apiresult.ResultCode;
 import com.hangyiyun.hangyiyun.controller.mall.MallController;
 import com.hangyiyun.hangyiyun.utils.HttpTools;
 import com.hangyiyun.hangyiyun.utils.HttpUtils;
@@ -15,7 +14,6 @@ import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import org.apache.http.HttpResponse;
 import org.apache.http.util.EntityUtils;
-import org.omg.PortableInterceptor.SUCCESSFUL;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,7 +36,7 @@ import java.util.Map;
  */
 @Api(tags = "GoodsController",description  = "商品管理")
 @RestController
-@RequestMapping(value = "/Goods" ,produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+@RequestMapping(value = "/Goods" ,produces = {"application/json;charset=UTF-8"})
 public class GoodsController {
 
     final String HOST="http://xyyapi.michain.tech";
