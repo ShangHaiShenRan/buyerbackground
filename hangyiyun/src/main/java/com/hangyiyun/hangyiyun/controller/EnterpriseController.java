@@ -1,12 +1,14 @@
 package com.hangyiyun.hangyiyun.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.hangyiyun.hangyiyun.apiResult.Result;
+import com.hangyiyun.hangyiyun.apiResult.ResultCode;
 import com.hangyiyun.hangyiyun.utils.*;
 import com.shsr.objectvo.hangyiyun.vo.company.Enterprise;
 import com.shsr.objectvo.hangyiyun.vo.user.PigcmsUser;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.apache.http.HttpRequest;
 import org.apache.http.HttpResponse;
 import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
@@ -28,8 +30,8 @@ import java.util.Map;
  * 用户登录注册接口
  */
 @RestController
-@RequestMapping("/Enterprise")
-@Api(tags = "EnterpriseController",description  = "云登陆注册管理")
+@RequestMapping(value = "/Enterprise",produces = {"application/json;charset=UTF-8"})
+//@Api(tags = "EnterpriseController",description  = "云登陆注册管理")
 public class EnterpriseController {
 
     @Autowired
@@ -54,13 +56,11 @@ public class EnterpriseController {
      */
     @RequestMapping("/register")
     @ApiOperation("云平台注册")
-    public JSONObject register(Enterprise enterprise) {
+    public Result<JSONObject> register(Enterprise enterprise) {
 
         String path = "/api/third/registerapi";
         String method = "POST";
         String url = HOST + path;
-
-        JSONObject result = new JSONObject();
 
         try {
             enterprise.setUserCode("COM3151811246");//设置代理商编号
@@ -93,27 +93,25 @@ public class EnterpriseController {
             JSONObject respData = jsonResp.getJSONObject("data");//获得返回内容中状态;
 
             /*验证返回结果为true时和返回消息不为空(接口验证时出现过返回为true但是结果为空注册失败的情况)，直接开通商城*/
-            if (respStatus && respData != null && "".equals(respData)) {
+            if (respStatus) {
 
                 String companyCode = respData.getString("companyCode");
                 enterprise.setCompanyCode(companyCode);//调用开店方法前，将返回的消息整合成一个实体类;
 
                 JSONObject openMallResult = openMall(enterprise);//获取开店的权限
 
-                result = openMallResult;
-                logger.info(result.toJSONString());
+                logger.info(openMallResult.toJSONString());
+                return  new Result<JSONObject>().setCode(ResultCode.SUCCESS).setMessage("获取成功").setData(openMallResult);
             } else {
-                result = jsonResp;//注册失败，将失败消息返回前端
-                logger.info(result.toJSONString());
+
+                logger.info(jsonResp.toJSONString());
+                return new Result<JSONObject>().setCode(ResultCode.FAIL).setMessage("失败").setData(jsonResp);//注册失败，将失败消息返回前端
+
             }
         } catch (Exception e) {
             e.printStackTrace();
-            result.put("status", false);
-            result.put("message", "系统错误！");
-            result.put("data", null);
-
+            return  new Result<JSONObject>().setCode(ResultCode.INTERNAL_SERVER_ERROR).setMessage("系统错误").setData(null);
         }
-        return result;
     }
 
     /*
@@ -125,11 +123,8 @@ public class EnterpriseController {
      * */
 
     @ApiOperation("云平台登陆")
-    @RequestMapping(value = "/login",method = RequestMethod.POST)
-    public JSONObject login(@RequestBody PigcmsUser pigcmsUser) {
-
-        JSONObject result = new JSONObject();
-
+    @RequestMapping(value = "/login",produces ={"application/json;charset=UTF-8"})
+    public Result<JSONObject> login(@RequestBody PigcmsUser pigcmsUser) {
         String path = "/login";
         String method = "POST";
 
@@ -145,16 +140,20 @@ public class EnterpriseController {
 
         JSONObject jsonData = post.getJSONObject("data");
 
-        if(!jsonData.isEmpty()){
-            String strUserCode = jsonData.getString("userCode");
-            if(!strUserCode.isEmpty()){//验证redis中有没有相同的key，如果没有就直接存入redis
-                if(!redisUtil.hasKey(strUserCode)){
-                    redisUtil.set(pigcmsUser.getPhone()+"COM",strUserCode);//存储，key是电话
-                    result = post;
-                }
-            }
+        if(jsonData.isEmpty()){
+            return new Result<JSONObject>().setCode(ResultCode.FAIL).setMessage("失败").setData(post);
         }
-        return result;
+        String strUserCode = jsonData.getString("userCode");
+        if(strUserCode.isEmpty()&& redisUtil.hasKey(pigcmsUser.getPhone()+"COM") ){//验证redis中有没有相同的key，如果没有就直接存入redis
+            return new Result<JSONObject>().setCode(ResultCode.FAIL).setMessage("失败").setData(post);
+        }
+
+        if(!redisUtil.hasKey(strUserCode)){
+            redisUtil.set(pigcmsUser.getPhone()+"COM",strUserCode);//存储，key是电话
+            return new Result<JSONObject>().setCode(ResultCode.SUCCESS).setMessage("成功").setData(post);
+        }else{
+            return new Result<JSONObject>().setCode(ResultCode.FAIL).setMessage("失败").setData(post);
+        }
     }
 
 

@@ -2,6 +2,8 @@ package com.hangyiyun.hangyiyun.controller.mall;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.hangyiyun.hangyiyun.apiResult.Result;
+import com.hangyiyun.hangyiyun.apiResult.ResultCode;
 import com.hangyiyun.hangyiyun.utils.*;
 import com.shsr.objectvo.hangyiyun.vo.mall.TMpfMallInfo;
 import io.swagger.annotations.Api;
@@ -9,10 +11,12 @@ import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -24,8 +28,7 @@ import java.util.Map;
  * @return 
  **/
 @RestController
-@RequestMapping("/Mall")
-@Api(tags = "MallController",description  = "Saas商店管理")
+@RequestMapping(value = "/Mall",produces = {"application/json;charset=UTF-8"})
 public class MallController {
 
     final String HOST="http://xyyapi.michain.tech";
@@ -49,7 +52,7 @@ public class MallController {
      * @Date: 2020/3/29 11:39
      */
     @RequestMapping(value = "/by/id",method = RequestMethod.GET)
-    @ApiOperation("根据id查找saas商店")
+//    @ApiOperation("根据id查找saas商店")
     public JSONObject selectMallByID(String id){
         JSONObject result = new JSONObject();
 
@@ -83,25 +86,27 @@ public class MallController {
      **/
     @ApiOperation("添加saas平台上面的商城")
     @RequestMapping(value = "/addMall",method = RequestMethod.POST)
-    public JSONObject addMall(@RequestBody TMpfMallInfo mallInfo) throws Exception {
-        logger.info(JSON.toJSONString(mallInfo));
+    public Result<JSONObject> addMall(@RequestBody TMpfMallInfo mallInfo, @RequestHeader("Authorization") String token) throws Exception {
         String path="/admin/mall";
         String url = HOST+path;
 
-        JSONObject result = new JSONObject();
-
         Map<String,String> headers = new HashMap<String,String>();
         headers.put("Content-Type", "application/json");
+        headers.put("Authorization",token);
 
-        result = util.getResultForObj(mallInfo,url,"POST",headers);
-        boolean notBlank = StringUtils.isNotBlank(result.toString());
-        if(notBlank){
-            String encryptData = result.getString("data");
-
-            /*将加密数据存储到redise*/
-            boolean userMsgToRedise = redisUtil.set(mallInfo.getPhone()+"ACT",encryptData.toString() );
+        JSONObject post = util.getResultForObj(mallInfo, HOST, path, "POST", headers);
+        if(post.isEmpty()){
+            return new Result<JSONObject>().setCode(ResultCode.FAIL).setMessage("失败").setData(null);
         }
-        return result;
+
+        boolean notBlank = StringUtils.isNotBlank(post.toString());
+        if(notBlank){
+            String encryptData = post.getString("data");
+            boolean userMsgToRedise = redisUtil.set(mallInfo.getPhone()+"ACT",encryptData.toString() ); /*将加密数据存储到redise*/
+            return new Result<JSONObject>().setCode(ResultCode.SUCCESS).setMessage("成功").setData(post);
+        }else{
+            return new Result<JSONObject>().setCode(ResultCode.INTERNAL_SERVER_ERROR).setMessage("失败").setData(null);
+        }
     }
 
     /**
@@ -112,7 +117,7 @@ public class MallController {
      * @return
      **/
     @RequestMapping(value = "/editMall",method = RequestMethod.POST)
-    @ApiOperation("修改商城信息")
+//    @ApiOperation("修改商城信息")
     public JSONObject editMall(@RequestBody TMpfMallInfo mallInfo) {
 
         logger.info("进入editMall.........................................");
@@ -126,7 +131,11 @@ public class MallController {
         headers.put("Content-Type", "application/json");
 
         /*进行重构将这个传输改为fegin*/
-        result = util.getResultForObj(mallInfo,url,"POST",headers);
+        try {
+            result = util.getResultForObj(mallInfo,HOST,path,"POST",headers);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         return  result;
     }

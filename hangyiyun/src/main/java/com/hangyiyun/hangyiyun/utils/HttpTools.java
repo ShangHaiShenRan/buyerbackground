@@ -3,6 +3,7 @@ package com.hangyiyun.hangyiyun.utils;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import org.apache.http.HttpEntity;
+import org.apache.http.ProtocolVersion;
 import org.apache.http.StatusLine;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
@@ -14,18 +15,13 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
-import org.junit.jupiter.api.Test;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.File;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
-import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -33,8 +29,6 @@ import java.util.Map;
  * @创建时间: 2020/4/19
  * @描述:
  **/
-@Component
-@Scope("prototype")
 public class HttpTools {
 
     /**
@@ -44,7 +38,7 @@ public class HttpTools {
      * @Param [host, path, headers, bodys, parames]
      * @return com.alibaba.fastjson.JSONObject
      **/
-    public JSONObject doPost(String host, String path, Map<String,String> headers, JSONObject bodys, Map<String,String> parames) throws IOException {
+    public static JSONObject doPost(String host, String path, Map<String,String> headers, JSONObject bodys, Map<String,String> parames) throws IOException {
 
         JSONObject result = new JSONObject();
 
@@ -69,16 +63,15 @@ public class HttpTools {
         CloseableHttpResponse response = requestClient.execute(post);//发送请求，获取返回内容;
 
         StatusLine statusLine = response.getStatusLine();//获取返回状态头;
-        statusLine.getStatusCode();//获得状态码;
-        statusLine.getProtocolVersion();//获得返回http版本;
-        statusLine.getReasonPhrase();//获得的的返回....Emmmm 忘了叫什么了.....
+        int statusCode = statusLine.getStatusCode();//获得状态码;
+        ProtocolVersion protocolVersion = statusLine.getProtocolVersion();//获得返回http版本;
+        String reasonPhrase = statusLine.getReasonPhrase();//获得的的返回....Emmmm 忘了叫什么了.....
 
         HttpEntity entity = response.getEntity();//获得返回的响应体 Body
         if (entity != null) {
             String strResp = EntityUtils.toString(entity);
 
             JSONObject jsonResp = JSONObject.parseObject(strResp);
-
             result = jsonResp;
         }
         return result;
@@ -92,7 +85,7 @@ public class HttpTools {
      * @Param [host, path, headers, parames]
      * @return com.alibaba.fastjson.JSONObject
      **/
-    public JSONObject doGet(String host,String path,Map<String,String> headers,Map<String,String> parames) throws IOException {
+    public static JSONObject doGet(String host,String path,Map<String,String> headers,Map<String,String> parames) throws IOException {
 
         JSONObject result = new JSONObject();
 
@@ -118,7 +111,7 @@ public class HttpTools {
     }
 
     /*将parames,host,path 进行拼接*/
-    private String buildUrl(String host, String path, Map<String, String> parames) throws UnsupportedEncodingException {
+    private static String buildUrl(String host, String path, Map<String, String> parames) throws UnsupportedEncodingException {
         StringBuilder sbUrl = new StringBuilder();
         sbUrl.append(host);
         if (!StringUtils.isBlank(path)) {
@@ -152,7 +145,7 @@ public class HttpTools {
     /*
     * 文件上传post请求
     * */
-    public JSONObject uploadImage(String url,String key,MultipartFile[] files,Map<String,String> paramter)throws Exception{
+    public static JSONObject uploadImage(String url, String key, MultipartFile[] files, Map<String, String> paramter)throws Exception{
         CloseableHttpClient httpClient  = HttpClientBuilder.create().build();
         HttpPost httpPost=new HttpPost(url);
         CloseableHttpResponse response = null;

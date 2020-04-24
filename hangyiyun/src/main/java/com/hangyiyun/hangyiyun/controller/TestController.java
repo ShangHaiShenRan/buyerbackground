@@ -1,7 +1,7 @@
 package com.hangyiyun.hangyiyun.controller;
 
-import com.hangyiyun.hangyiyun.apiresult.Result;
-import com.hangyiyun.hangyiyun.apiresult.ResultGenerator;
+import com.hangyiyun.hangyiyun.apiResult.Result;
+import com.hangyiyun.hangyiyun.apiResult.ResultGenerator;
 import io.swagger.annotations.ApiOperation;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Value;
@@ -17,8 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
 
     private static final String DEFAULT_SUCCESS_MESSAGE = "SUCCESS";
-
-
 
     @Value("${host}")
     String host;
