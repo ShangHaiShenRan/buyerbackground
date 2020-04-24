@@ -1,6 +1,7 @@
 package com.hangyiyun.hangyiyun.zlz.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import com.hangyiyun.hangyiyun.apiResult.Result;
 import com.hangyiyun.hangyiyun.controller.EnterpriseController;
 
 import com.hangyiyun.hangyiyun.controller.UserController;
@@ -44,10 +45,12 @@ public class EnterpriseControllerTest {
         enterprise.setPassword("Zlz13117500158");
         enterprise.setCompanyName("This is Test Data:数据测试数据测试9");*/
         pigcmsUser = new PigcmsUser();
-        pigcmsUser.setPhone("17611118813");
+        pigcmsUser.setPhone("17611118822");
 
-        JSONObject register =userController.loginByName(pigcmsUser);
-        System.out.println(register.toString());
+        Result<JSONObject> result = userController.loginByName(pigcmsUser);
+        String message = result.getMessage();
+        JSONObject data = result.getData();
+        System.out.println(message.toString() +"------------"+data.toString());
 
         /*
         * 登陆测试

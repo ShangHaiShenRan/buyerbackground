@@ -2,6 +2,8 @@ package com.hangyiyun.hangyiyun.controller.mall;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.hangyiyun.hangyiyun.apiResult.Result;
+import com.hangyiyun.hangyiyun.apiResult.ResultCode;
 import com.hangyiyun.hangyiyun.utils.*;
 import com.shsr.objectvo.hangyiyun.vo.mall.TMpfMallInfo;
 import io.swagger.annotations.Api;
@@ -84,28 +86,27 @@ public class MallController {
      **/
     @ApiOperation("添加saas平台上面的商城")
     @RequestMapping(value = "/addMall",method = RequestMethod.POST)
-    public JSONObject addMall(@RequestBody TMpfMallInfo mallInfo,@RequestHeader("Authorization") String token) throws Exception {
-        logger.info(JSON.toJSONString(mallInfo));
+    public Result<JSONObject> addMall(@RequestBody TMpfMallInfo mallInfo, @RequestHeader("Authorization") String token) throws Exception {
         String path="/admin/mall";
         String url = HOST+path;
-
-        JSONObject result = new JSONObject();
 
         Map<String,String> headers = new HashMap<String,String>();
         headers.put("Content-Type", "application/json");
         headers.put("Authorization",token);
 
-        result = util.getResultForObj(mallInfo,HOST,path,"POST",headers);
-
-        logger.warn(result.toString());
-        boolean notBlank = StringUtils.isNotBlank(result.toString());
-        if(notBlank){
-            String encryptData = result.getString("data");
-
-            /*将加密数据存储到redise*/
-            boolean userMsgToRedise = redisUtil.set(mallInfo.getPhone()+"ACT",encryptData.toString() );
+        JSONObject post = util.getResultForObj(mallInfo, HOST, path, "POST", headers);
+        if(post.isEmpty()){
+            return new Result<JSONObject>().setCode(ResultCode.FAIL).setMessage("失败").setData(null);
         }
-        return result;
+
+        boolean notBlank = StringUtils.isNotBlank(post.toString());
+        if(notBlank){
+            String encryptData = post.getString("data");
+            boolean userMsgToRedise = redisUtil.set(mallInfo.getPhone()+"ACT",encryptData.toString() ); /*将加密数据存储到redise*/
+            return new Result<JSONObject>().setCode(ResultCode.SUCCESS).setMessage("成功").setData(post);
+        }else{
+            return new Result<JSONObject>().setCode(ResultCode.INTERNAL_SERVER_ERROR).setMessage("失败").setData(null);
+        }
     }
 
     /**
