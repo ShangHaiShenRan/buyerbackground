@@ -5,6 +5,7 @@ public class StringUtils {
 	private StringUtils() {
 	}
 
+
 	/**
 	 * 如果字符串等于null或去空格后等于""，则返回true，否则返回false
 	 * 

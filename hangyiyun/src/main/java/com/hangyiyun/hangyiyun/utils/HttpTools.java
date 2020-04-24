@@ -15,6 +15,8 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
@@ -29,6 +31,8 @@ import java.util.Map;
  * @创建时间: 2020/4/19
  * @描述:
  **/
+@Component
+@Scope("prototype")
 public class HttpTools {
 
 
@@ -39,7 +43,7 @@ public class HttpTools {
      * @Param [host, path, headers, bodys, parames]
      * @return com.alibaba.fastjson.JSONObject
      **/
-    public  JSONObject doPost(String host, String path, Map<String,String> headers, JSONObject bodys, Map<String,String> parames) throws IOException {
+    public JSONObject doPost(String host, String path, Map<String,String> headers, JSONObject bodys, Map<String,String> parames) throws IOException {
 
         JSONObject result = new JSONObject();
 
@@ -50,14 +54,7 @@ public class HttpTools {
             post.setHeader(header.getKey(),header.getValue());
         }
 
-        /*传入bodys  坑点！！！！ 之前是通过常用的list传入，用的NameValuePair 会出现 错误请求的情况*/
-        /*JSONObject jsonObject = new JSONObject();
-        for (Map.Entry<String,String> mt:bodys.entrySet()){
-            jsonObject.put(mt.getKey(),mt.getValue());
-        }*/
-
-//        一定要设置编码格式，不然乱码
-        post.setEntity(new StringEntity(bodys.toString(),"UTF-8"));
+        post.setEntity(new StringEntity(bodys.toString(),"UTF-8"));//一定要设置编码格式，不然乱码
 
         CloseableHttpClient requestClient = HttpClients.createDefault();//创建一个默认请求客户端；
 
@@ -86,7 +83,7 @@ public class HttpTools {
      * @Param [host, path, headers, parames]
      * @return com.alibaba.fastjson.JSONObject
      **/
-    public  JSONObject doGet(String host,String path,Map<String,String> headers,Map<String,String> parames) throws IOException {
+    public JSONObject doGet(String host,String path,Map<String,String> headers,Map<String,String> parames) throws IOException {
 
         JSONObject result = new JSONObject();
 
@@ -112,7 +109,7 @@ public class HttpTools {
     }
 
     /*将parames,host,path 进行拼接*/
-    private  String buildUrl(String host, String path, Map<String, String> parames) throws UnsupportedEncodingException {
+    private String buildUrl(String host, String path, Map<String, String> parames) throws UnsupportedEncodingException {
         StringBuilder sbUrl = new StringBuilder();
         sbUrl.append(host);
         if (!StringUtils.isBlank(path)) {

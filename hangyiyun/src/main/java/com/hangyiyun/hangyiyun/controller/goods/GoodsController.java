@@ -12,6 +12,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
+import org.apache.http.HttpRequest;
 import org.apache.http.HttpResponse;
 import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
@@ -39,12 +40,15 @@ import java.util.Map;
 @RequestMapping(value = "/Goods" ,produces = {"application/json;charset=UTF-8"})
 public class GoodsController {
 
-
     final String HOST="http://xyyapi.michain.tech";
     private static final Logger logger = LoggerFactory.getLogger(MallController.class);
 
+
     @Autowired
     private Util util;
+
+    @Autowired
+    private HttpTools httpTools;
 
     /**
      * @Author wangcc
@@ -75,7 +79,7 @@ public class GoodsController {
 //        Objcet==>JSONObject
         JSONObject body= (JSONObject) JSONObject.toJSON(goodsInfoVO);
         try {
-            result = HttpTools.doPost(HOST,path,headers,body,paramtes);
+            result = httpTools.doPost(HOST,path,headers,body,paramtes);
             return new Result<JSONObject>().setCode(ResultCode.SUCCESS).setMessage("添加成功").setData(result);
         } catch (IOException e) {
             e.printStackTrace();
@@ -122,9 +126,15 @@ public class GoodsController {
     * @return com.alibaba.fastjson.JSONObject
     **/
     @ApiOperation("按页查找商品")
-    @RequestMapping("/selectByPag")
+    @RequestMapping(value = "/selectByPag",method = RequestMethod.GET)
     public JSONObject selectByPage(@RequestParam String pageNum ,String pageSize,String goodsCategory,String goodsAttributes,String goodsName ){
         JSONObject result = new JSONObject();
+
+        logger.info("pageNum="+pageNum);
+        logger.info("pageSize="+pageSize);
+        logger.info("goodsCategory="+goodsCategory);
+        logger.info("goodsAttributes="+goodsAttributes);
+        logger.info("goodsName="+goodsName);
 
         String path = "/admin/goodsinfos/insales";
         String url = HOST+path;
@@ -214,7 +224,7 @@ public class GoodsController {
         params.put("goodsName",goodsName);
 
         try {
-            JSONObject jsonObject = HttpTools.doGet(HOST, path, headers, params);
+            JSONObject jsonObject = httpTools.doGet(HOST, path, headers, params);
             if(!jsonObject.isEmpty()){
                 return new Result<JSONObject>().setCode(ResultCode.SUCCESS).setMessage("请求成功").setData(jsonObject);
             }else{
@@ -237,7 +247,7 @@ public class GoodsController {
         String url = HOST+path;
         String key="file";
         try {
-            JSONObject jsonObject= HttpTools.uploadImage(url,key,file,null);
+            JSONObject jsonObject= httpTools.uploadImage(url,key,file,null);
             if(jsonObject!=null){
                 return new Result<JSONObject>().setCode(ResultCode.SUCCESS)
                         .setMessage("上传成功")

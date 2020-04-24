@@ -10,6 +10,7 @@ import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -26,13 +27,11 @@ import java.util.Map;
  * @return 
  **/
 @RestController
-@RequestMapping(value = "/Mall",produces = {"application/json;charset=UTF-8"})
+@RequestMapping(value = "/Mall",produces = MediaType.APPLICATION_JSON_VALUE)
 public class MallController {
 
     final String HOST="http://xyyapi.michain.tech";
-
     private static final Logger logger = LoggerFactory.getLogger(MallController.class);
-
     private static final String tokenKey = "d811ad6ff50765b1e791318643239744";
 
     @Autowired
@@ -49,9 +48,8 @@ public class MallController {
      * @Author: 骄傲的骨傲天
      * @Date: 2020/3/29 11:39
      */
+    @ApiOperation("根据id查找saas商店")
     @RequestMapping(value = "/by/id",method = RequestMethod.GET)
-
-//    @ApiOperation("根据id查找saas商店")
     public JSONObject selectMallByID(String id){
         JSONObject result = new JSONObject();
 

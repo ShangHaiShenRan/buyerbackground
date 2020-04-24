@@ -102,7 +102,8 @@ public class PageBean implements Serializable {
 		if(null!=isPagination&&!"".equals(isPagination.trim()))
 			this.isPagination = Boolean.parseBoolean(isPagination);
 	}
-	
+
+
 	/**
 	 * 获取分页起始标记位置
 	 * @return

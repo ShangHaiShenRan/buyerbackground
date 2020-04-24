@@ -27,6 +27,9 @@ public class Util {
     @Autowired
     private RedisUtil redisUtil;
 
+    @Autowired
+    private HttpTools httpTools;
+
     /**
      * @return com.alibaba.fastjson.JSONObject
      * @Author wangcc
@@ -54,6 +57,9 @@ public class Util {
         logger.info("打印传输进来的内容：" + object.toString());
         JSONObject result = new JSONObject();
 
+
+
+
         /*转换格式 obj => JSONObject*/
         JSONObject jsonBody = (JSONObject) JSONObject.toJSON(object);
 
@@ -68,12 +74,11 @@ public class Util {
 
         /*判断连接类型，连接三方获取响应*/
         Map<String, String> parames = new HashMap<String, String>();
-        respResult = HttpTools.doPost(host, path, headers, jsonBody, parames);
+        respResult = httpTools.doPost(host, path, headers, jsonBody, parames);
 
         //respResult = HttpClientUtils.doPost(url, method, headers, JsonBody)
         /*检测响应*/
         result = checkRespStatusAndGetMsg(respResult);
-
 
         return result;
     }

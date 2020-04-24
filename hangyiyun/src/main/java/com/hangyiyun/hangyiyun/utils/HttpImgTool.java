@@ -31,6 +31,7 @@ public class HttpImgTool {
 
     public static JSONObject uploadFile(String requestUrl, final MultipartFile multipartFile) throws IOException {
 
+
         JSONObject result = new JSONObject();
 
         HttpPost post = new HttpPost(requestUrl);
