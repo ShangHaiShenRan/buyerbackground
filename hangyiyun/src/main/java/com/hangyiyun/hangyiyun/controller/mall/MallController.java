@@ -60,8 +60,6 @@ public class MallController {
         heards.put("Content-Type","application/json");
         String params = "id="+id;
 
-        /*请求头添加数据(目前只添加一个其他用默认格式)*/
-
         try {
 
             JSONObject jsonObjResult = HttpClientUtils.doGet(url, heards, params);
