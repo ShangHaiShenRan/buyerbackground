@@ -12,7 +12,8 @@ public enum ResultCode {
     NOT_FOUND(404),//接口不存在
     INTERNAL_SERVER_ERROR(500),//服务器内部错误
     INVALID_SCOPE(403),//登陆但权限缺失
-    BAD_REQUEST(405);
+    BAD_REQUEST(405),
+    INVALID_PERMISSION(508);//权限错误
 
     private final int code;
 

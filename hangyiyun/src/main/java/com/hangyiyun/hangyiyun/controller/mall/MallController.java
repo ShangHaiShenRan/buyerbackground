@@ -96,6 +96,14 @@ public class MallController {
         headers.put("Content-Type", "application/json");
         headers.put("Authorization",token);
 
+        /*判断数据库中是否有加密账户和密码，如果没有就添加，如果有直接返回*/
+        String phone  = mallInfo.getPhone();
+        boolean checkEcryptData = redisUtil.hasKey(phone + "ACT");
+
+        if(!checkEcryptData){
+            return new Result<JSONObject>().setCode(ResultCode.INVALID_PERMISSION).setMessage("该用户已存在，直接登陆").setData(null);
+        }
+
         JSONObject post = util.getResultForObj(mallInfo, HOST, path, "POST", headers);
         if(post.isEmpty()){
             return new Result<JSONObject>().setCode(ResultCode.FAIL).setMessage("失败").setData(null);
